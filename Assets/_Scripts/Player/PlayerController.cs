@@ -1,10 +1,12 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : SerializedMonoBehaviour
 {
-    public Stats playerStats;
+    public Stats playerStatsOriginal;
+    public static Stats playerStats;
     private float movementSpeed;
     private float currentHealth;
     private float maxHealth;
@@ -28,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        playerStats = Instantiate(playerStats);
+        playerStats = Instantiate(playerStatsOriginal);
         CalculateStats();
     }
     

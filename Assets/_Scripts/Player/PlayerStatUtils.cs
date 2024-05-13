@@ -79,4 +79,9 @@ public static class PlayerStatUtils
         float critDamage = stats.GetStat(Stat.critDamage) * stats.GetStat(Stat.critDamageModifier);
         return critDamage;
     }
+    public static float CalculateAttackArea(Stats stats)
+    {
+        float attackArea = stats.GetStat(Stat.attackArea) * stats.GetStat(Stat.attackAreaModifier);
+        return attackArea;
+    }
 }

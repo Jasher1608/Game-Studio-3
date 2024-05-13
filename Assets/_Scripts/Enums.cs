@@ -41,5 +41,10 @@ public enum Stat
     critChanceModifier,
     critDamage,
     critDamageModifier,
-    abilityCooldownModifier
+    abilityCooldownModifier,
+    additionalProjectileCount,
+    projectileSpeedModifier,
+    attackArea,
+    attackAreaModifier,
+    durationModifier
 }
