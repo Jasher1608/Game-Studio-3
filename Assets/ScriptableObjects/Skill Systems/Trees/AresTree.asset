@@ -21,5 +21,6 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  skills: []
-  treeName: 
+  skills:
+  - {fileID: 11400000, guid: dbe2719953f855f44a1800021da2cd0e, type: 2}
+  treeName: Ares
