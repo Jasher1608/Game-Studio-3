@@ -2,20 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-
     public Stats playerStats;
     private float movementSpeed;
     public Rigidbody2D rb;
     private Vector3 moveDirection;
 
-    
     void Start()
     {
         playerStats = Instantiate(playerStats);
-        movementSpeed = playerStats.GetStat(Stat.movementSpeed) * playerStats.GetStat(Stat.movementSpeedModifier);
-        
+        movementSpeed = PlayerStatUtils.CalculateMovementSpeed(playerStats);
     }
     
     void Update()
@@ -39,7 +36,5 @@ public class PlayerMovement : MonoBehaviour
     void Move()
     {
         rb.velocity = new Vector3(moveDirection.x * movementSpeed, moveDirection.y * movementSpeed, 0f);
-
     }
-
 }
