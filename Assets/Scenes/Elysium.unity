@@ -616,7 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428870eebb880f94b8372a55448111ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimensions: 20
+  dimensions: 10
   tileObjects:
   - {fileID: 8387159081642753197, guid: b6f502d4aca20b4488453f2119b52f84, type: 3}
   - {fileID: 8182247532594213965, guid: 889b9cadffe9866418feea9ee0131ae2, type: 3}
