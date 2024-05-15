@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
+using System.Diagnostics;
 
 public class WaveFunction : MonoBehaviour
 {
@@ -14,8 +15,11 @@ public class WaveFunction : MonoBehaviour
 
     int iterations = 0;
 
+    private Stopwatch stopwatch = new Stopwatch();
+
     void Awake()
     {
+        stopwatch.Start();
         gridComponents = new List<Cell>();
         InitializeGrid();
     }
@@ -61,7 +65,7 @@ public class WaveFunction : MonoBehaviour
             tempGrid.RemoveRange(stopIndex, tempGrid.Count - stopIndex);
         }
 
-        yield return new WaitForSeconds(0.01f);
+        yield return null;
 
         CollapseCell(tempGrid);
     }
@@ -103,7 +107,7 @@ public class WaveFunction : MonoBehaviour
                         options.Add(t);
                     }
 
-                    //update above
+                    // Update above
                     if (y > 0)
                     {
                         Cell up = gridComponents[x + (y - 1) * dimensions];
@@ -120,7 +124,7 @@ public class WaveFunction : MonoBehaviour
                         CheckValidity(options, validOptions);
                     }
 
-                    //update right
+                    // Update right
                     if (x < dimensions - 1)
                     {
                         Cell right = gridComponents[x + 1 + y * dimensions];
@@ -137,7 +141,7 @@ public class WaveFunction : MonoBehaviour
                         CheckValidity(options, validOptions);
                     }
 
-                    //look down
+                    // Update down
                     if (y < dimensions - 1)
                     {
                         Cell down = gridComponents[x + (y + 1) * dimensions];
@@ -154,7 +158,7 @@ public class WaveFunction : MonoBehaviour
                         CheckValidity(options, validOptions);
                     }
 
-                    //look left
+                    // Update left
                     if (x > 0)
                     {
                         Cell left = gridComponents[x - 1 + y * dimensions];
@@ -190,7 +194,11 @@ public class WaveFunction : MonoBehaviour
         {
             StartCoroutine(CheckEntropy());
         }
-
+        else
+        {
+            stopwatch.Stop();
+            UnityEngine.Debug.Log($"Map generation took {stopwatch.ElapsedMilliseconds}ms");
+        }
     }
 
     void CheckValidity(List<Tile> optionList, List<Tile> validOption)
