@@ -616,8 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428870eebb880f94b8372a55448111ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimensions: 10
-  tileObjects:
+  allTiles:
   - {fileID: 8387159081642753197, guid: b6f502d4aca20b4488453f2119b52f84, type: 3}
   - {fileID: 8182247532594213965, guid: 889b9cadffe9866418feea9ee0131ae2, type: 3}
   - {fileID: 5578971210335937621, guid: c131e54fcde60a34c83340bd4c21d2d6, type: 3}
@@ -642,8 +641,8 @@ MonoBehaviour:
   - {fileID: 7105791295998524332, guid: b7573f8ed1d7cb64685193358f04170a, type: 3}
   - {fileID: -5444541829277354274, guid: 2e215c807921807469f38c0e2373e016, type: 3}
   - {fileID: 1544361107785315038, guid: 09b56ef713a427c45be36bf9ef470511, type: 3}
-  gridComponents: []
-  cellObj: {fileID: 3895442547388560232, guid: 49d600917a682a34fb086cf5b9946d72, type: 3}
+  gridWidth: 20
+  gridHeight: 20
 --- !u!4 &1804607890
 Transform:
   m_ObjectHideFlags: 0

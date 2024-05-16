@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf6e8e47845d3f40a01eb3acca7c052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: {fileID: 3588818343143933300}
   upNeighbours:
   - {fileID: 8182247532594213965, guid: 889b9cadffe9866418feea9ee0131ae2, type: 3}
   - {fileID: -4798169265034326209}
