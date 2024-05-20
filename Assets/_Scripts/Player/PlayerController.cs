@@ -19,14 +19,19 @@ public class PlayerController : SerializedMonoBehaviour
     private float magicRange;
     private float magicCooldown;
     private float luck;
-    private float dashRange;
-    private float dashCooldown;
     private float criticalChance;
     private float criticalDamage;
+    private float dashRange;
+    private float dashCooldown;
 
+    private bool canDash = true;
+    private bool isDashing = true;
+    private float dashPower;
+    private float dashTime;
 
     public Rigidbody2D rb;
     private Vector3 moveDirection;
+
 
     void Start()
     {
@@ -37,12 +42,29 @@ public class PlayerController : SerializedMonoBehaviour
     
     void Update()
     {
+
         ProcessInputs();
+        
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        {
+            StartCoroutine(Dash());
+            Debug.Log("Dash button hit");
+        }
+
+        if (isDashing)
+        {
+            return;
+        }
     }
 
     void FixedUpdate()
     {
         Move();
+
+        if (isDashing)
+        {
+            return;
+        }
     }
 
     void ProcessInputs()
@@ -56,6 +78,21 @@ public class PlayerController : SerializedMonoBehaviour
     void Move()
     {
         rb.velocity = new Vector3(moveDirection.x * movementSpeed, moveDirection.y * movementSpeed, 0f);
+    }
+
+
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.velocity = new Vector2(transform.localScale.x * dashPower, 0f);
+        yield return new WaitForSeconds(dashTime);
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 
 
