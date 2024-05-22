@@ -21,13 +21,12 @@ public class PlayerController : SerializedMonoBehaviour
     private float luck;
     private float criticalChance;
     private float criticalDamage;
-    private float dashRange;
+    private float dashPower;
     private float dashCooldown;
 
     private bool canDash = true;
-    private bool isDashing = true;
-    private float dashPower;
-    private float dashTime;
+    [SerializeField]  private bool isDashing = true;
+    [SerializeField] private float dashTime;
 
     public Rigidbody2D rb;
     private Vector3 moveDirection;
@@ -85,12 +84,10 @@ public class PlayerController : SerializedMonoBehaviour
     {
         canDash = false;
         isDashing = true;
-        float originalGravity = rb.gravityScale;
-        rb.gravityScale = 0f;
-        rb.velocity = new Vector2(transform.localScale.x * dashPower, 0f);
+        movementSpeed *= dashPower;
         yield return new WaitForSeconds(dashTime);
-        rb.gravityScale = originalGravity;
         isDashing = false;
+        movementSpeed /= dashPower;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
@@ -110,7 +107,7 @@ public class PlayerController : SerializedMonoBehaviour
         magicRange = PlayerStatUtils.CalculateMagicRange(playerStats);
         magicCooldown = PlayerStatUtils.CalculateMagicCooldown(playerStats);
         luck = PlayerStatUtils.CalculateLuck(playerStats);
-        dashRange = PlayerStatUtils.CalculateDashRange(playerStats);
+        dashPower = PlayerStatUtils.CalculateDashPower(playerStats);
         dashCooldown = PlayerStatUtils.CalculateDashCooldown(playerStats);
         criticalDamage = PlayerStatUtils.CalculateCritDamage(playerStats);
         criticalChance = PlayerStatUtils.CalculateCritChance(playerStats);

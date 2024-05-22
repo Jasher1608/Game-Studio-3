@@ -59,10 +59,10 @@ public static class PlayerStatUtils
         float movementSpeed = stats.GetStat(Stat.movementSpeed) * stats.GetStat(Stat.movementSpeedModifier);
         return movementSpeed;
     }
-    public static float CalculateDashRange(Stats stats)
+    public static float CalculateDashPower(Stats stats)
     {
-        float dashRange = stats.GetStat(Stat.dashRange) * stats.GetStat(Stat.dashRangeModifier);
-        return dashRange;
+        float dashPower = stats.GetStat(Stat.dashPower) * stats.GetStat(Stat.dashPowerModifier);
+        return dashPower;
     }
     public static float CalculateDashCooldown(Stats stats)
     {
