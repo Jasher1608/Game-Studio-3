@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f2d49fe2b3b0b428ae7c4fccaafb9e, type: 3}
+  m_Name: New Character Database
+  m_EditorClassIdentifier: 
+  character:
+  - characterName: Medea
+    characterSprite: {fileID: 626514147, guid: f143dbada834e854abdd63f7261c0130, type: 3}
+  - characterName: Atalanta
+    characterSprite: {fileID: 1096769131, guid: 38d73174cb5db334f9ad025955f4053c, type: 3}
+  - characterName: Orephus
+    characterSprite: {fileID: -506415494, guid: 0bcdb09745fd015428a5d55d52cc426b, type: 3}
+  - characterName: Gilgamesh
+    characterSprite: {fileID: 668405551, guid: c8435725769e4c94faa5d32b6b8dabd5, type: 3}
