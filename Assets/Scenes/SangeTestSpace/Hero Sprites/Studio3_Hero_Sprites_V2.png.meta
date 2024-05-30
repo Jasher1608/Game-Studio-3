@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0bcdb09745fd015428a5d55d52cc426b
+guid: b360d93acdcffa34d85ffa98908d35fd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -7,7 +7,7 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
-    sRGBTexture: 0
+    sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Orephus_Charm_Idle_0
+      name: Studio3_Hero_Sprites_V2_0
       rect:
         serializedVersion: 2
-        x: 82
-        y: 49
-        width: 57
-        height: 86
+        x: 65
+        y: 369
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa92e1f14d1606041952fecfde5506f2
-      internalID: -37608065
+      spriteID: 7ec2ae1d33ecae34c975a8f5de5aa06e
+      internalID: -1247287159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orephus_Charm_Idle_1
+      name: Studio3_Hero_Sprites_V2_1
       rect:
         serializedVersion: 2
-        x: 313
-        y: 49
-        width: 57
-        height: 86
+        x: 145
+        y: 369
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e68988bbb60c3d847b3feb8f561c1f4d
-      internalID: -791433357
+      spriteID: 6f4e37812b55b494695b91676f0aae10
+      internalID: 1875139252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orephus_Charm_Idle_2
+      name: Studio3_Hero_Sprites_V2_2
       rect:
         serializedVersion: 2
-        x: 544
-        y: 49
-        width: 57
-        height: 86
+        x: 65
+        y: 289
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f12a3578650c0894f916cde26f3722c3
-      internalID: -1967389968
+      spriteID: 8a102281071a81a469106f6322d1faa1
+      internalID: -1394225260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orephus_Charm_Idle_3
+      name: Studio3_Hero_Sprites_V2_3
       rect:
         serializedVersion: 2
-        x: 775
-        y: 49
-        width: 57
-        height: 86
+        x: 145
+        y: 289
+        width: 61
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,50 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e50c2ce7f22a634681414258686610c
-      internalID: -506415494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Orephus_Charm_Idle_4
-      rect:
-        serializedVersion: 2
-        x: 1006
-        y: 49
-        width: 57
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81405265352fb2f47853d82eeb723a68
-      internalID: 939960822
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Orephus_Charm_Idle_5
-      rect:
-        serializedVersion: 2
-        x: 1237
-        y: 49
-        width: 57
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62c03813d57c5d843b37963040c190cd
-      internalID: -1871783728
+      spriteID: afd798a73cb4ad046a868350aa90e76e
+      internalID: -1413319691
       vertices: []
       indices: 
       edges: []
@@ -246,12 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Orephus_Charm_Idle_0: -37608065
-      Orephus_Charm_Idle_1: -791433357
-      Orephus_Charm_Idle_2: -1967389968
-      Orephus_Charm_Idle_3: -506415494
-      Orephus_Charm_Idle_4: 939960822
-      Orephus_Charm_Idle_5: -1871783728
+      Studio3_Hero_Sprites_V2_0: -1247287159
+      Studio3_Hero_Sprites_V2_1: 1875139252
+      Studio3_Hero_Sprites_V2_2: -1394225260
+      Studio3_Hero_Sprites_V2_3: -1413319691
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

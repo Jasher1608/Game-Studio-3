@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character:
   - characterName: Medea
-    characterSprite: {fileID: 626514147, guid: f143dbada834e854abdd63f7261c0130, type: 3}
+    characterSprite: {fileID: -1394225260, guid: b360d93acdcffa34d85ffa98908d35fd, type: 3}
   - characterName: Atalanta
-    characterSprite: {fileID: 1096769131, guid: 38d73174cb5db334f9ad025955f4053c, type: 3}
+    characterSprite: {fileID: 1875139252, guid: b360d93acdcffa34d85ffa98908d35fd, type: 3}
   - characterName: Orephus
-    characterSprite: {fileID: -506415494, guid: 0bcdb09745fd015428a5d55d52cc426b, type: 3}
+    characterSprite: {fileID: -1413319691, guid: b360d93acdcffa34d85ffa98908d35fd, type: 3}
   - characterName: Gilgamesh
-    characterSprite: {fileID: 668405551, guid: c8435725769e4c94faa5d32b6b8dabd5, type: 3}
+    characterSprite: {fileID: -1247287159, guid: b360d93acdcffa34d85ffa98908d35fd, type: 3}
