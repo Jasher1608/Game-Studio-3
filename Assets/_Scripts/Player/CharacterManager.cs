@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CharacterManager : MonoBehaviour
 {
     public CharacterDatabase characterDB;
 
-    public Text nameText;
+    public TextMeshProUGUI characterName;
     public SpriteRenderer artworkSprite;
 
     private int selectedOption = 0;
@@ -15,6 +17,16 @@ public class CharacterManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!PlayerPrefs.HasKey("selectedOption"))
+        {
+            selectedOption = 0;
+        }
+
+        else
+        {
+            Load();
+        }
+
         UpdateCharacter(selectedOption);
     }
 
@@ -28,6 +40,7 @@ public class CharacterManager : MonoBehaviour
         }
 
         UpdateCharacter(selectedOption);
+        Save();
 
     }
 
@@ -41,14 +54,31 @@ public class CharacterManager : MonoBehaviour
         }
 
         UpdateCharacter(selectedOption);
+        Save();
+
     }
 
     private void UpdateCharacter(int selectedOption)
     {
         Character character = characterDB.GetCharacter(selectedOption);
         artworkSprite.sprite = character.characterSprite;
-        nameText.text = character.characterName;
+        characterName.text = character.characterName;
 
     }
 
+
+    private void Save()
+    {
+        PlayerPrefs.SetInt("selectedOption", selectedOption);
+    }
+
+    private void Load()
+    {
+        selectedOption = PlayerPrefs.GetInt("selectedOption");
+    }
+
+    public void ChangeScene(int sceneID)
+    {
+        SceneManager.LoadScene(sceneID);
+    }
 }

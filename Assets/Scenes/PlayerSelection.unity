@@ -577,7 +577,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1068000580}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2040343330}
+        m_TargetAssemblyTypeName: CharacterManager, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1068000580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,7 +640,7 @@ GameObject:
   - component: {fileID: 1102723753}
   - component: {fileID: 1102723752}
   m_Layer: 5
-  m_Name: NameText
+  m_Name: CharacterName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1345,15 +1357,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1096769131, guid: 38d73174cb5db334f9ad025955f4053c, type: 3}
+  m_Sprite: {fileID: -1247287159, guid: b360d93acdcffa34d85ffa98908d35fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.42}
+  m_Size: {x: 0.062, y: 0.062}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2040343329
@@ -1384,7 +1396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterDB: {fileID: 11400000, guid: a726616ea024cba4696577b2bcd81de2, type: 2}
-  nameText: {fileID: 0}
+  characterName: {fileID: 1102723752}
   artworkSprite: {fileID: 2040343328}
 --- !u!1 &2075665353
 GameObject:

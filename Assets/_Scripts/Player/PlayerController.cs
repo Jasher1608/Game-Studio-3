@@ -1,10 +1,15 @@
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerController : SerializedMonoBehaviour
 {
+    public CharacterDatabase characterDB;
+    public SpriteRenderer artworkSprite;
+    private int selectedOption = 0;
+
     public Stats playerStatsOriginal;
     public static Stats playerStats;
     private float movementSpeed;
@@ -36,6 +41,18 @@ public class PlayerController : SerializedMonoBehaviour
     {
         playerStats = Instantiate(playerStatsOriginal);
         CalculateStats();
+
+        if (!PlayerPrefs.HasKey("selectedOption"))
+        {
+            selectedOption = 0;
+        }
+
+        else
+        {
+            Load();
+        }
+
+        UpdateCharacter(selectedOption);
     }
     
     
@@ -111,5 +128,16 @@ public class PlayerController : SerializedMonoBehaviour
         dashCooldown = PlayerStatUtils.CalculateDashCooldown(playerStats);
         criticalDamage = PlayerStatUtils.CalculateCritDamage(playerStats);
         criticalChance = PlayerStatUtils.CalculateCritChance(playerStats);
-    } 
+    }
+
+    private void UpdateCharacter(int selectedOption)
+    {
+        Character character = characterDB.GetCharacter(selectedOption);
+        artworkSprite.sprite = character.characterSprite;
+    }
+
+    private void Load()
+    {
+        selectedOption = PlayerPrefs.GetInt("selectedOption");
+    }
 }
