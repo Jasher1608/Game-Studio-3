@@ -7,5 +7,6 @@ public class TilePlacement : MonoBehaviour
     void Awake()
     {
         transform.position = new Vector3(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y), 0);
+        transform.localScale = Vector3.one;
     }
 }
