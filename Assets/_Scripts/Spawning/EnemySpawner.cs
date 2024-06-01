@@ -79,6 +79,8 @@ public class EnemySpawner : MonoBehaviour
         waves[currentWaveCount].waveQuota = currentWaveQuota;
     }
 
+    // TODO: Reduce nesting
+    // TODO: Implement object pooling
     void SpawnEnemies()
     {
         if (waves[currentWaveCount].spawnCount < waves[currentWaveCount].waveQuota && !maxEnemiesReached)

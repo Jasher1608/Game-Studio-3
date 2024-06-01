@@ -20,6 +20,9 @@ public class EnemyController : MonoBehaviour
 
     private Vector2 movement;
 
+    public float separationDistance = 0.5f;
+    public LayerMask enemyLayerMask;
+
     void Awake()
     {
         enemyStats = Instantiate(enemyStatsOriginal);
@@ -32,16 +35,17 @@ public class EnemyController : MonoBehaviour
         CalculateStats();
     }
 
-
     void Update()
     {
         if (Vector2.Distance(transform.position, playerTransform.position) >= despawnDistance)
         {
             ReturnEnemy();
         }
-        
+
         Vector2 direction = (playerTransform.position - transform.position).normalized;
-        movement = direction * movementSpeed;
+        Vector2 separation = CalculateSeparation();
+
+        movement = (direction + separation).normalized * movementSpeed;
         rb.velocity = movement;
     }
 
@@ -78,5 +82,22 @@ public class EnemyController : MonoBehaviour
         Vector3 offset = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle)) * distance;
 
         transform.position = playerPosition + offset;
+    }
+
+    Vector2 CalculateSeparation()
+    {
+        Vector2 separationForce = Vector2.zero;
+        Collider2D[] neighbors = Physics2D.OverlapCircleAll(transform.position, separationDistance, enemyLayerMask);
+
+        foreach (Collider2D neighbor in neighbors)
+        {
+            if (neighbor != null && neighbor.transform != transform)
+            {
+                Vector2 difference = transform.position - neighbor.transform.position;
+                separationForce += difference.normalized / difference.magnitude;
+            }
+        }
+
+        return separationForce;
     }
 }
