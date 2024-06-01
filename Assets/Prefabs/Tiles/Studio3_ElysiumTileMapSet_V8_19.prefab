@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7948915631317220429}
   - component: {fileID: 7150865978597967732}
-  - component: {fileID: -202127572850854897}
+  - component: {fileID: 806282126835926323}
   m_Layer: 0
   m_Name: Studio3_ElysiumTileMapSet_V8_19
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-202127572850854897
+--- !u!114 &806282126835926323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

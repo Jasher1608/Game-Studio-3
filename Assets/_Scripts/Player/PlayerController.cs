@@ -64,7 +64,6 @@ public class PlayerController : SerializedMonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
             StartCoroutine(Dash());
-            Debug.Log("Dash button hit");
         }
 
         if (isDashing)
