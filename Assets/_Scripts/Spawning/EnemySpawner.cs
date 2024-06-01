@@ -1,143 +1,130 @@
-using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
     [System.Serializable]
-    public class EnemyWave
+    public class Wave
     {
-        public List<EnemyType> enemyTypes;
+        public string waveName;
+        public List<EnemyGroup> enemyGroups;
+        public int waveQuota;
+        public float spawnInterval;
+        public int spawnCount;
     }
 
     [System.Serializable]
-    public class EnemyType
+    public class EnemyGroup
     {
+        public string enemyName;
+        public int enemyCount;
+        public int spawnCount;
         public GameObject enemyPrefab;
-        public int minAmount;
-        public float spawnInterval;
     }
 
-    public List<EnemyWave> waves;
-    public float waveInterval = 60f;
+    public List<Wave> waves;
+    public int currentWaveCount;
 
-    private float waveTimer;
-    private int currentWaveIndex = 0;
-    private int totalEnemiesAlive = 0;
-    private const int maxEnemiesAlive = 300;
-    private Camera mainCamera;
+    float spawnTimer;
+    public int enemiesAlive;
+    public int maxEnemiesAllowed;
+    public bool maxEnemiesReached = false;
+    public float waveInterval;
+
+    Transform player;
+    Camera mainCamera;
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         mainCamera = Camera.main;
-        waveTimer = waveInterval;
-        InvokeRepeating(nameof(SpawnEnemies), 0f, 1f);
-
-        foreach (var wave in waves)
-        {
-            foreach (var enemyType in wave.enemyTypes)
-            {
-                EnemyPool.Instance.CreatePool(enemyType.enemyPrefab, 10); // Default initial pool size
-            }
-        }
+        CalculateWaveQuota();
     }
 
     private void Update()
     {
-        waveTimer -= Time.deltaTime;
-
-        if (waveTimer <= 0f)
+        if (currentWaveCount < waves.Count && waves[currentWaveCount].spawnCount == 0)
         {
-            waveTimer = waveInterval;
-            currentWaveIndex++;
-            if (currentWaveIndex >= waves.Count)
-            {
-                currentWaveIndex = 0; // Loop back to the first wave
-            }
+            StartCoroutine(BeginNextWave());
+        }
+        
+        spawnTimer += Time.deltaTime;
+
+        if (spawnTimer >= waves[currentWaveCount].spawnInterval)
+        {
+            spawnTimer = 0f;
+            SpawnEnemies();
         }
     }
 
-    private void SpawnEnemies()
+    IEnumerator BeginNextWave()
     {
-        if (totalEnemiesAlive >= maxEnemiesAlive) return;
-
-        var currentWave = waves[currentWaveIndex];
-
-        foreach (var enemyType in currentWave.enemyTypes)
+        yield return new WaitForSeconds(waveInterval);
+        if (currentWaveCount < waves.Count - 1)
         {
-            if (GetEnemiesOfTypeAlive(enemyType.enemyPrefab) < enemyType.minAmount)
+            currentWaveCount++;
+            CalculateWaveQuota();
+        }
+    }
+
+    void CalculateWaveQuota()
+    {
+        int currentWaveQuota = 0;
+        foreach (var enemyGroup in waves[currentWaveCount].enemyGroups)
+        {
+            currentWaveQuota += enemyGroup.enemyCount;
+        }
+
+        waves[currentWaveCount].waveQuota = currentWaveQuota;
+    }
+
+    void SpawnEnemies()
+    {
+        if (waves[currentWaveCount].spawnCount < waves[currentWaveCount].waveQuota && !maxEnemiesReached)
+        {
+            foreach (var enemyGroup in waves[currentWaveCount].enemyGroups)
             {
-                int enemiesToSpawn = enemyType.minAmount - GetEnemiesOfTypeAlive(enemyType.enemyPrefab);
-                for (int i = 0; i < enemiesToSpawn; i++)
+                if (enemyGroup.spawnCount < enemyGroup.enemyCount)
                 {
-                    SpawnEnemy(enemyType.enemyPrefab);
+                    if (enemiesAlive >= maxEnemiesAllowed)
+                    {
+                        maxEnemiesReached = true;
+                        return;
+                    }
+
+                    Vector3 playerPosition = player.position;
+
+                    float cameraHeight = 2f * mainCamera.orthographicSize;
+                    float cameraWidth = cameraHeight * mainCamera.aspect;
+
+                    float minDistance = Mathf.Max(cameraWidth, cameraHeight) / 2f + 1f;
+                    float maxDistance = minDistance + 5f;
+
+                    float angle = Random.Range(0, Mathf.PI * 2);
+
+                    float distance = Random.Range(minDistance, maxDistance);
+
+                    Vector3 offset = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle)) * distance;
+                    Vector2 spawnPosition = new Vector2(playerPosition.x + offset.x, playerPosition.y + offset.y);
+
+                    Instantiate(enemyGroup.enemyPrefab, spawnPosition, Quaternion.identity);
+
+                    enemyGroup.spawnCount++;
+                    waves[currentWaveCount].spawnCount++;
+                    enemiesAlive++;
                 }
             }
-            else
-            {
-                if (Random.value < enemyType.spawnInterval)
-                {
-                    SpawnEnemy(enemyType.enemyPrefab);
-                }
-            }
         }
-    }
 
-    private void SpawnEnemy(GameObject enemyPrefab)
-    {
-        GameObject enemy = EnemyPool.Instance.GetPooledObject(enemyPrefab);
-        if (enemy != null)
+        if (enemiesAlive < maxEnemiesAllowed)
         {
-            enemy.SetActive(true);
-            enemy.transform.position = GetRandomSpawnPosition();
-            totalEnemiesAlive++;
+            maxEnemiesReached = false;
         }
     }
 
-    private int GetEnemiesOfTypeAlive(GameObject enemyPrefab)
+    public void OnEnemyKilled()
     {
-        return EnemyPool.Instance.GetActiveCount(enemyPrefab);
-    }
-
-    private Vector3 GetRandomSpawnPosition()
-    {
-        Vector3 spawnPosition = Vector3.zero;
-
-        float screenHeight = 2f * mainCamera.orthographicSize;
-        float screenWidth = screenHeight * mainCamera.aspect;
-
-        float spawnBuffer = 2f; // Distance outside the screen
-
-        float xPosition = 0f;
-        float yPosition = 0f;
-
-        int side = Random.Range(0, 4); // 0 = Top, 1 = Bottom, 2 = Left, 3 = Right
-
-        switch (side)
-        {
-            case 0: // Top
-                xPosition = Random.Range(-screenWidth / 2, screenWidth / 2);
-                yPosition = screenHeight / 2 + spawnBuffer;
-                break;
-            case 1: // Bottom
-                xPosition = Random.Range(-screenWidth / 2, screenWidth / 2);
-                yPosition = -screenHeight / 2 - spawnBuffer;
-                break;
-            case 2: // Left
-                xPosition = -screenWidth / 2 - spawnBuffer;
-                yPosition = Random.Range(-screenHeight / 2, screenHeight / 2);
-                break;
-            case 3: // Right
-                xPosition = screenWidth / 2 + spawnBuffer;
-                yPosition = Random.Range(-screenHeight / 2, screenHeight / 2);
-                break;
-        }
-
-        spawnPosition = new Vector3(xPosition, yPosition, 0f);
-        return spawnPosition;
-    }
-
-    public void OnEnemyDeath(GameObject enemy)
-    {
-        totalEnemiesAlive--;
+        enemiesAlive--;
     }
 }
