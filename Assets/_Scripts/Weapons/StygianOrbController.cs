@@ -23,6 +23,7 @@ public class StygianOrbController : WeaponController
             float orbY = transform.position.y + Mathf.Sin(angle) * radius;
 
             GameObject spawnedOrb = Instantiate(prefab, new Vector3(orbX, orbY, 0), Quaternion.identity, gameObject.transform);
+            spawnedOrb.transform.localScale *= PlayerController.playerStats.GetStat(Stat.attackAreaModifier);
         }
     }
 

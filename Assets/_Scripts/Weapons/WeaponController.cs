@@ -31,6 +31,7 @@ public class WeaponController : SerializedMonoBehaviour
 
     protected virtual void Attack()
     {
+        CalculateStats();
         currentCooldown = cooldownDuration;
     }
 
