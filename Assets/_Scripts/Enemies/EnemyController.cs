@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour
     private Rigidbody2D rb;
 
     [SerializeField] private Stats enemyStatsOriginal;
-    [SerializeField] private Stats enemyStats;
+    [HideInInspector] public Stats enemyStats;
 
     public float despawnDistance = 20f;
 
@@ -37,6 +37,11 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
+        if (enemyStats.GetStat(Stat.health) <= 0)
+        {
+            Death();
+        }
+        
         if (Vector2.Distance(transform.position, playerTransform.position) >= despawnDistance)
         {
             ReturnEnemy();
@@ -56,6 +61,8 @@ public class EnemyController : MonoBehaviour
         meleeDamage = PlayerStatUtils.CalculateMeleeDamage(enemyStats);
         meleeCooldown = PlayerStatUtils.CalculateMeleeCooldown(enemyStats);
     }
+
+    // TODO: Implement an OnTakeDamage() method
 
     private void Death()
     {
@@ -84,6 +91,7 @@ public class EnemyController : MonoBehaviour
         transform.position = playerPosition + offset;
     }
 
+    // TODO: Rework flocking to reduce jitter
     Vector2 CalculateSeparation()
     {
         Vector2 separationForce = Vector2.zero;

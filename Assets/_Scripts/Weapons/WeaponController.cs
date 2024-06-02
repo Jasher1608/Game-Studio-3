@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class WeaponController : SerializedMonoBehaviour
 {
+    // TODO: Move some stats to behaviour script to reduce dependencies
     [Header("Weapon Stats")]
     public GameObject prefab;
     public float damage;

@@ -584,7 +584,7 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   prefab: {fileID: 9078656483518413336, guid: 2d5c5db3e8e7e234fbe15bfc4574a218, type: 3}
-  damage: 0
+  damage: 5
   speed: 125
   cooldownDuration: 7
   currentCooldown: 0
