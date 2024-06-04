@@ -43,3 +43,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackgroundTitle
+    uniqueID: 3827120993
+    locked: 0
