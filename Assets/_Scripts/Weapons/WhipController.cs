@@ -5,10 +5,11 @@ using UnityEngine;
 public class WhipController : WeaponController
 {
 
+
+    public GameObject whipPrefab;
     public float attackRange;
     public float attackAngle;
     public string enemyTag = "Enemy";
-
 
 
     protected new void Start()
@@ -24,11 +25,17 @@ public class WhipController : WeaponController
 
     private void WhipAttack()
     {
+        //Instantiate the whip object at the player's position and rotation
+        GameObject spawnedWhip = Instantiate(whipPrefab, transform.position, transform.rotation);
+
+
         //Direction of attack
         Vector3 attackDirection = transform.right;
 
         //Detect other collders within attack range
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, attackRange);
+
+       
 
         foreach (Collider2D collider in hitColliders)
         {
@@ -53,7 +60,7 @@ public class WhipController : WeaponController
         if (enemyController != null)
         {
             float damage = PlayerStatUtils.CalculateMeleeDamage(PlayerController.playerStats);
-            //enemyController.TakeDamage(damage);
+            enemyController.TakeDamage();
         }
     }
 
