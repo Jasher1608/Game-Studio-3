@@ -237,7 +237,7 @@ Transform:
   m_Children:
   - {fileID: 519420032}
   - {fileID: 654038189}
-  - {fileID: 1611183263}
+  - {fileID: 1832869401}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &430522995
@@ -601,7 +601,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1133348308}
-  - component: {fileID: 1133348307}
+  - component: {fileID: 1133348309}
   m_Layer: 0
   m_Name: Enemy Spawner
   m_TagString: Untagged
@@ -609,18 +609,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1133348307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133348306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b39d40348c9fa4e4084d354b2db7c00f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1133348308
 Transform:
   m_ObjectHideFlags: 0
@@ -636,6 +624,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1133348309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133348306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43bf9caf24faad341aa4a43301e275df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves: []
+  currentWaveCount: 0
+  enemiesAlive: 0
+  maxEnemiesAllowed: 0
+  maxEnemiesReached: 0
+  waveInterval: 0
 --- !u!1 &1373065954
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,23 +719,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1611183260 stripped
+--- !u!1 &1832869400
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1801405710338492815, guid: 4d35c6711e28ff94c8081d16675351a9, type: 3}
-  m_PrefabInstance: {fileID: 1222403405507028515}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1611183263 stripped
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1832869401}
+  - component: {fileID: 1832869402}
+  m_Layer: 0
+  m_Name: WhipController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1832869401
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2525874833892018171, guid: 4d35c6711e28ff94c8081d16675351a9, type: 3}
-  m_PrefabInstance: {fileID: 1222403405507028515}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1611183266
+  m_GameObject: {fileID: 1832869400}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 430522994}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1832869402
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611183260}
+  m_GameObject: {fileID: 1832869400}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f8bcc011298fad4da95d3fe23f587f1, type: 3}
@@ -744,76 +772,16 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  prefab: {fileID: 0}
-  damage: 0
-  speed: 0
-  cooldownDuration: 0
+  prefab: {fileID: 1801405710338492815, guid: 4d35c6711e28ff94c8081d16675351a9, type: 3}
+  damage: 5
+  speed: 5
+  cooldownDuration: 5
   currentCooldown: 0
-  pierce: 0
-  count: 0
-  attackRange: 0
+  pierce: 10
+  count: 1
+  attackRange: 10
   attackAngle: 0
   enemyTag: Enemy
---- !u!1001 &1222403405507028515
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 430522994}
-    m_Modifications:
-    - target: {fileID: 1801405710338492815, guid: 4d35c6711e28ff94c8081d16675351a9, type: 3}
-      propertyPath: m_Name
-      value: WhipController
-      objectReference: {fileID: 0}
-    - target: {fileID: 2525874833892018171, guid: 4d35c6711e28ff94c8081d16675351a9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.3419999
-      objectReference: {fileID: 0}
-    - target: {fileID: 2525874833892018171, guid: 4d35c6711e28ff94c8081d16675351a9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.103
-      objectReference: {fileID: 0}
-    - target: {fileID: 2525874833892018171, guid: 4d35c6711e28ff94c8081d16675351a9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.07208511
-      objectReference: {fileID: 0}
-    - target: {fileID: 2525874833892018171, guid: 4d35c6711e28ff94c8081d16675351a9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2525874833892018171, guid: 4d35c6711e28ff94c8081d16675351a9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2525874833892018171, guid: 4d35c6711e28ff94c8081d16675351a9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2525874833892018171, guid: 4d35c6711e28ff94c8081d16675351a9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2525874833892018171, guid: 4d35c6711e28ff94c8081d16675351a9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2525874833892018171, guid: 4d35c6711e28ff94c8081d16675351a9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2525874833892018171, guid: 4d35c6711e28ff94c8081d16675351a9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1801405710338492815, guid: 4d35c6711e28ff94c8081d16675351a9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1611183266}
-  m_SourcePrefab: {fileID: 100100000, guid: 4d35c6711e28ff94c8081d16675351a9, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -34,7 +34,7 @@ public class WhipBehaviour : MeleeWeaponBehaviour
                 return;
             }
 
-            enemyController.enemyStats.ChangeStat(Stat.health, -WhipController.damage);
+            enemyController.enemyStats.ChangeStat(Stat.health, -whipController.damage);
         }
     }
 
