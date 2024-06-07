@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -888026328, guid: 8c6cdf82e6ba3ba4bb2b7ed3f114653d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -163,8 +163,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStatsOriginal: {fileID: 11400000, guid: 12712fce96d473f46b82b49a2ac08b23, type: 2}
   enemyStats: {fileID: 0}
-  despawnDistance: 20
+  despawnDistance: 30
   separationDistance: 0
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  ambrosia: {fileID: 5340849254588779802, guid: 3c367084448d1ae49b3f1b12b952bec7, type: 3}

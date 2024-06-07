@@ -24,6 +24,8 @@ public class EnemyController : MonoBehaviour
     public float separationDistance = 0.5f;
     public LayerMask enemyLayerMask;
 
+    [SerializeField] private GameObject ambrosia;
+
     void Awake()
     {
         enemyStats = Instantiate(enemyStatsOriginal);
@@ -69,6 +71,7 @@ public class EnemyController : MonoBehaviour
     {
         EnemySpawner enemySpawner = FindObjectOfType<EnemySpawner>();
         enemySpawner.OnEnemyKilled();
+        Instantiate(ambrosia, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 

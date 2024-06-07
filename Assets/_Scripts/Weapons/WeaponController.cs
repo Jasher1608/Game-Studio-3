@@ -39,7 +39,7 @@ public class WeaponController : SerializedMonoBehaviour
     {
         cooldownDuration *= PlayerController.playerStats.GetStat(Stat.abilityCooldownModifier);
         speed *= PlayerController.playerStats.GetStat(Stat.projectileSpeedModifier);
-        damage *= PlayerStatUtils.CalculateMagicDamage(PlayerController.playerStats);
+        damage *= PlayerController.playerStats.GetStat(Stat.magicDamageModifier);
         count += Mathf.RoundToInt(PlayerController.playerStats.GetStat(Stat.additionalProjectileCount));
     }
 }
