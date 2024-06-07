@@ -15,9 +15,7 @@ MonoBehaviour:
   character:
   - characterName: Medea
     characterSprite: {fileID: -1394225260, guid: b360d93acdcffa34d85ffa98908d35fd, type: 3}
-  - characterName: Atalanta
-    characterSprite: {fileID: 1875139252, guid: b360d93acdcffa34d85ffa98908d35fd, type: 3}
   - characterName: Orephus
     characterSprite: {fileID: -1413319691, guid: b360d93acdcffa34d85ffa98908d35fd, type: 3}
-  - characterName: Gilgamesh
+  - characterName: Theseus
     characterSprite: {fileID: -1247287159, guid: b360d93acdcffa34d85ffa98908d35fd, type: 3}

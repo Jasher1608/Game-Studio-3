@@ -28,10 +28,10 @@ public class WhipController : WeaponController
         spawnedWhip.transform.parent = transform;
 
 
-        //TO DO:
-        //Ability to increase count of whip
-        //Increase distance / range of whip in realtion to whip count
-        //Depending on the whip count decide which direction to face (e.g. whips in vampire survivor)
+        
+        // TODO: Ability to increase count of whip
+        // TODO: Increase distance / range of whip in realtion to whip count
+        // TODO: Depending on the whip count decide which direction to face (e.g. whips in vampire survivor)
     }
 
     private void OnDrawGizmosSelected()
