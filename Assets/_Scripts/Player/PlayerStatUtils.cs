@@ -84,4 +84,9 @@ public static class PlayerStatUtils
         float attackArea = stats.GetStat(Stat.attackArea) * stats.GetStat(Stat.attackAreaModifier);
         return attackArea;
     }
+    public static float CalculatePickupRange(Stats stats)
+    {
+        float pickupRange = stats.GetStat(Stat.pickupRange) * stats.GetStat(Stat.pickupRangeModifier);
+        return pickupRange;
+    }
 }

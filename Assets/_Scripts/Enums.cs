@@ -46,5 +46,8 @@ public enum Stat
     projectileSpeedModifier,
     attackArea,
     attackAreaModifier,
-    durationModifier
+    durationModifier,
+    xpModifier,
+    pickupRange,
+    pickupRangeModifier
 }

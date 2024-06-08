@@ -28,6 +28,7 @@ public class PlayerController : SerializedMonoBehaviour
     private float criticalDamage;
     private float dashPower;
     private float dashCooldown;
+    private float pickupRange;
 
     private bool canDash = true;
     [SerializeField]  private bool isDashing = true;
@@ -35,6 +36,9 @@ public class PlayerController : SerializedMonoBehaviour
 
     public Rigidbody2D rb;
     private Vector3 moveDirection;
+
+    public LayerMask ambrosiaLayerMask;
+    [SerializeField] private float ambrosiaSpeed;
 
 
     void Start()
@@ -58,7 +62,6 @@ public class PlayerController : SerializedMonoBehaviour
     
     void Update()
     {
-
         ProcessInputs();
         
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
@@ -66,10 +69,7 @@ public class PlayerController : SerializedMonoBehaviour
             StartCoroutine(Dash());
         }
 
-        if (isDashing)
-        {
-            return;
-        }
+        AttractAmbrosia();
     }
 
     void FixedUpdate()
@@ -108,8 +108,6 @@ public class PlayerController : SerializedMonoBehaviour
         canDash = true;
     }
 
-
-
     void CalculateStats()
     {
         movementSpeed = PlayerStatUtils.CalculateMovementSpeed(playerStats);
@@ -127,6 +125,7 @@ public class PlayerController : SerializedMonoBehaviour
         dashCooldown = PlayerStatUtils.CalculateDashCooldown(playerStats);
         criticalDamage = PlayerStatUtils.CalculateCritDamage(playerStats);
         criticalChance = PlayerStatUtils.CalculateCritChance(playerStats);
+        pickupRange = PlayerStatUtils.CalculatePickupRange(playerStats);
     }
 
     private void UpdateCharacter(int selectedOption)
@@ -138,5 +137,21 @@ public class PlayerController : SerializedMonoBehaviour
     private void Load()
     {
         selectedOption = PlayerPrefs.GetInt("selectedOption");
+    }
+
+    private void AttractAmbrosia()
+    {
+        Collider2D[] ambrosias = Physics2D.OverlapCircleAll(transform.position, pickupRange, ambrosiaLayerMask);
+
+        foreach (Collider2D ambrosia in ambrosias)
+        {
+            if (ambrosia != null)
+            {
+                Vector2 direction = (transform.position - ambrosia.transform.position).normalized;
+                float step = ambrosiaSpeed * Time.deltaTime;
+
+                ambrosia.transform.position = Vector2.MoveTowards(ambrosia.transform.position, transform.position, step);
+            }
+        }
     }
 }

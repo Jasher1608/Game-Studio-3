@@ -170,6 +170,10 @@ MonoBehaviour:
   isDashing: 1
   dashTime: 0.2
   rb: {fileID: 430522995}
+  ambrosiaLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  ambrosiaSpeed: 5
 --- !u!212 &430522993
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -608,7 +612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1133348308
 Transform:
   m_ObjectHideFlags: 0
