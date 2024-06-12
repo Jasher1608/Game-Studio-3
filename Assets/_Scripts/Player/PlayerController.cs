@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : SerializedMonoBehaviour
 {
@@ -34,9 +35,11 @@ public class PlayerController : SerializedMonoBehaviour
     public float xp;
     private float xpToNextLevel;
     public float ambrosiaXP;
+    [SerializeField] private Slider xpSlider;
+    [SerializeField] private TextMeshProUGUI levelText;
 
     private bool canDash = true;
-    [SerializeField]  private bool isDashing = true;
+    [SerializeField] private bool isDashing = true;
     [SerializeField] private float dashTime;
 
     public Rigidbody2D rb;
@@ -63,6 +66,7 @@ public class PlayerController : SerializedMonoBehaviour
 
         UpdateCharacter(selectedOption);
         CalculateXPToNextLevel();
+        levelText.text = $"LVL {level}";
     }
     
     
@@ -100,7 +104,6 @@ public class PlayerController : SerializedMonoBehaviour
     {
         rb.velocity = new Vector3(moveDirection.x * movementSpeed, moveDirection.y * movementSpeed, 0f);
     }
-
 
     private IEnumerator Dash()
     {
@@ -169,12 +172,14 @@ public class PlayerController : SerializedMonoBehaviour
             xp -= xpToNextLevel;
             LevelUp();
         }
+        xpSlider.value = xp;
     }
 
     private void LevelUp()
     {
         level++;
         CalculateXPToNextLevel();
+        levelText.text = $"LVL {level}";
     }
 
     private void CalculateXPToNextLevel()
@@ -195,6 +200,7 @@ public class PlayerController : SerializedMonoBehaviour
         {
             xpToNextLevel = 455 + (level - 40) * 16; // 455 is the XP needed to reach level 41
         }
+        xpSlider.maxValue = xpToNextLevel;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
