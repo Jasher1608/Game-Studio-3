@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class WhipController : WeaponController
 {
-    public float attackRange;
     public float attackAngle;
     public string enemyTag = "Enemy";
+    private Quaternion[] whipDirections = new Quaternion[]
+    {
+        Quaternion.Euler(0, 0, 0),     // Right
+        Quaternion.Euler(0, 0, 180),   // Left
+        Quaternion.Euler(0, 0, 90),    // Top
+        Quaternion.Euler(0, 0, -90)    // Bottom
+    };
 
     protected new void Start()
     {
@@ -21,27 +27,21 @@ public class WhipController : WeaponController
 
     private void WhipAttack()
     {
-        //Instantiate the whip object at the player's position and rotation
-        GameObject spawnedWhip = Instantiate(prefab, transform.position, transform.rotation);
+        // ity to increase count of whip
+        for (int i = 0; i < count; i++)
+        {
+            // Spawn whip
+            GameObject spawnedWhip = Instantiate(prefab, gameObject.transform);   
 
-        // Set the instantiated whip as a child of the player
-        spawnedWhip.transform.parent = transform;
+            //Increased range depending on whip count
+            spawnedWhip.transform.localScale *= PlayerController.playerStats.GetStat(Stat.attackAreaModifier);
 
+            // TODO: Depending on the whip count decide which direction to face (e.g. whips in vampire survivor)
+            spawnedWhip.transform.rotation = whipDirections[i % 4];
 
-        
-        // TODO: Ability to increase count of whip
-        // TODO: Increase distance / range of whip in realtion to whip count
-        // TODO: Depending on the whip count decide which direction to face (e.g. whips in vampire survivor)
+        }
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        //To visualise the above
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
-    }
-
-    //cooldown copied from Stygianord contoller script
     public void ResetCooldown()
     {
         currentCooldown = cooldownDuration;
