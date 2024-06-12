@@ -30,6 +30,11 @@ public class PlayerController : SerializedMonoBehaviour
     private float dashCooldown;
     private float pickupRange;
 
+    public int level = 1;
+    public float xp;
+    private float xpToNextLevel;
+    public float ambrosiaXP;
+
     private bool canDash = true;
     [SerializeField]  private bool isDashing = true;
     [SerializeField] private float dashTime;
@@ -57,6 +62,7 @@ public class PlayerController : SerializedMonoBehaviour
         }
 
         UpdateCharacter(selectedOption);
+        CalculateXPToNextLevel();
     }
     
     
@@ -152,6 +158,51 @@ public class PlayerController : SerializedMonoBehaviour
 
                 ambrosia.transform.position = Vector2.MoveTowards(ambrosia.transform.position, transform.position, step);
             }
+        }
+    }
+
+    public void GainXP(float amount)
+    {
+        xp += amount;
+        while (xp >= xpToNextLevel)
+        {
+            xp -= xpToNextLevel;
+            LevelUp();
+        }
+    }
+
+    private void LevelUp()
+    {
+        level++;
+        CalculateXPToNextLevel();
+    }
+
+    private void CalculateXPToNextLevel()
+    {
+        if (level == 1)
+        {
+            xpToNextLevel = 5;
+        }
+        else if (level <= 20)
+        {
+            xpToNextLevel = 5 + (level - 1) * 10;
+        }
+        else if (level <= 40)
+        {
+            xpToNextLevel = 195 + (level - 20) * 13; // 195 is the XP needed to reach level 21
+        }
+        else
+        {
+            xpToNextLevel = 455 + (level - 40) * 16; // 455 is the XP needed to reach level 41
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ambrosia"))
+        {
+            GainXP(ambrosiaXP);
+            Destroy(collision.gameObject);
         }
     }
 }

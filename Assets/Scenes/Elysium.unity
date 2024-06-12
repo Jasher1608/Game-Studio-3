@@ -167,6 +167,9 @@ MonoBehaviour:
   characterDB: {fileID: 11400000, guid: a726616ea024cba4696577b2bcd81de2, type: 2}
   artworkSprite: {fileID: 430522993}
   playerStatsOriginal: {fileID: 11400000, guid: 1c2379ba3dfc55b4084eb8bf185ea3fb, type: 2}
+  level: 1
+  xp: 0
+  ambrosiaXP: 2
   isDashing: 1
   dashTime: 0.2
   rb: {fileID: 430522995}
