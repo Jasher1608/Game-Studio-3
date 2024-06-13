@@ -15,6 +15,11 @@ public class WeaponController : SerializedMonoBehaviour
     public int pierce;
     public int count;
 
+    public bool fireAtEnemy = false;
+    [SerializeField] protected float detectionRadius;
+    protected Vector3 nearestEnemyDirection;
+    public LayerMask enemyLayer;
+
     protected virtual void Start()
     {
         currentCooldown = cooldownDuration;
@@ -25,7 +30,18 @@ public class WeaponController : SerializedMonoBehaviour
         currentCooldown -= Time.deltaTime;
         if (currentCooldown <= 0f)
         {
-            Attack();
+            if (!fireAtEnemy)
+            {
+                Attack();
+            }
+            else
+            {
+                nearestEnemyDirection = GetDirectionToNearestEnemy(transform.position);
+                if (nearestEnemyDirection != null)
+                {
+                    Attack();
+                }
+            }
         }
     }
 
@@ -41,5 +57,50 @@ public class WeaponController : SerializedMonoBehaviour
         speed *= PlayerController.playerStats.GetStat(Stat.projectileSpeedModifier);
         damage *= PlayerController.playerStats.GetStat(Stat.magicDamageModifier);
         count += Mathf.RoundToInt(PlayerController.playerStats.GetStat(Stat.additionalProjectileCount));
+    }
+
+    protected Transform GetNearestEnemyPosition(Vector3 currentPosition)
+    {
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(currentPosition, detectionRadius, enemyLayer);
+        Transform nearestEnemy = null;
+        float shortestDistance = Mathf.Infinity;
+
+        foreach (Collider2D hitCollider in hitColliders)
+        {
+            float distanceToEnemy = Vector3.Distance(currentPosition, hitCollider.transform.position);
+            if (distanceToEnemy < shortestDistance)
+            {
+                shortestDistance = distanceToEnemy;
+                nearestEnemy = hitCollider.transform;
+            }
+        }
+
+        if (nearestEnemy != null)
+        {
+            return nearestEnemy;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    protected Vector3 GetDirectionToNearestEnemy(Vector3 currentPosition)
+    {
+        Transform nearestEnemy = GetNearestEnemyPosition(currentPosition);
+        if (nearestEnemy != null)
+        {
+            Vector3 directionToEnemy = nearestEnemy.position - currentPosition;
+            return directionToEnemy.normalized;
+        }
+        else
+        {
+            return Vector3.zero;
+        }
+    }
+
+    public void ResetCooldown()
+    {
+        currentCooldown = cooldownDuration;
     }
 }

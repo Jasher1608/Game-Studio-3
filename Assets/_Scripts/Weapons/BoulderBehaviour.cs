@@ -1,20 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class StygianOrbBehaviour : ProjectileWeaponBehaviour
+public class BoulderBehaviour : ProjectileWeaponBehaviour
 {
-    StygianOrbController stygianOrbController;
+    BoulderController boulderController;
+    public Vector3 targetDirection;
 
     protected override void Start()
     {
         base.Start();
-        stygianOrbController = FindObjectOfType<StygianOrbController>();
+        boulderController = FindObjectOfType<BoulderController>();
     }
 
     void Update()
     {
-        transform.RotateAround(stygianOrbController.transform.position, Vector3.forward, stygianOrbController.speed * Time.deltaTime);
+        if (targetDirection != Vector3.zero)
+        {
+            transform.position += boulderController.speed * Time.deltaTime * targetDirection;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,12 +37,12 @@ public class StygianOrbBehaviour : ProjectileWeaponBehaviour
                 return;
             }
 
-            enemyController.enemyStats.ChangeStat(Stat.health, -stygianOrbController.damage);
+            enemyController.enemyStats.ChangeStat(Stat.health, -boulderController.damage);
         }
     }
 
     private void OnDestroy()
     {
-        stygianOrbController.ResetCooldown();
+        boulderController.ResetCooldown();
     }
 }

@@ -26,9 +26,4 @@ public class StygianOrbController : WeaponController
             spawnedOrb.transform.localScale *= PlayerController.playerStats.GetStat(Stat.attackAreaModifier);
         }
     }
-
-    public void ResetCooldown()
-    {
-        currentCooldown = cooldownDuration;
-    }
 }
