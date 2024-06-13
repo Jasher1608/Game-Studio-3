@@ -659,10 +659,10 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  prefab: {fileID: 9078656483518413336, guid: 2d5c5db3e8e7e234fbe15bfc4574a218, type: 3}
+  prefab: {fileID: 1973814242646546138, guid: 2d5c5db3e8e7e234fbe15bfc4574a218, type: 3}
   damage: 5
   speed: 150
-  cooldownDuration: 5
+  cooldownDuration: 6
   currentCooldown: 0
   pierce: 0
   count: 1
@@ -670,7 +670,7 @@ MonoBehaviour:
   detectionRadius: 0
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   radius: 2
 --- !u!1 &843762906
 GameObject:
