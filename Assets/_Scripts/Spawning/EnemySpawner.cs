@@ -31,6 +31,7 @@ public class EnemySpawner : MonoBehaviour
     public int maxEnemiesAllowed;
     public bool maxEnemiesReached = false;
     public float waveInterval;
+    private bool awaitingNextWave = false;
 
     Transform player;
     Camera mainCamera;
@@ -44,7 +45,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        if (currentWaveCount < waves.Count && waves[currentWaveCount].spawnCount == 0)
+        if (currentWaveCount < waves.Count && !awaitingNextWave)
         {
             StartCoroutine(BeginNextWave());
         }
@@ -60,11 +61,13 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator BeginNextWave()
     {
+        awaitingNextWave = true;
         yield return new WaitForSeconds(waveInterval);
         if (currentWaveCount < waves.Count - 1)
         {
             currentWaveCount++;
             CalculateWaveQuota();
+            awaitingNextWave = false;
         }
     }
 
