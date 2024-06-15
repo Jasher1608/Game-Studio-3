@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ExperienceManager : MonoBehaviour
 {
+    public Dictionary<God, GodInstance> godInstances = new Dictionary<God, GodInstance>();
     public GodInstance currentGodInstance;
     public float totalXP;
 
@@ -18,6 +19,10 @@ public class ExperienceManager : MonoBehaviour
 
     public void SetCurrentGod(God god)
     {
-        currentGodInstance = new GodInstance(god);
+        if (!godInstances.ContainsKey(god))
+        {
+            godInstances[god] = new GodInstance(god);
+        }
+        currentGodInstance = godInstances[god];
     }
 }

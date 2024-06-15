@@ -190,7 +190,7 @@ public class PlayerController : SerializedMonoBehaviour
     private IEnumerator SmoothlyUpdateXPBar(float targetValue)
     {
         float currentValue = xpBarSlider.value;
-        float duration = 0.25f; // Duration of the smooth transition
+        float duration = 0.35f;
         float elapsed = 0f;
 
         while (elapsed < duration)
@@ -201,5 +201,11 @@ public class PlayerController : SerializedMonoBehaviour
         }
 
         xpBarSlider.value = targetValue;
+    }
+
+    public void ChangeGod(God newGod)
+    {
+        experienceManager.SetCurrentGod(newGod);
+        UpdateUI();
     }
 }
