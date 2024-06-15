@@ -47,6 +47,8 @@ public class PlayerController : SerializedMonoBehaviour
     public Slider xpBarSlider;
     public TextMeshProUGUI levelText;
 
+    [SerializeField] private GameObject devotionPanel;
+
     private Coroutine updateUICoroutine;
 
     void Start()
@@ -64,7 +66,7 @@ public class PlayerController : SerializedMonoBehaviour
         }
 
         UpdateCharacter(selectedOption);
-        UpdateUI();
+        ToggleDevotionUI(true);
     }
 
     void Update()
@@ -76,17 +78,17 @@ public class PlayerController : SerializedMonoBehaviour
             StartCoroutine(Dash());
         }
 
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            ToggleDevotionUI(!devotionPanel.activeSelf);
+        }
+
         AttractAmbrosia();
     }
 
     void FixedUpdate()
     {
         Move();
-
-        if (isDashing)
-        {
-            return;
-        }
     }
 
     void ProcessInputs()
@@ -207,5 +209,19 @@ public class PlayerController : SerializedMonoBehaviour
     {
         experienceManager.SetCurrentGod(newGod);
         UpdateUI();
+    }
+
+    public void ToggleDevotionUI(bool isActive)
+    {
+        devotionPanel.SetActive(isActive);
+        if (isActive)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            UpdateUI();
+        }
     }
 }

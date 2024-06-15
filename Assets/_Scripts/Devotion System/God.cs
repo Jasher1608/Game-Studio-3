@@ -7,7 +7,4 @@ public class God : ScriptableObject
 {
     public string godName;
     public SkillTree skillTree;
-    public int level;
-    public float currentXP;
-    public float xpToNextLevel;
 }
