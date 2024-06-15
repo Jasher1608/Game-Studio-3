@@ -7,13 +7,14 @@ public class SkillManager : SerializedMonoBehaviour
 {
     [TableList]
     public SkillTree[] skillTrees;
+    public God currentGod;
 
     public void UpgradeSkill(Skill skill, Stats playerStats)
     {
         if (skill.currentLevel < skill.maxLevel)
         {
             skill.currentLevel++;
-            
+
             if (skill.statModifiersByLevel.TryGetValue(skill.currentLevel, out List<StatModifier> modifiers))
             {
                 foreach (var modifier in modifiers)
@@ -21,19 +22,11 @@ public class SkillManager : SerializedMonoBehaviour
                     playerStats.ChangeStat(modifier.stat, modifier.modifierValue);
                 }
             }
-
-            CheckForSynergies(skill, playerStats);
         }
     }
 
-    private void CheckForSynergies(Skill skill, Stats playerStats)
+    public void SetCurrentGod(God god)
     {
-        foreach (var synergySkill in skill.synergies)
-        {
-            if (synergySkill.currentLevel > 0)
-            {
-                // Apply synergy effect
-            }
-        }
+        currentGod = god;
     }
 }

@@ -24,7 +24,4 @@ public class Skill : SerializedScriptableObject
     [BoxGroup("Stat Modifiers"), InlineProperty, PropertyOrder(0)]
     [DictionaryDrawerSettings(KeyLabel = "Level", ValueLabel = "Modifiers")]
     public Dictionary<int, List<StatModifier>> statModifiersByLevel;
-
-    [BoxGroup("Advanced"), LabelText("Synergies")]
-    public Skill[] synergies;
 }

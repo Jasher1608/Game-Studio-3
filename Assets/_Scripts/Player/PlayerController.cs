@@ -31,12 +31,7 @@ public class PlayerController : SerializedMonoBehaviour
     private float dashCooldown;
     private float pickupRange;
 
-    public int level = 1;
-    public float xp;
-    private float xpToNextLevel;
     public float ambrosiaXP;
-    [SerializeField] private Slider xpSlider;
-    [SerializeField] private TextMeshProUGUI levelText;
 
     private bool canDash = true;
     [SerializeField] private bool isDashing = true;
@@ -48,6 +43,11 @@ public class PlayerController : SerializedMonoBehaviour
     public LayerMask ambrosiaLayerMask;
     [SerializeField] private float ambrosiaSpeed;
 
+    public ExperienceManager experienceManager;
+    public Slider xpBarSlider;
+    public TextMeshProUGUI levelText;
+
+    private Coroutine updateUICoroutine;
 
     void Start()
     {
@@ -58,22 +58,19 @@ public class PlayerController : SerializedMonoBehaviour
         {
             selectedOption = 0;
         }
-
         else
         {
             Load();
         }
 
         UpdateCharacter(selectedOption);
-        CalculateXPToNextLevel();
-        levelText.text = $"LVL {level}";
+        UpdateUI();
     }
-    
-    
+
     void Update()
     {
         ProcessInputs();
-        
+
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
             StartCoroutine(Dash());
@@ -164,51 +161,45 @@ public class PlayerController : SerializedMonoBehaviour
         }
     }
 
-    public void GainXP(float amount)
-    {
-        xp += amount;
-        while (xp >= xpToNextLevel)
-        {
-            xp -= xpToNextLevel;
-            LevelUp();
-        }
-        xpSlider.value = xp;
-    }
-
-    private void LevelUp()
-    {
-        level++;
-        CalculateXPToNextLevel();
-        levelText.text = $"LVL {level}";
-    }
-
-    private void CalculateXPToNextLevel()
-    {
-        if (level == 1)
-        {
-            xpToNextLevel = 5;
-        }
-        else if (level <= 20)
-        {
-            xpToNextLevel = 5 + (level - 1) * 10;
-        }
-        else if (level <= 40)
-        {
-            xpToNextLevel = 195 + (level - 20) * 13; // 195 is the XP needed to reach level 21
-        }
-        else
-        {
-            xpToNextLevel = 455 + (level - 40) * 16; // 455 is the XP needed to reach level 41
-        }
-        xpSlider.maxValue = xpToNextLevel;
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Ambrosia"))
         {
-            GainXP(ambrosiaXP);
             Destroy(collision.gameObject);
+            experienceManager.GainExperience(ambrosiaXP);
+            UpdateUI();
         }
+    }
+
+    private void UpdateUI()
+    {
+        if (experienceManager.currentGodInstance != null)
+        {
+            xpBarSlider.maxValue = experienceManager.currentGodInstance.xpToNextLevel;
+
+            if (updateUICoroutine != null)
+            {
+                StopCoroutine(updateUICoroutine);
+            }
+
+            updateUICoroutine = StartCoroutine(SmoothlyUpdateXPBar(experienceManager.currentGodInstance.currentXP));
+            levelText.text = "LVL " + experienceManager.currentGodInstance.level;
+        }
+    }
+
+    private IEnumerator SmoothlyUpdateXPBar(float targetValue)
+    {
+        float currentValue = xpBarSlider.value;
+        float duration = 0.25f; // Duration of the smooth transition
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            xpBarSlider.value = Mathf.Lerp(currentValue, targetValue, elapsed / duration);
+            yield return null;
+        }
+
+        xpBarSlider.value = targetValue;
     }
 }
