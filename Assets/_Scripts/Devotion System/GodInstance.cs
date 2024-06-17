@@ -8,13 +8,17 @@ public class GodInstance
     public int level;
     public float currentXP;
     public float xpToNextLevel;
+    public int skillPoints;
+    public int investedSkillPoints;
 
     public GodInstance(God god)
     {
         this.god = god;
-        level = 0; // Starting level
+        level = 0;
         currentXP = 0;
         xpToNextLevel = CalculateNextLevelXP();
+        skillPoints = 0;
+        investedSkillPoints = 0;
     }
 
     public void AddExperience(float amount)
@@ -31,6 +35,7 @@ public class GodInstance
         level++;
         currentXP -= xpToNextLevel;
         xpToNextLevel = CalculateNextLevelXP();
+        skillPoints += 1;
     }
 
     private float CalculateNextLevelXP()

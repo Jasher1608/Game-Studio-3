@@ -7,7 +7,6 @@ public class SkillManager : SerializedMonoBehaviour
 {
     [TableList]
     public SkillTree[] skillTrees;
-    public God currentGod;
 
     public void UpgradeSkill(Skill skill, Stats playerStats)
     {
@@ -23,10 +22,5 @@ public class SkillManager : SerializedMonoBehaviour
                 }
             }
         }
-    }
-
-    public void SetCurrentGod(God god)
-    {
-        currentGod = god;
     }
 }
