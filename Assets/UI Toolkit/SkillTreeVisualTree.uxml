@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/SkillTreeStyle.uss?fileID=7433441132597879392&amp;guid=2baaf110daf4d684788fe5b2f33c8fe0&amp;type=3#SkillTreeStyle" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/SkillTree/constellations-0_DemoSkillTreeBackground.jpg?fileID=21300000&amp;guid=200a7266c46ec6c40bd3e3752dc0ed7b&amp;type=3#constellations-0_DemoSkillTreeBackground&quot;);">
+        <ui:Label tabindex="-1" text="Skill Tree" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Header" class="header" />
+        <ui:Button text="Aries" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button" />
+        <ui:Button text="Apollo" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button" style="justify-content: flex-end; -unity-slice-bottom: 0;" />
+    </ui:VisualElement>
+</ui:UXML>
