@@ -1,8 +1,24 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/SkillTreeStyle.uss?fileID=7433441132597879392&amp;guid=2baaf110daf4d684788fe5b2f33c8fe0&amp;type=3#SkillTreeStyle" />
-    <ui:VisualElement name="Container" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/SkillTree/constellations-0_DemoSkillTreeBackground.jpg?fileID=21300000&amp;guid=200a7266c46ec6c40bd3e3752dc0ed7b&amp;type=3#constellations-0_DemoSkillTreeBackground&quot;);">
-        <ui:Label tabindex="-1" text="Skill Tree" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Header" class="header" />
-        <ui:Button text="Aries" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button" />
-        <ui:Button text="Apollo" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button" style="justify-content: flex-end; -unity-slice-bottom: 0;" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/SkillTree/TouchOfGod.jpg?fileID=21300000&amp;guid=01637f177a41b214090e3cb601997d6d&amp;type=3#TouchOfGod&quot;); opacity: 1; display: flex;">
+        <ui:Label tabindex="-1" text="Skill Tree" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Header" class="header" style="font-size: 100px; -unity-text-align: upper-center; top: 29px; -unity-font-style: normal;" />
+        <ui:Label tabindex="-1" text="XP " parse-escape-sequences="true" display-tooltip-when-elided="true" class="header" style="scale: 1 1; -unity-slice-top: -6; width: 106px; font-size: 100px; left: 251px; bottom: -33px; align-items: stretch; justify-content: flex-start; align-self: flex-start;" />
+        <ui:Button text="Ares" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Aries" class="button" style="justify-content: flex-end; -unity-slice-bottom: 0; left: -337px; bottom: -70px; right: -88px;" />
+        <ui:Button text="Apollo" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Apollo" class="button" style="justify-content: flex-end; -unity-slice-bottom: 0; left: 65px; bottom: -286px; right: -88px;" />
+        <ui:Button text="Dionysus" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Dionysus" class="button" style="left: 87px; bottom: 58px;" />
+        <ui:Button text="Artemis" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Artemis" class="button" style="left: 234px; bottom: -163px;" />
+        <ui:Button text="Athena" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Athena" class="button" style="left: 283px; bottom: 185px;" />
+        <ui:Button text="Nemesis" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Nemesis" class="button" style="left: 389px; bottom: -24px;" />
+        <ui:Button text="Nyx" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Nyx" class="button" style="left: 477px; bottom: 315px;" />
+        <ui:Button text="The Fates" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TheFates" class="button" style="left: 539px; bottom: 107px;" />
+        <ui:Button text="Skill 1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AresSkill1" class="skillSelector" style="left: 245px; top: -364px;" />
+        <ui:Button text="Skill 2" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AresSkill2" class="skillSelector" style="top: -371px; left: 139px;" />
+        <ui:Button text="Skill 3" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AresSkill3" class="skillSelector" style="left: 303px; top: -438px;" />
+        <ui:Button text="Skill 4" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AresSkill4" class="skillSelector" style="left: 53px; top: -420px;" />
+        <ui:Button text="Skill 5" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AresSkill5" class="skillSelector" style="left: 160px; top: -531px;" />
+        <ui:Button text="Skill 6" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AresSkill6" class="skillSelector" style="left: 112px; top: -545px;" />
+        <ui:Button text="Skill 7" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AresSkill7" class="skillSelector" style="left: 291px; top: -687px;" />
+        <ui:Button text="Skill 8" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AresSkill8" class="skillSelector" style="left: 385px; top: -779px;" />
+        <ui:Button text="Skill 9" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AresSkill9" class="skillSelector" style="left: 354px; top: -787px;" />
     </ui:VisualElement>
 </ui:UXML>

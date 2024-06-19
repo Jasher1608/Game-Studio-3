@@ -1,14 +1,68 @@
 .header {
     font-size: 40px;
     color: rgb(255, 255, 255);
+    -unity-font: url("project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&guid=43bc683a8b04a3949b2edd8a81a092b7&type=3#GreekRollsRegular");
+    -unity-font-definition: initial;
 }
 
 .button {
-    width: 220px;
+    width: 100px;
     height: 60px;
     align-self: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    -unity-font: url("project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&guid=43bc683a8b04a3949b2edd8a81a092b7&type=3#GreekRollsRegular");
+    -unity-font-definition: initial;
+    font-size: 40px;
+    -unity-text-align: upper-center;
+    -unity-text-outline-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    background-color: rgba(73, 17, 209, 0.62);
+    transition-delay: 0.1s;
+}
+
+.button:hover {
+    scale: 1.1 1.1;
+    -unity-background-image-tint-color: rgb(56, 0, 135);
+    transition-duration: 0.1s;
+    transition-property: opacity;
+    transition-timing-function: ease-out;
+}
+
+.skillSelector {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    border-top-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+    -unity-font: url("project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&guid=43bc683a8b04a3949b2edd8a81a092b7&type=3#GreekRollsRegular");
+    -unity-font-definition: initial;
+    -unity-font-style: bold;
+    margin-top: 14px;
+    margin-right: 14px;
+    margin-bottom: 14px;
+    margin-left: 14px;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+    border-bottom-right-radius: 90px;
+    border-bottom-left-radius: 90px;
+}
+
+.skillSelector:hover {
+    transition-delay: 0s;
+    scale: 1.5 1.5;
+    background-color: rgb(0, 0, 0);
+    -unity-background-image-tint-color: rgb(0, 0, 0);
+    transition-duration: 0.1s;
+}
+
+.xpText {
 }
