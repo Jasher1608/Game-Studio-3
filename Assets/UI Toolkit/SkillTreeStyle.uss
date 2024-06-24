@@ -26,9 +26,9 @@
 .button:hover {
     scale: 1.1 1.1;
     -unity-background-image-tint-color: rgb(56, 0, 135);
-    transition-duration: 0.1s;
-    transition-property: opacity;
-    transition-timing-function: ease-out;
+    transition-duration: 0.1s, 0s;
+    transition-property: opacity, ignored;
+    transition-timing-function: ease-out, ease;
 }
 
 .skillSelector:hover {
@@ -221,5 +221,9 @@
     color: rgb(255, 255, 255);
 }
 
-.areasSkillsSelector:hover {
+.tooltipAresSkill1:hover {
+    background-color: rgb(0, 255, 17);
+    width: 300px;
+    height: 300px;
+    left: 571px;
 }
