@@ -48,6 +48,7 @@ public class PlayerController : SerializedMonoBehaviour
     public ExperienceManager experienceManager;
     public Slider xpBarSlider;
     public TextMeshProUGUI levelText;
+    public TextMeshProUGUI godText;
 
     [SerializeField] private GameObject skillTreeUI;
     [SerializeField] private UIDocument skillTreeDocument;
@@ -189,6 +190,7 @@ public class PlayerController : SerializedMonoBehaviour
 
             updateUICoroutine = StartCoroutine(SmoothlyUpdateXPBar(experienceManager.currentGodInstance.currentXP));
             levelText.text = "LVL " + experienceManager.currentGodInstance.level;
+            godText.text = experienceManager.currentGodInstance.god.godName;
         }
     }
 
