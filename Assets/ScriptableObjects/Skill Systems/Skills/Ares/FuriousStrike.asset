@@ -90,7 +90,7 @@ MonoBehaviour:
       Data: 4
     - Name: modifierValue
       Entry: 4
-      Data: 0.2
+      Data: 0.1
     - Name: 
       Entry: 8
       Data: 
@@ -124,7 +124,7 @@ MonoBehaviour:
       Data: 4
     - Name: modifierValue
       Entry: 4
-      Data: 0.35
+      Data: 0.15
     - Name: 
       Entry: 8
       Data: 
@@ -145,8 +145,7 @@ MonoBehaviour:
       Data: 
   skillName: Furious Strike
   maxLevel: 3
-  currentLevel: 0
+  currentLevel: 3
   icon: {fileID: 0}
   description: Unleash the ferocity of war; each swing of your blade carries the
     wrath of Ares, enhancing your attack damage.
-  synergies: []

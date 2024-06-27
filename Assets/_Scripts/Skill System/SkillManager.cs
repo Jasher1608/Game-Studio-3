@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class SkillManager : SerializedMonoBehaviour
 {
-    [TableList]
-    public SkillTree[] skillTrees;
-
     public void UpgradeSkill(Skill skill, Stats playerStats)
     {
         if (skill.currentLevel < skill.maxLevel)

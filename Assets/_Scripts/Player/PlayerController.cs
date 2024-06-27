@@ -88,6 +88,7 @@ public class PlayerController : SerializedMonoBehaviour
         }
 
         AttractAmbrosia();
+        Debug.Log(playerStats.GetStat(Stat.meleeDamageModifier));
     }
 
     void FixedUpdate()
