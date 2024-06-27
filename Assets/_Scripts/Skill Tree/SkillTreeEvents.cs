@@ -1,9 +1,10 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class SkillTreeEvents : MonoBehaviour
+public class SkillTreeEvents : SerializedMonoBehaviour
 {
     private UIDocument _document;
 
@@ -27,8 +28,7 @@ public class SkillTreeEvents : MonoBehaviour
 
     // TODO: Change this to use a dictionary, and include all gods
     [Header("Gods")]
-    [SerializeField] private God ares;
-    [SerializeField] private God apollo;
+    [SerializeField] private Dictionary<string, God> gods = new Dictionary<string, God>();
 
     private void OnEnable()
     {
@@ -79,15 +79,9 @@ public class SkillTreeEvents : MonoBehaviour
 
     private void OnButtonClick(ClickEvent evt, string buttonName)
     {
-        Debug.Log($"You pressed the {buttonName} button");
-        if (buttonName == "Ares")
+        if (gods.TryGetValue(buttonName, out God god))
         {
-            _playerController.ChangeGod(ares);
-            _xpLabel.text = $"XP: {experienceManager.currentGodInstance.currentXP:F1}/{experienceManager.currentGodInstance.xpToNextLevel:F1}";
-        }
-        else if (buttonName == "Apollo")
-        {
-            _playerController.ChangeGod(apollo);
+            _playerController.ChangeGod(god);
             _xpLabel.text = $"XP: {experienceManager.currentGodInstance.currentXP:F1}/{experienceManager.currentGodInstance.xpToNextLevel:F1}";
         }
     }
