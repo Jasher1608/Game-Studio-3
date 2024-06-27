@@ -7,7 +7,7 @@ public class SkillTreeEvents : MonoBehaviour
 {
     private UIDocument _document;
 
-    private Button _buttonAries;
+    private Button _buttonAres;
     private Button _buttonApollo;
     private Button _buttonDionysus;
     private Button _buttonArtemis;
@@ -16,16 +16,27 @@ public class SkillTreeEvents : MonoBehaviour
     private Button _buttonNyx;
     private Button _buttonTheFates;
 
+    private Label _xpLabel;
+
     private List<Button> _skillTreeButtons = new List<Button>();
 
     private AudioSource _audioSource;
 
-    private void Awake()
+    private PlayerController _playerController;
+    public ExperienceManager experienceManager;
+
+    // TODO: Change this to use a dictionary, and include all gods
+    [Header("Gods")]
+    [SerializeField] private God ares;
+    [SerializeField] private God apollo;
+
+    private void OnEnable()
     {
         _audioSource = GetComponent<AudioSource>();
         _document = GetComponent<UIDocument>();
+        _playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
 
-        _buttonAries = _document.rootVisualElement.Q<Button>("Aries");
+        _buttonAres = _document.rootVisualElement.Q<Button>("Ares");
         _buttonApollo = _document.rootVisualElement.Q<Button>("Apollo");
         _buttonDionysus = _document.rootVisualElement.Q<Button>("Dionysus");
         _buttonArtemis = _document.rootVisualElement.Q<Button>("Artemis");
@@ -33,9 +44,10 @@ public class SkillTreeEvents : MonoBehaviour
         _buttonNemesis = _document.rootVisualElement.Q<Button>("Nemesis");
         _buttonNyx = _document.rootVisualElement.Q<Button>("Nyx");
         _buttonTheFates = _document.rootVisualElement.Q<Button>("TheFates");
+        _xpLabel = _document.rootVisualElement.Q<Label>("XP");
+        _xpLabel.text = $"XP: {experienceManager.currentGodInstance.currentXP:F1}/{experienceManager.currentGodInstance.xpToNextLevel:F1}";
 
-
-        RegisterButtonCallback(_buttonAries, "Aries");
+        RegisterButtonCallback(_buttonAres, "Ares");
         RegisterButtonCallback(_buttonApollo, "Apollo");
         RegisterButtonCallback(_buttonDionysus, "Dionysus");
         RegisterButtonCallback(_buttonArtemis, "Artemis");
@@ -57,7 +69,7 @@ public class SkillTreeEvents : MonoBehaviour
     {
             if (button != null)
             {
-                button.RegisterCallback<ClickEvent>(evt => OnPlayGameClick(evt, buttonName));
+                button.RegisterCallback<ClickEvent>(evt => OnButtonClick(evt, buttonName));
             }
             else
             {
@@ -65,9 +77,19 @@ public class SkillTreeEvents : MonoBehaviour
             }
     }
 
-    private void OnPlayGameClick(ClickEvent evt, string buttonName)
+    private void OnButtonClick(ClickEvent evt, string buttonName)
     {
         Debug.Log($"You pressed the {buttonName} button");
+        if (buttonName == "Ares")
+        {
+            _playerController.ChangeGod(ares);
+            _xpLabel.text = $"XP: {experienceManager.currentGodInstance.currentXP:F1}/{experienceManager.currentGodInstance.xpToNextLevel:F1}";
+        }
+        else if (buttonName == "Apollo")
+        {
+            _playerController.ChangeGod(apollo);
+            _xpLabel.text = $"XP: {experienceManager.currentGodInstance.currentXP:F1}/{experienceManager.currentGodInstance.xpToNextLevel:F1}";
+        }
     }
 
     private void OnDisable()
@@ -79,8 +101,6 @@ public class SkillTreeEvents : MonoBehaviour
             _skillTreeButtons[i].UnregisterCallback<ClickEvent>(OnAllButtonsClick);
         }
     }
-    
-    
     
     private void OnAllButtonsClick(ClickEvent evt)
     {

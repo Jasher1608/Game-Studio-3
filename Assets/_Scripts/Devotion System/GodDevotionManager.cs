@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GodDevotionManager : MonoBehaviour
 {
-    public List<God> gods;
     public God currentGod;
     public ExperienceManager experienceManager;
 

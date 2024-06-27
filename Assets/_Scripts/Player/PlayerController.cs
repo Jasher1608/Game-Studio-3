@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Slider = UnityEngine.UI.Slider;
 
 public class PlayerController : SerializedMonoBehaviour
 {
@@ -47,7 +49,8 @@ public class PlayerController : SerializedMonoBehaviour
     public Slider xpBarSlider;
     public TextMeshProUGUI levelText;
 
-    [SerializeField] private GameObject devotionPanel;
+    [SerializeField] private GameObject skillTreeUI;
+    [SerializeField] private UIDocument skillTreeDocument;
 
     private Coroutine updateUICoroutine;
 
@@ -66,7 +69,7 @@ public class PlayerController : SerializedMonoBehaviour
         }
 
         UpdateCharacter(selectedOption);
-        ToggleDevotionUI(true);
+        ToggleSkillTree(true);
     }
 
     void Update()
@@ -80,7 +83,7 @@ public class PlayerController : SerializedMonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            ToggleDevotionUI(!devotionPanel.activeSelf);
+            ToggleSkillTree(!skillTreeUI.activeSelf);
         }
 
         AttractAmbrosia();
@@ -211,9 +214,9 @@ public class PlayerController : SerializedMonoBehaviour
         UpdateUI();
     }
 
-    public void ToggleDevotionUI(bool isActive)
+    public void ToggleSkillTree(bool isActive)
     {
-        devotionPanel.SetActive(isActive);
+        skillTreeUI.SetActive(isActive);
         if (isActive)
         {
             Time.timeScale = 0f;
