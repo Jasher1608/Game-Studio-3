@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a5895178f0588e4dae2de45d7ce19d1, type: 3}
-  m_Name: FuriousStrike
+  m_Name: FrenziedOnslaught
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -65,10 +65,10 @@ MonoBehaviour:
       Data: 4|StatModifier, Assembly-CSharp
     - Name: stat
       Entry: 3
-      Data: 6
+      Data: 8
     - Name: modifierValue
       Entry: 4
-      Data: 0.05
+      Data: -0.5
     - Name: 
       Entry: 8
       Data: 
@@ -111,10 +111,10 @@ MonoBehaviour:
       Data: 7|StatModifier, Assembly-CSharp
     - Name: stat
       Entry: 3
-      Data: 6
+      Data: 8
     - Name: modifierValue
       Entry: 4
-      Data: 0.05
+      Data: -0.5
     - Name: 
       Entry: 8
       Data: 
@@ -148,7 +148,7 @@ MonoBehaviour:
       Data: 4
     - Name: modifierValue
       Entry: 4
-      Data: 0.15
+      Data: 0.1
     - Name: 
       Entry: 8
       Data: 
@@ -157,10 +157,10 @@ MonoBehaviour:
       Data: 10|StatModifier, Assembly-CSharp
     - Name: stat
       Entry: 3
-      Data: 6
+      Data: 8
     - Name: modifierValue
       Entry: 4
-      Data: 0.05
+      Data: -0.5
     - Name: 
       Entry: 8
       Data: 
@@ -179,9 +179,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  skillName: Furious Strike
+  skillName: Frenzied Onslaught
   maxLevel: 3
-  currentLevel: 3
+  currentLevel: 0
   icon: {fileID: 0}
-  description: Unleash the ferocity of war; each swing of your blade carries the
-    wrath of Ares, enhancing your attack damage.
+  description: Unleash a relentless barrage of powerful blows, enhancing your melee
+    damage and reducing time between attacks.

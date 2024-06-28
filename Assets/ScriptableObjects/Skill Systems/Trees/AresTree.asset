@@ -23,4 +23,12 @@ MonoBehaviour:
     SerializationNodes: []
   skills:
   - {fileID: 11400000, guid: dbe2719953f855f44a1800021da2cd0e, type: 2}
+  - {fileID: 11400000, guid: 10ea18baaf9dcc042b52562c03a36778, type: 2}
+  - {fileID: 11400000, guid: d41fc6963a181484683c263dff63c7a5, type: 2}
+  - {fileID: 11400000, guid: 5f3deaed77c7d7547be31e6fc43d3bc9, type: 2}
+  - {fileID: 11400000, guid: a32f4b499acfba445925ed607b66fc2e, type: 2}
+  - {fileID: 11400000, guid: 6b4b2cc8f6205044d835b84d54438f88, type: 2}
+  - {fileID: 11400000, guid: 59c1e81b09273124e8507c0b3774cb99, type: 2}
+  - {fileID: 11400000, guid: d3b42ab049ebad740a131724dbb92d81, type: 2}
+  - {fileID: 11400000, guid: b31c349a225d1c2488d6160ffa21123e, type: 2}
   treeName: Ares

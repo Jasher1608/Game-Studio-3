@@ -131,6 +131,30 @@ public class SkillTreeEvents : SerializedMonoBehaviour
             case "AresSkill1":
                 skillManager.UpgradeSkill(_aresSkillTree.skills[0], PlayerController.playerStats);
                 break;
+            case "AresSkill2":
+                skillManager.UpgradeSkill(_aresSkillTree.skills[1], PlayerController.playerStats);
+                break;
+            case "AresSkill3":
+                skillManager.UpgradeSkill(_aresSkillTree.skills[2], PlayerController.playerStats);
+                break;
+            case "AresSkill4":
+                skillManager.UpgradeSkill(_aresSkillTree.skills[3], PlayerController.playerStats);
+                break;
+            case "AresSkill5":
+                skillManager.UpgradeSkill(_aresSkillTree.skills[4], PlayerController.playerStats);
+                break;
+            case "AresSkill6":
+                skillManager.UpgradeSkill(_aresSkillTree.skills[5], PlayerController.playerStats);
+                break;
+            case "AresSkill7":
+                skillManager.UpgradeSkill(_aresSkillTree.skills[6], PlayerController.playerStats);
+                break;
+            case "AresSkill8":
+                skillManager.UpgradeSkill(_aresSkillTree.skills[7], PlayerController.playerStats);
+                break;
+            case "AresSkill9":
+                skillManager.UpgradeSkill(_aresSkillTree.skills[8], PlayerController.playerStats);
+                break;
         }
     }
 
