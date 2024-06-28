@@ -223,10 +223,38 @@
 
 .tooltip:hover {
     left: 50px;
-    flex-grow: 1;
+    flex-grow: 0;
     width: 300px;
     height: 300px;
     background-color: rgb(255, 0, 194);
     top: -120px;
     text-overflow: ellipsis;
+    overflow: hidden;
+    transition-property: overflow;
+    -unity-background-scale-mode: stretch-to-fill;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    flex-shrink: 0;
+    border-left-color: rgb(243, 0, 0);
+    border-right-color: rgb(243, 0, 0);
+    border-top-color: rgb(243, 0, 0);
+    border-bottom-color: rgb(243, 0, 0);
+    flex-direction: row;
+    scale: 1.1 1.1;
+}
+
+.myslider {
+    width: 188px;
+    left: 0;
+    flex-direction: column;
+    background-color: rgb(0, 255, 4);
+    height: 30px;
+    -unity-font: url("project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&guid=43bc683a8b04a3949b2edd8a81a092b7&type=3#GreekRollsRegular");
+    -unity-font-definition: initial;
+    font-size: 20px;
+}
+
+#mySlider Label {
 }
