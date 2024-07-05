@@ -243,6 +243,7 @@
     border-bottom-color: rgb(243, 0, 0);
     flex-direction: row;
     scale: 1.1 1.1;
+    transition-delay: 2s;
 }
 
 .myslider {
@@ -257,4 +258,12 @@
 }
 
 #mySlider Label {
+}
+
+.tooltip-hidden {
+    display: flex;
+}
+
+.tooltip-visible {
+    display: none;
 }
