@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenu/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=5a00cb4b81509d543992407f1a511fa6&amp;type=3#MainMenuStyle" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/DreamlyStudios/BACKGROUND-Fantasy%20Myth%202/Asgardian%20Palace/T_Asgardian_Palace_1.png?fileID=21300000&amp;guid=4ea97e591adf3d945b6b10b76a1e3901&amp;type=3#T_Asgardian_Palace_1&quot;); background-color: rgb(0, 0, 0); -unity-background-image-tint-color: rgb(255, 255, 255);">
+        <ui:VisualElement name="MainButtonContainer" style="flex-grow: 1; width: 699px; height: 145px; background-color: rgba(0, 0, 0, 0.67);">
+            <ui:Label tabindex="-1" text="Main Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Header" class="header" style="margin-top: 50px; margin-right: 50px; margin-bottom: 50px; margin-left: 50px; top: 28px; left: 0;" />
+            <ui:Button text="Start" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Play" class="button" />
+            <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Settings" class="button" />
+            <ui:Button text="Controls" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Controls" class="button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
