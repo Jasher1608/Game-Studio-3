@@ -21,6 +21,13 @@ public class MainMenuEvents : MonoBehaviour
         _button = _document.rootVisualElement.Q("Play") as Button;
         _button.RegisterCallback<ClickEvent>(OnPlayClick);
 
+        _button = _document.rootVisualElement.Q("Settings") as Button;
+        _button.RegisterCallback<ClickEvent>(OnSettingsClick);
+
+        _button = _document.rootVisualElement.Q("Controls") as Button;
+        _button.RegisterCallback<ClickEvent>(OnControlsClick);
+
+
         _menuButtons = _document.rootVisualElement.Query<Button>().ToList();
         for (int i = 0; i < _menuButtons.Count; i++)
         {
@@ -32,6 +39,8 @@ public class MainMenuEvents : MonoBehaviour
     private void OnDisable()
     {
         _button.UnregisterCallback<ClickEvent>(OnPlayClick);
+        _button.UnregisterCallback<ClickEvent>(OnSettingsClick);
+        _button.UnregisterCallback<ClickEvent>(OnControlsClick);
 
         for (int i = 0; i < _menuButtons.Count; i++)
         {
@@ -47,11 +56,13 @@ public class MainMenuEvents : MonoBehaviour
 
     private void OnSettingsClick(ClickEvent evt)
     {
+        Debug.Log("You pressed the Settings Button");
         // insert settings panel functionality
     }
 
-    private void OnControlsCLick(ClickEvent evt)
+    private void OnControlsClick(ClickEvent evt)
     {
+        Debug.Log("You pressed the Controls Button");
         // insert Controls panel functionality
     }
 
