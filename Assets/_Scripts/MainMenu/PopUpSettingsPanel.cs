@@ -11,12 +11,18 @@ namespace PopupSettingsPanel
         {
 
         }
-        
 
+
+
+        private const string styleResource = "PopupWindowStyleSheet";
+        private const string ussPopup = "popup_window";
 
         public PopupWindow()
         {
+            styleSheets.Add(Resources.Load<StyleSheet>(styleResource));
+
             VisualElement window = new VisualElement();
+            window.AddToClassList(ussPopup);
             hierarchy.Add(window);
         }
 

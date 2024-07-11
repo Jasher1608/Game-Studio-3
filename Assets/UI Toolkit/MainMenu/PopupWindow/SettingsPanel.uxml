@@ -1,6 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/MainMenu/PopupWindow/Popup_StyleSheet.uss?fileID=7433441132597879392&amp;guid=5d44efda50d8b6142a548885f2e09a2f&amp;type=3#Popup_StyleSheet" />
-    <ui:VisualElement class="popup_window" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-        <ui:Label tabindex="-1" text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Header" />
-    </ui:VisualElement>
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenu/PopupWindow/Resources/PopUpWindowStyleSheet.uss?fileID=7433441132597879392&amp;guid=f074537ba0836514eae173bf2f972367&amp;type=3#PopUpWindowStyleSheet" />
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenu/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=5a00cb4b81509d543992407f1a511fa6&amp;type=3#MainMenuStyle" />
+    <PopupSettingsPanel.PopupWindow name="PopupWindow" style="width: 859px; align-self: flex-end; height: 1202px; justify-content: center;">
+        <ui:Label tabindex="-1" text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" class="header" style="-unity-text-align: upper-left; top: -702px;" />
+    </PopupSettingsPanel.PopupWindow>
 </ui:UXML>
