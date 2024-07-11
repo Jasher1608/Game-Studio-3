@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; background-color: rgb(0, 0, 0);">
+        <ui:Label tabindex="-1" text="Controls" parse-escape-sequences="true" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); align-self: center; -unity-font: url(&quot;project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&amp;guid=43bc683a8b04a3949b2edd8a81a092b7&amp;type=3#GreekRollsRegular&quot;); -unity-font-definition: initial; font-size: 50px; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace PopupSettingsPanel
+namespace PopupControlsPanel
 {
     public class PopupWindow : VisualElement
     {
@@ -11,13 +11,12 @@ namespace PopupSettingsPanel
         {
 
         }
-        
+
 
 
         public PopupWindow()
         {
-            VisualElement window = new VisualElement();
-            hierarchy.Add(window);
+
         }
 
     }
