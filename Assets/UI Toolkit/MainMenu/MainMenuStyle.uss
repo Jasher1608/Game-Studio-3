@@ -8,9 +8,9 @@
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0);
     -unity-font-style: normal;
-    padding-top: 56px;
+    padding-top: 24px;
     padding-right: 56px;
-    padding-bottom: 56px;
+    padding-bottom: 79px;
     padding-left: 56px;
 }
 

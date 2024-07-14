@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1542409557}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &63493010
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: a25d6a14bbcfec24f9dff4e653630fc9, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: f846f5ec26808d74e8b1ccc0b729fb5a, type: 3}
-  m_SortingOrder: 0
+  m_SortingOrder: 2
 --- !u!1 &832600772
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: a25d6a14bbcfec24f9dff4e653630fc9, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 025ca893a18aca942ac46c922ad97ba4, type: 3}
-  m_SortingOrder: 0
+  m_SortingOrder: 3
 --- !u!1 &1316106128
 GameObject:
   m_ObjectHideFlags: 0
