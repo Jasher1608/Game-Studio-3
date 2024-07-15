@@ -25,13 +25,13 @@ namespace PopupSettingsPanel
             AddToClassList(ussPopupContainer);
 
             VisualElement window = new VisualElement();
-            //window.style.backgroundColor = new StyleColor(Color.blue); // Temporary style for visibility
+            window.style.backgroundColor = new StyleColor(Color.blue); // Temporary style for visibility
             window.AddToClassList(ussPopup);
             hierarchy.Add(window);
 
             // Text Section
             VisualElement horizontalContainerText = new VisualElement();
-           // horizontalContainerText.style.backgroundColor = new StyleColor(Color.green); // Temporary style for visibility
+            horizontalContainerText.style.backgroundColor = new StyleColor(Color.green); // Temporary style for visibility
             horizontalContainerText.AddToClassList(ussHorContainer);
             window.Add(horizontalContainerText);
 
@@ -39,7 +39,7 @@ namespace PopupSettingsPanel
             Debug.Log("reached message label");
 
             msgLabel.text = "Do you really want the red pill?";
-            //msgLabel.style.color = Color.yellow; // Temporary style for visibility
+            msgLabel.style.color = Color.yellow; // Temporary style for visibility
             msgLabel.AddToClassList(ussPopupMsg);
             horizontalContainerText.Add(msgLabel);
 

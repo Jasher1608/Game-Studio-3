@@ -1,0 +1,27 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenu/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=5a00cb4b81509d543992407f1a511fa6&amp;type=3#MainMenuStyle" />
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; align-items: flex-start; background-image: none; margin-top: 49px; margin-right: 49px; margin-bottom: 49px; margin-left: 49px;">
+        <ui:VisualElement tabindex="1" name="ApolloVisualContainer" style="flex-grow: 1; width: 625px; background-image: url(&quot;project://database/Assets/Sprites/Gods/Apollo.jpg?fileID=21300000&amp;guid=688445d49ecd07e49ba662cbfa3103ab&amp;type=3#Apollo&quot;); height: 960px; -unity-background-image-tint-color: rgb(99, 99, 99); align-items: flex-start;">
+            <ui:Label tabindex="-1" text="Apollo&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" class="header" style="font-size: 162px;" />
+        </ui:VisualElement>
+        <ui:VisualElement tabindex="2" focusable="false" name="ApolloTreeContainer" style="flex-grow: 1; -unity-background-scale-mode: stretch-to-fill; align-self: center; height: 961px; width: 1366px; -unity-background-image-tint-color: rgb(48, 47, 47); align-items: flex-start; position: absolute; left: 270px; background-color: rgba(118, 0, 0, 0); top: -30px; flex-direction: column;">
+            <ui:Button text="Skill 1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Skill1" class="button Skill1" />
+            <ui:Button text="Skill 2" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Skill2" class="button Skill2" />
+            <ui:Button text="Skill 3" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Skill3" class="button Skill3" />
+            <ui:Button text="Skill 4" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Skill4" class="button Skill4" />
+            <ui:Button text="Skill 5" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Skill5" class="button Skill5" />
+            <ui:Button text="Skill 6" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Skill6" class="button Skill6" />
+            <ui:Button text="Skill 7" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Skill7" class="button Skill7" />
+            <ui:Button text="Skill 8" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Skill8" class="button Skill8" />
+            <ui:Button text="Skill 9" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Skill9" class="button Skill9" />
+        </ui:VisualElement>
+        <ui:VisualElement name="XP_SkillTallyContainer" style="flex-grow: 1; position: absolute; width: 270px; left: 45px; height: 165px; top: 700px;">
+            <ui:Label tabindex="-1" text="Apollo XP" parse-escape-sequences="true" display-tooltip-when-elided="true" name="XP" class="header2" style="-unity-text-align: middle-left; height: 67px;" />
+            <ui:Label tabindex="-1" text="Apollo SKILL POINTS" parse-escape-sequences="false" display-tooltip-when-elided="true" name="ApolloSkillPoints" class="header2" style="-unity-text-align: middle-left;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="GodlyWeaponContainer" tabindex="3" style="flex-grow: 1; width: 1791px; position: absolute; left: -56px; background-color: rgba(0, 0, 0, 0); height: 176px; top: 767px; align-self: flex-end;">
+            <ui:ProgressBar value="22" title="GODLY     WEAPON     PROGRESS" name="ApolloWeaponProgressBar" class="myslider" style="align-items: stretch; justify-content: center; background-color: rgb(255, 181, 66); top: 119px; left: 52px; height: 67px; width: 1708px; -unity-font: url(&quot;project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&amp;guid=43bc683a8b04a3949b2edd8a81a092b7&amp;type=3#GreekRollsRegular&quot;); -unity-font-definition: initial;" />
+            <ui:VisualElement name="GodlyWeapon" tabindex="-2" style="flex-grow: 1; height: 195px; width: 194px; position: absolute; left: 1615px; top: 13px; background-image: url(&quot;project://database/Assets/Sprites/Gods/GodlyWeapons/Ares.png?fileID=2800000&amp;guid=2d03db52c5438914bb15fef24bf02f0a&amp;type=3#Ares&quot;); -unity-background-image-tint-color: rgb(132, 84, 0);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

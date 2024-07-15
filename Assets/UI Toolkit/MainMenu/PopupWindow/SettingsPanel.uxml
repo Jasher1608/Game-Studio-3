@@ -1,10 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/MainMenu/PopupWindow/Resources/PopupWindowStyleSheet.uss?fileID=7433441132597879392&amp;guid=f074537ba0836514eae173bf2f972367&amp;type=3#PopupWindowStyleSheet" />
     <Style src="project://database/Assets/UI%20Toolkit/MainMenu/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=5a00cb4b81509d543992407f1a511fa6&amp;type=3#MainMenuStyle" />
-    <PopupControlsPanel.PopupWindow tabindex="2" name="PopupWindow" class="popup_window" style="justify-content: flex-end; margin-top: 141px; margin-right: 141px; margin-bottom: 141px; margin-left: 141px; height: 800px; width: 600px;">
+    <PopupControlsPanel.PopupWindow tabindex="2" name="PopupWindow" class="popup_window popup_container" style="justify-content: flex-end; margin-top: 141px; margin-right: 141px; margin-bottom: 141px; margin-left: 141px; height: 800px; width: 600px;">
         <ui:Label tabindex="-1" text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Heading" class="header" style="top: 75px;" />
-        <ui:VisualElement name="HorizontalContainer" tabindex="-2" class="horizontal_container" style="flex-grow: 1; width: 395px; height: 100px; align-self: center; justify-content: space-around; align-items: center;">
-            <ui:VisualElement name="Text" tabindex="-3" focusable="false" class="popup_msg" style="flex-grow: 1; -unity-font: url(&quot;project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&amp;guid=43bc683a8b04a3949b2edd8a81a092b7&amp;type=3#GreekRollsRegular&quot;); font-size: 28px; color: rgb(0, 0, 0); height: 404px; -unity-font-definition: initial;" />
+        <ui:VisualElement name="VisualElement" tabindex="-2" class="popup_window" style="flex-grow: 1; width: 395px; height: 100px; align-self: center; justify-content: space-around; align-items: center;">
+            <ui:VisualElement name="VisualElement" tabindex="-3" focusable="false" class="horizontal_container" style="flex-grow: 1; -unity-font: url(&quot;project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&amp;guid=43bc683a8b04a3949b2edd8a81a092b7&amp;type=3#GreekRollsRegular&quot;); font-size: 28px; color: rgb(0, 0, 0); height: 404px; -unity-font-definition: initial;">
+                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" class="popup_msg" style="width: 293px;" />
+            </ui:VisualElement>
         </ui:VisualElement>
     </PopupControlsPanel.PopupWindow>
 </ui:UXML>
