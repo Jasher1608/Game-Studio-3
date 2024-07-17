@@ -36,6 +36,9 @@
 .button:hover {
     scale: 1.1 1.1;
     -unity-background-image-tint-color: rgb(0, 0, 0);
+    transition-duration: 0s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
 }
 
 .Skill1 {
@@ -88,8 +91,8 @@
     -unity-font: url("project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&guid=43bc683a8b04a3949b2edd8a81a092b7&type=3#GreekRollsRegular");
     -unity-font-definition: initial;
     color: rgb(255, 255, 255);
-    margin-top: 31px;
-    margin-right: 31px;
-    margin-bottom: 31px;
-    margin-left: 31px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
 }

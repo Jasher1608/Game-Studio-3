@@ -16,8 +16,8 @@
             <ui:Button text="Skill 9" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Skill9" class="button Skill9" />
         </ui:VisualElement>
         <ui:VisualElement name="XP_SkillTallyContainer" style="flex-grow: 1; position: absolute; width: 270px; left: 45px; height: 165px; top: 700px;">
-            <ui:Label tabindex="-1" text="DIONYSUS XP" parse-escape-sequences="true" display-tooltip-when-elided="true" name="XP" class="header2" style="-unity-text-align: middle-left; height: 67px;" />
-            <ui:Label tabindex="-1" text="DIONYSUS SKILL POINTS" parse-escape-sequences="false" display-tooltip-when-elided="true" name="DionysusSkillPoints" class="header2" style="-unity-text-align: middle-left;" />
+            <ui:Label tabindex="-1" text="DIONYSUS XP = " parse-escape-sequences="true" display-tooltip-when-elided="true" name="XP" class="header2" style="-unity-text-align: middle-left; height: 67px;" />
+            <ui:Label tabindex="-1" text="DIONYSUS SKILL POINTS = " parse-escape-sequences="false" display-tooltip-when-elided="true" name="DionysusSkillPoints" class="header2" style="-unity-text-align: middle-left;" />
         </ui:VisualElement>
         <ui:VisualElement name="GodlyWeaponContainer" tabindex="3" style="flex-grow: 1; width: 1791px; position: absolute; left: -56px; background-color: rgba(0, 0, 0, 0); height: 176px; top: 767px; align-self: flex-end;">
             <ui:ProgressBar value="22" title="GODLY     WEAPON     PROGRESS" name="DionysusWeaponProgressBar" class="myslider" style="align-items: stretch; justify-content: center; background-color: rgb(132, 0, 207); top: 119px; left: 52px; height: 67px; width: 1708px; -unity-font: url(&quot;project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&amp;guid=43bc683a8b04a3949b2edd8a81a092b7&amp;type=3#GreekRollsRegular&quot;); -unity-font-definition: initial;" />
