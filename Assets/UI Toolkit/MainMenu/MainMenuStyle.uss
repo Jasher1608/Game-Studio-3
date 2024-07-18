@@ -21,16 +21,21 @@
     background-image: url("project://database/Assets/Sprites/MainMenu/Border/panel-border-013.png?fileID=21300000&guid=0df59c5b104393a4eac1f4094de00a15&type=3#panel-border-013");
     background-color: rgb(0, 0, 0);
     width: 150px;
-    height: 150px;
+    height: 175px;
     align-self: center;
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;
     color: rgb(255, 255, 255);
     justify-content: flex-start;
     align-items: center;
     transition-duration: 0.35s;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.81);
+    border-top-width: 6px;
+    border-right-width: 6px;
+    border-bottom-width: 6px;
+    border-left-width: 6px;
 }
 
 .button:hover {
@@ -91,8 +96,97 @@
     -unity-font: url("project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&guid=43bc683a8b04a3949b2edd8a81a092b7&type=3#GreekRollsRegular");
     -unity-font-definition: initial;
     color: rgb(255, 255, 255);
+    margin-top: 53px;
+    margin-right: 53px;
+    margin-bottom: 53px;
+    margin-left: 53px;
+}
+
+.closeButton {
+    background-image: url("project://database/Assets/Sprites/Icons/BackButton.png?fileID=21300000&guid=97c128fea5f78544c80e0a83bf46d0da&type=3#BackButton");
+    height: 50px;
+    width: 60px;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.closeButton:hover {
+    background-image: url("project://database/Assets/Sprites/Icons/BackButton.png?fileID=21300000&guid=97c128fea5f78544c80e0a83bf46d0da&type=3#BackButton");
+    height: 50px;
+    width: 60px;
+    -unity-background-image-tint-color: rgb(192, 0, 2);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    scale: 1.1 1.1;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+}
+
+.moveSettingsPanelIntoFrame {
+    translate: -2441px 0;
+    opacity: 1;
+}
+
+.moveControlsPanelIntoFrame {
+    translate: -2490px 0;
+    opacity: 1;
+}
+
+.header3 {
+    -unity-text-outline-color: rgb(255, 255, 255);
+    font-size: 65px;
+    -unity-font: url("project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&guid=43bc683a8b04a3949b2edd8a81a092b7&type=3#GreekRollsRegular");
+    -unity-font-definition: initial;
+    color: rgb(255, 255, 255);
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 0;
     margin-left: 0;
+}
+
+.menuButton {
+    -unity-font: url("project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&guid=43bc683a8b04a3949b2edd8a81a092b7&type=3#GreekRollsRegular");
+    -unity-font-definition: initial;
+    font-size: 50px;
+    background-image: url("project://database/Assets/Sprites/MainMenu/Border/panel-border-013.png?fileID=21300000&guid=0df59c5b104393a4eac1f4094de00a15&type=3#panel-border-013");
+    background-color: rgb(0, 0, 0);
+    width: 150px;
+    height: 150px;
+    align-self: center;
+    margin-top: 32px;
+    margin-right: 32px;
+    margin-bottom: 32px;
+    margin-left: 32px;
+    color: rgb(255, 255, 255);
+    justify-content: flex-start;
+    align-items: center;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.81);
+}
+
+.menuButton:hover {
+    -unity-font: url("project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&guid=43bc683a8b04a3949b2edd8a81a092b7&type=3#GreekRollsRegular");
+    -unity-font-definition: initial;
+    font-size: 50px;
+    background-image: url("project://database/Assets/Sprites/MainMenu/Border/panel-border-013.png?fileID=21300000&guid=0df59c5b104393a4eac1f4094de00a15&type=3#panel-border-013");
+    background-color: rgb(0, 0, 0);
+    width: 150px;
+    height: 150px;
+    align-self: center;
+    color: rgb(255, 255, 255);
+    justify-content: flex-start;
+    align-items: center;
+    transition-duration: 0.2s;
+    -unity-background-image-tint-color: rgba(212, 0, 0, 0.81);
+    scale: 1.2 1.2;
+    rotate: 0;
+    transition-timing-function: ease;
+    border-left-color: rgba(255, 0, 0, 0);
+    border-right-color: rgba(255, 0, 0, 0);
+    border-top-color: rgba(255, 0, 0, 0);
+    border-bottom-color: rgba(255, 0, 0, 0);
 }

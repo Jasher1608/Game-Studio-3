@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/MainMenu/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=5a00cb4b81509d543992407f1a511fa6&amp;type=3#MainMenuStyle" />
-    <ui:VisualElement name="VisualElement" style="flex-grow: 1; align-items: flex-start; background-image: none; margin-top: 49px; margin-right: 49px; margin-bottom: 49px; margin-left: 49px;">
-        <ui:VisualElement tabindex="1" name="NemesisVisualContainer" style="flex-grow: 1; width: 625px; background-image: url(&quot;project://database/Assets/Sprites/Gods/Nemesis.jpg?fileID=21300000&amp;guid=8b6780b5a04887b4589d5c576c6f7375&amp;type=3#Nemesis&quot;); height: 960px; -unity-background-image-tint-color: rgb(99, 99, 99); align-items: flex-start;">
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; align-items: flex-start; background-image: none; margin-top: 49px; margin-right: 49px; margin-bottom: 49px; margin-left: 49px; background-color: rgba(0, 0, 0, 0.39);">
+        <ui:VisualElement tabindex="1" name="NemesisVisualContainer" style="flex-grow: 1; width: 625px; background-image: url(&quot;project://database/Assets/Sprites/Gods/Nemesis.jpg?fileID=21300000&amp;guid=8b6780b5a04887b4589d5c576c6f7375&amp;type=3#Nemesis&quot;); height: 960px; -unity-background-image-tint-color: rgb(130, 106, 106); align-items: flex-start; background-color: rgba(0, 0, 0, 0.68);">
             <ui:Label tabindex="-1" text="Nemesis" parse-escape-sequences="true" display-tooltip-when-elided="true" class="header" style="font-size: 162px;" />
         </ui:VisualElement>
         <ui:VisualElement tabindex="2" focusable="false" name="NemesisTreeContainer" style="flex-grow: 1; -unity-background-scale-mode: stretch-to-fill; align-self: center; height: 961px; width: 1366px; -unity-background-image-tint-color: rgb(48, 47, 47); align-items: flex-start; position: absolute; left: 270px; background-color: rgba(118, 0, 0, 0); top: -30px; flex-direction: column;">
@@ -16,8 +16,8 @@
             <ui:Button text="Skill 9" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Skill9" class="button Skill9" />
         </ui:VisualElement>
         <ui:VisualElement name="XP_SkillTallyContainer" style="flex-grow: 1; position: absolute; width: 270px; left: 45px; height: 165px; top: 700px;">
-            <ui:Label tabindex="-1" text="Nemesis XP = " parse-escape-sequences="true" display-tooltip-when-elided="true" name="XP" class="header2" style="-unity-text-align: middle-left; height: 67px;" />
-            <ui:Label tabindex="-1" text="Nemesis SKILL POINTS = " parse-escape-sequences="false" display-tooltip-when-elided="true" name="NemsisSkillPoints" class="header2" style="-unity-text-align: middle-left;" />
+            <ui:Label tabindex="-1" text="Nemesis XP = " parse-escape-sequences="true" display-tooltip-when-elided="true" name="XP" class="header3" style="-unity-text-align: middle-left; height: 67px;" />
+            <ui:Label tabindex="-1" text="Nemesis SKILL POINTS = " parse-escape-sequences="false" display-tooltip-when-elided="true" name="NemsisSkillPoints" class="header3" style="-unity-text-align: middle-left;" />
         </ui:VisualElement>
         <ui:VisualElement name="GodlyWeaponContainer" tabindex="3" style="flex-grow: 1; width: 1791px; position: absolute; left: -56px; background-color: rgba(0, 0, 0, 0); height: 176px; top: 767px; align-self: flex-end;">
             <ui:ProgressBar value="22" title="GODLY     WEAPON     PROGRESS" name="NemesisWeaponProgressBar" class="myslider" style="align-items: stretch; justify-content: center; background-color: rgb(0, 0, 0); top: 119px; left: 52px; height: 67px; width: 1708px; -unity-font: url(&quot;project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&amp;guid=43bc683a8b04a3949b2edd8a81a092b7&amp;type=3#GreekRollsRegular&quot;); -unity-font-definition: initial;" />
