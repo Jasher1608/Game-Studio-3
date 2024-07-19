@@ -1,0 +1,82 @@
+.moveAresPanelIntoFrame {
+}
+
+.moveArtemisPanelIntoFrame {
+}
+
+.moveApolloPanelIntoFrame {
+}
+
+.moveAthenaPanelIntoFrame {
+}
+
+.moveDionysusPanelIntoFrame {
+}
+
+.moveNemesisPanelIntoFrame {
+}
+
+.moveNyxPanelIntoFrame {
+}
+
+.Skill1 {
+    left: -443px;
+    bottom: -375px;
+    height: 150px;
+    width: 150px;
+}
+
+.Skill2 {
+    left: -240px;
+    width: 150px;
+    height: 150px;
+}
+
+.Skill3 {
+    top: 183px;
+    left: -240px;
+    width: 150px;
+    height: 150px;
+}
+
+.Skill4 {
+    left: 0;
+    top: -515px;
+    width: 150px;
+    height: 150px;
+}
+
+.Skill5 {
+    top: -480px;
+    left: 0;
+    width: 150px;
+    height: 150px;
+}
+
+.Skill6 {
+    top: -467px;
+    left: 0;
+    width: 150px;
+    height: 150px;
+}
+
+.Skill7 {
+    top: -450px;
+    left: 0;
+    width: 150px;
+    height: 150px;
+}
+
+.Skill8 {
+    top: -1141px;
+    left: 250px;
+    width: 150px;
+    height: 150px;
+}
+
+.Skill9 {
+    top: -936px;
+    left: 250px;
+    width: 150px;
+    height: 150px;
+}
