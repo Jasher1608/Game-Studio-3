@@ -1,170 +1,198 @@
-////using System.Collections;
-////using System.Collections.Generic;
-////using UnityEngine;
-////using UnityEngine.UIElements;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UIElements;
 
-////public class SkillTreeEvents : MonoBehaviour
-////{
-////    private UIDocument _document;
-////    private Button _button;
+public class SkillTreeEvents : MonoBehaviour
+{
+    private UIDocument _document;
+    private Button _button;
 
-////    private List<Button> _skillTreeButtons = new List<Button>();
-////    private AudioSource _audioSource;
+    private List<Button> _skillTreeButtons = new List<Button>();
+    private AudioSource _audioSource;
 
-////    private VisualElement _AresPanel;
-////    private VisualElement _ApolloPanel;
-////    private VisualElement _DionysusPanel;
-////    private VisualElement _ArtemisPanel;
-////    private VisualElement _AthenaPanel;
-////    private VisualElement _NyxPanel;
-////    private VisualElement _NemesisPanel;
+    private VisualElement _aresPanel;
+    private VisualElement _apolloPanel;
+    private VisualElement _dionysusPanel;
+    private VisualElement _artemisPanel;
+    private VisualElement _athenaPanel;
+    private VisualElement _nyxPanel;
+    private VisualElement _nemesisPanel;
 
-////    private Button _aresBackButton;
-////    private Button _apolloBackButton;
-////    private Button _dionysusBackButton;
-////    private Button _artemisBackButton;
-////    private Button _athenaBackButton;
-////    private Button _nyxBackButton;
-////    private Button _nemesisBackButton;
+    private Button _aresBackButton;
+    private Button _apolloBackButton;
+    private Button _dionysusBackButton;
+    private Button _artemisBackButton;
+    private Button _athenaBackButton;
+    private Button _nyxBackButton;
+    private Button _nemesisBackButton;
 
-////    private VisualElement _currentOpenPanel;
-
-
-
-////    private void Awake()
-////    {
-////        _audioSource = GetComponent<AudioSource>();
-////        _document = GetComponent<UIDocument>();
-
-////        _button = _document.rootVisualElement.Q("Ares") as Button;
-////        _button.RegisterCallback<ClickEvent>(OnPlayClick);
-
-////        _button = _document.rootVisualElement.Q("Apollo") as Button;
-////        _button.RegisterCallback<ClickEvent>(OnSettingsClick);
-
-////        _button = _document.rootVisualElement.Q("Dionysus") as Button;
-////        _button.RegisterCallback<ClickEvent>(OnControlsClick);
-
-////        _button = _document.rootVisualElement.Q("Artemis") as Button;
-////        _button.RegisterCallback<ClickEvent>(OnControlsClick);
-
-////        _button = _document.rootVisualElement.Q("Athena") as Button;
-////        _button.RegisterCallback<ClickEvent>(OnControlsClick);
-
-////        _button = _document.rootVisualElement.Q("Nemesis") as Button;
-////        _button.RegisterCallback<ClickEvent>(OnControlsClick);
-
-////        _button = _document.rootVisualElement.Q("Nyx") as Button;
-////        _button.RegisterCallback<ClickEvent>(OnControlsClick);
-
-
-////        _AresPanel = _document.rootVisualElement.Q("AresPanel");
-////        _ApolloPanel = _document.rootVisualElement.Q("ApolloPanel");
-////        _DionysusPanel = _document.rootVisualElement.Q("DionysusPanel");
-////        _ArtemisPanel = _document.rootVisualElement.Q("ArtemisPanel");
-////        _AthenaPanel = _document.rootVisualElement.Q("AthenaPanel");
-////        _NemesisPanel = _document.rootVisualElement.Q("NemesisPanel");
-////        _NyxPanel = _document.rootVisualElement.Q("NyxPanel");
-
-
-////        _aresBackButton = _document.rootVisualElement.Q("AresBackButton");
-
-
-////        // UP TO HERE
-
-////        _settingsBackButton = _settingsPanel.Q<Button>("SettingsBackButton");
-////        _settingsBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
-
-////        _controlsBackButton = _controlsPanel.Q<Button>("ControlsBackButton");
-////        _controlsBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
+    private VisualElement _currentOpenPanel;
 
 
 
-////        _menuButtons = _document.rootVisualElement.Query<Button>().ToList();
-////        for (int i = 0; i < _menuButtons.Count; i++)
-////        {
-////            _menuButtons[i].RegisterCallback<ClickEvent>(OnAllButtonClick);
-////        }
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+        _document = GetComponent<UIDocument>();
 
-////    }
+        _button = _document.rootVisualElement.Q("Ares") as Button;
+        _button.RegisterCallback<ClickEvent>(OnAresClick);
 
-////    private void OnDisable()
-////    {
-////        _button.UnregisterCallback<ClickEvent>(OnPlayClick);
-////        _button.UnregisterCallback<ClickEvent>(OnSettingsClick);
-////        _button.UnregisterCallback<ClickEvent>(OnControlsClick);
+        _button = _document.rootVisualElement.Q("Apollo") as Button;
+        _button.RegisterCallback<ClickEvent>(OnApolloClick);
 
-////        _settingsBackButton.UnregisterCallback<ClickEvent>(OnBackButtonClick);
-////        _controlsBackButton.UnregisterCallback<ClickEvent>(OnBackButtonClick);
+        _button = _document.rootVisualElement.Q("Dionysus") as Button;
+        _button.RegisterCallback<ClickEvent>(OnContClick);
 
+        _button = _document.rootVisualElement.Q("Artemis") as Button;
+        _button.RegisterCallback<ClickEvent>(OnControlsClick);
 
-////        for (int i = 0; i < _menuButtons.Count; i++)
-////        {
-////            _menuButtons[i].UnregisterCallback<ClickEvent>(OnAllButtonClick);
-////        }
-////    }
+        _button = _document.rootVisualElement.Q("Athena") as Button;
+        _button.RegisterCallback<ClickEvent>(OnControlsClick);
 
-////    private void OnPlayClick(ClickEvent evt)
-////    {
-////        Debug.Log("You pressed the Play Button");
-////        // insert load next scene here / action here
-////    }
+        _button = _document.rootVisualElement.Q("Nemesis") as Button;
+        _button.RegisterCallback<ClickEvent>(OnControlsClick);
 
-////    private void OnSettingsClick(ClickEvent evt)
-////    {
-////        Debug.Log("You pressed the Settings Button");
-////        // insert settings panel functionality
+        _button = _document.rootVisualElement.Q("Nyx") as Button;
+        _button.RegisterCallback<ClickEvent>(OnControlsClick);
 
 
-
-////        CloseCurrentOpenPanel();
-
-////        if (_settingsPanel != null)
-////        {
-////            _settingsPanel.AddToClassList("moveSettingsPanelIntoFrame");
-////            _currentOpenPanel = _settingsPanel;
-////        }
-////    }
-
-////    private void OnControlsClick(ClickEvent evt)
-////    {
-////        Debug.Log("You pressed the Controls Button");
-////        // insert Controls panel functionality
-
-////        CloseCurrentOpenPanel();
-
-////        if (_controlsPanel != null)
-////        {
-////            _controlsPanel.AddToClassList("moveControlsPanelIntoFrame");
-////            _currentOpenPanel = _controlsPanel;
-////        }
-////    }
-
-////    private void OnBackButtonClick(ClickEvent evt)
-////    {
-////        Debug.Log("You pressed the Back Button");
-////        CloseCurrentOpenPanel();
-
-////    }
-
-////    private void CloseCurrentOpenPanel()
-////    {
-////        if (_currentOpenPanel != null)
-////        {
-////            _currentOpenPanel.RemoveFromClassList("moveSettingsPanelIntoFrame");
-////            _currentOpenPanel.RemoveFromClassList("moveControlsPanelIntoFrame");
-////            _currentOpenPanel = null;
-////        }
-////    }
+        _aresPanel = _document.rootVisualElement.Q("AresPanel");
+        _apolloPanel = _document.rootVisualElement.Q("ApolloPanel");
+        _dionysusPanel = _document.rootVisualElement.Q("DionysusPanel");
+        _artemisPanel = _document.rootVisualElement.Q("ArtemisPanel");
+        _athenaPanel = _document.rootVisualElement.Q("AthenaPanel");
+        _nemesisPanel = _document.rootVisualElement.Q("NemesisPanel");
+        _nyxPanel = _document.rootVisualElement.Q("NyxPanel");
 
 
+        _aresBackButton = _aresPanel.Q<Button>("AresBackButton");
+        _aresBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
 
-////    private void OnAllButtonClick(ClickEvent evt)
-////    {
-////        _audioSource.Play();
-////    }
+        _apolloBackButton = _apolloPanel.Q<Button>("ApolloBackButton");
+        _apolloBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
 
-////}
+        _dionysusBackButton = _dionysusPanel.Q<Button>("DionysusBackButton");
+        _dionysusBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
+
+        _artemisBackButton = _artemisPanel.Q<Button>("ArtemisBackButton");
+        _artemisBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
+
+        _athenaBackButton = _athenaPanel.Q<Button>("AthenaBackButton");
+        _athenaBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
+
+        _nemesisBackButton = _nemesisBackButton.Q<Button>("NemesisBackButton");
+        _nemesisBackButton.RegisterCallback<ClickEvent> (OnBackButtonClick);
+
+        _nyxBackButton = _nyxPanel.Q<Button>("NemesisBackButton");
+        _nyxBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
+
+
+        UP TO HERE
+
+       _buttons = _document.rootVisualElement.Query<Button>().ToList();
+        for (int i = 0; i < _buttons.Count; i++)
+        {
+            _buttons[i].RegisterCallback<ClickEvent>(OnAllButtonClick);
+        }
+
+    }
+
+    private void OnDisable()
+    {
+        _button.UnregisterCallback<ClickEvent>(OnAresClick);
+        _button.UnregisterCallback<ClickEvent>(OnApolloClick);
+        _button.UnregisterCallback<ClickEvent>(OnArtemisClick);
+        _button.UnregisterCallback<ClickEvent>(OnAthenaClick);
+        _button.UnregisterCallback<ClickEvent>(OnNemesisClick);
+
+
+        _settingsBackButton.UnregisterCallback<ClickEvent>(OnBackButtonClick);
+        _controlsBackButton.UnregisterCallback<ClickEvent>(OnBackButtonClick);
+
+
+        for (int i = 0; i < _menuButtons.Count; i++)
+        {
+            _menuButtons[i].UnregisterCallback<ClickEvent>(OnAllButtonClick);
+        }
+    }
+
+    private void OnAresClick(ClickEvent evt)
+    {
+        Debug.Log("You pressed the Ares Button");
+        // insert load next scene here / action here
+
+        CloseCurrentOpenPanel();
+
+        if (_aresPanel != null)
+        {
+            _aresPanel.AddToClassList("moveAresPanelIntoFrame");
+            _currentOpenPanel = _aresPanel;
+        }
+    }
+
+    private void OnApolloClick(ClickEvent evt)
+    {
+        Debug.Log("You pressed the Apollo Button");
+        // insert settings panel functionality
+
+        CloseCurrentOpenPanel();
+
+        if (_apolloPanel != null)
+        {
+            _apolloPanel.AddToClassList("moveApolloPanelIntoFrame");
+            _currentOpenPanel = _apolloPanel;
+        }
+    }
+
+}
+
+   
+
+    private void OnControlsClick(ClickEvent evt)
+    {
+        Debug.Log("You pressed the Controls Button");
+        // insert Controls panel functionality
+
+        CloseCurrentOpenPanel();
+
+        if (_controlsPanel != null)
+        {
+            _controlsPanel.AddToClassList("moveControlsPanelIntoFrame");
+            _currentOpenPanel = _controlsPanel;
+        }
+    }
+
+    private void OnBackButtonClick(ClickEvent evt)
+    {
+        Debug.Log("You pressed the Back Button");
+        CloseCurrentOpenPanel();
+    }
+
+    private void CloseCurrentOpenPanel()
+    {
+            if (_currentOpenPanel != null)
+            {
+                _currentOpenPanel.RemoveFromClassList("moveAresPanelIntoFrame");
+                _currentOpenPanel.RemoveFromClassList("moveApolloPanelIntoFrame");
+                _currentOpenPanel.RemoveFromClassList("moveDionysusPanelIntoFrame");
+                _currentOpenPanel.RemoveFromClassList("moveAthenaPanelIntoFrame");
+                _currentOpenPanel.RemoveFromClassList("moveArtemisPanelIntoFrame");
+                _currentOpenPanel.RemoveFromClassList("moveNyxPanelIntoFrame");
+                _currentOpenPanel.RemoveFromClassList("moveNemesisPanelIntoFrame");
+
+                _currentOpenPanel = null;
+            }
+    }
+
+
+    private void OnAllButtonClick(ClickEvent evt)
+    {
+        _audioSource.Play();
+    }
+
+}
 
 
 // STARTED AGAIN TO ALIGN WITH NEW SKILL TREE DESIGN - 19 July 2024 
