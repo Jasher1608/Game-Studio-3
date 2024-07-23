@@ -1,82 +1,98 @@
 .moveAresPanelIntoFrame {
-}
-
-.moveArtemisPanelIntoFrame {
+    translate: 0 1192px;
+    transition-duration: 1s;
 }
 
 .moveApolloPanelIntoFrame {
-}
-
-.moveAthenaPanelIntoFrame {
+    translate: 0 1192px;
+    transition-duration: 1s;
 }
 
 .moveDionysusPanelIntoFrame {
+    translate: 0 1192px;
+    transition-duration: 1s;
 }
 
-.moveNemesisPanelIntoFrame {
+.moveArtemisPanelIntoFrame {
+    translate: 0 1192px;
+    transition-duration: 1s;
+}
+
+.moveAthenaPanelIntoFrame {
+    translate: 0 1192px;
+    transition-duration: 1s;
 }
 
 .moveNyxPanelIntoFrame {
+    translate: 0 1192px;
+    transition-duration: 1s;
+}
+
+.moveNemesisPanelIntoFrame {
+    translate: 0 1192px;
+    transition-duration: 1s;
 }
 
 .Skill1 {
     left: -443px;
     bottom: -375px;
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
+    top: 305px;
 }
 
 .Skill2 {
     left: -240px;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
+    top: 27px;
 }
 
 .Skill3 {
-    top: 183px;
+    top: 194px;
     left: -240px;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
 
 .Skill4 {
-    left: 0;
-    top: -515px;
-    width: 150px;
-    height: 150px;
+    left: -40px;
+    top: -347px;
+    width: 100px;
+    height: 100px;
 }
 
 .Skill5 {
-    top: -480px;
-    left: 0;
-    width: 150px;
-    height: 150px;
+    top: -255px;
+    left: -40px;
+    width: 100px;
+    height: 100px;
 }
 
 .Skill6 {
-    top: -467px;
-    left: 0;
-    width: 150px;
-    height: 150px;
+    top: -200px;
+    left: -40px;
+    width: 100px;
+    height: 100px;
 }
 
 .Skill7 {
-    top: -450px;
-    left: 0;
-    width: 150px;
-    height: 150px;
+    top: -140px;
+    left: -40px;
+    width: 100px;
+    height: 100px;
 }
 
 .Skill8 {
-    top: -1032px;
-    left: 250px;
-    width: 150px;
-    height: 150px;
+    top: -708px;
+    left: 164px;
+    width: 100px;
+    height: 100px;
 }
 
 .Skill9 {
-    top: -936px;
-    left: 250px;
-    width: 150px;
-    height: 150px;
+    top: -457px;
+    left: 173px;
+    width: 100px;
+    height: 100px;
 }
