@@ -6,111 +6,168 @@ using UnityEngine.UIElements;
 public class MainMenuEvents : MonoBehaviour
 {
     private UIDocument _document;
-    private Button _button;
-    private List<Button> _menuButtons = new List<Button>();
     private AudioSource _audioSource;
+
+    private Button _playButton;
+    private Button _settingsButton;
+    private Button _controlsButton;
+    private Button _playGameButton;
+    private Button _nextButtonOne;
+    private Button _nextButtonTwo;
+    private Button _nextButtonThree;
+
+    private List<Button> _menuButtons = new List<Button>();
 
     private VisualElement _settingsPanel;
     private VisualElement _controlsPanel;
+    private VisualElement _containerZeroPanel;
+    private VisualElement _containerGameNarrativeOnePanel;
 
     private Button _settingsBackButton;
     private Button _controlsBackButton;
 
     private VisualElement _currentOpenPanel;
 
-
-
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
-
         _document = GetComponent<UIDocument>();
 
-        _button = _document.rootVisualElement.Q("Play") as Button;
-        _button.RegisterCallback<ClickEvent>(OnPlayClick);
+        // Initialize buttons
+        _playButton = _document.rootVisualElement.Q<Button>("Play");
+        _settingsButton = _document.rootVisualElement.Q<Button>("Settings");
+        _controlsButton = _document.rootVisualElement.Q<Button>("Controls");
+        _playGameButton = _document.rootVisualElement.Q<Button>("PlayGame");
+        _nextButtonOne = _document.rootVisualElement.Q<Button>("NextButtonOne");
+        _nextButtonTwo = _document.rootVisualElement.Q<Button>("NextButtonTwo");
+        _nextButtonThree = _document.rootVisualElement.Q<Button>("NextButtonThree");
 
-        _button = _document.rootVisualElement.Q("Settings") as Button;
-        _button.RegisterCallback<ClickEvent>(OnSettingsClick);
+        // Register button callbacks
+        RegisterButtonCallbacks();
 
-        _button = _document.rootVisualElement.Q("Controls") as Button;
-        _button.RegisterCallback<ClickEvent>(OnControlsClick);
+        // Initialize panels
+        _settingsPanel = _document.rootVisualElement.Q<VisualElement>("SettingsPanel");
+        _controlsPanel = _document.rootVisualElement.Q<VisualElement>("ControlsPanel");
+        _containerZeroPanel = _document.rootVisualElement.Q<VisualElement>("ContainerZeroPanel");
+        _containerGameNarrativeOnePanel = _document.rootVisualElement.Q<VisualElement>("ContainerGameNarrativeOne");
 
-        _settingsPanel = _document.rootVisualElement.Q("SettingsPanel");
-        _controlsPanel = _document.rootVisualElement.Q("ControlsPanel");
+        // Initialize back buttons
+        _settingsBackButton = _settingsPanel?.Q<Button>("SettingsBackButton");
+        _controlsBackButton = _controlsPanel?.Q<Button>("ControlsBackButton");
 
-        _settingsBackButton = _settingsPanel.Q<Button>("SettingsBackButton");
-        _settingsBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
+        // Register back button callbacks
+        RegisterBackButtonCallbacks();
 
-        _controlsBackButton = _controlsPanel.Q<Button>("ControlsBackButton");
-        _controlsBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
-
-
-
+        // Register all menu buttons for audio
         _menuButtons = _document.rootVisualElement.Query<Button>().ToList();
-        for (int i = 0; i < _menuButtons.Count; i++)
+        foreach (var button in _menuButtons)
         {
-            _menuButtons[i].RegisterCallback<ClickEvent>(OnAllButtonClick);
+            button.RegisterCallback<ClickEvent>(OnAllButtonClick);
         }
-
     }
 
     private void OnDisable()
     {
-        _button.UnregisterCallback<ClickEvent>(OnPlayClick);
-        _button.UnregisterCallback<ClickEvent>(OnSettingsClick);
-        _button.UnregisterCallback<ClickEvent>(OnControlsClick);
+        // Unregister button callbacks
+        UnregisterButtonCallbacks();
 
-        _settingsBackButton.UnregisterCallback<ClickEvent>(OnBackButtonClick);
-        _controlsBackButton.UnregisterCallback<ClickEvent>(OnBackButtonClick);
+        // Unregister back button callbacks
+        UnregisterBackButtonCallbacks();
 
-
-        for (int i = 0; i < _menuButtons.Count; i++)
+        // Unregister all menu button callbacks
+        foreach (var button in _menuButtons)
         {
-            _menuButtons[i].UnregisterCallback<ClickEvent>(OnAllButtonClick);
+            button.UnregisterCallback<ClickEvent>(OnAllButtonClick);
         }
+    }
+
+    private void RegisterButtonCallbacks()
+    {
+        if (_playButton != null) _playButton.RegisterCallback<ClickEvent>(OnPlayClick);
+        if (_settingsButton != null) _settingsButton.RegisterCallback<ClickEvent>(OnSettingsClick);
+        if (_controlsButton != null) _controlsButton.RegisterCallback<ClickEvent>(OnControlsClick);
+        if (_playGameButton != null) _playGameButton.RegisterCallback<ClickEvent>(OnPlayGameClick);
+        if (_nextButtonOne != null) _nextButtonOne.RegisterCallback<ClickEvent>(OnNextButtonOneClick);
+        if (_nextButtonTwo != null) _nextButtonTwo.RegisterCallback<ClickEvent>(OnNextButtonTwoClick);
+        if (_nextButtonThree != null) _nextButtonThree.RegisterCallback<ClickEvent>(OnNextButtonThreeClick);
+    }
+
+    private void UnregisterButtonCallbacks()
+    {
+        if (_playButton != null) _playButton.UnregisterCallback<ClickEvent>(OnPlayClick);
+        if (_settingsButton != null) _settingsButton.UnregisterCallback<ClickEvent>(OnSettingsClick);
+        if (_controlsButton != null) _controlsButton.UnregisterCallback<ClickEvent>(OnControlsClick);
+        if (_playGameButton != null) _playGameButton.UnregisterCallback<ClickEvent>(OnPlayGameClick);
+        if (_nextButtonOne != null) _nextButtonOne.UnregisterCallback<ClickEvent>(OnNextButtonOneClick);
+        if (_nextButtonTwo != null) _nextButtonTwo.UnregisterCallback<ClickEvent>(OnNextButtonTwoClick);
+        if (_nextButtonThree != null) _nextButtonThree.UnregisterCallback<ClickEvent>(OnNextButtonThreeClick);
+    }
+
+    private void RegisterBackButtonCallbacks()
+    {
+        if (_settingsBackButton != null) _settingsBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
+        if (_controlsBackButton != null) _controlsBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
+    }
+
+    private void UnregisterBackButtonCallbacks()
+    {
+        if (_settingsBackButton != null) _settingsBackButton.UnregisterCallback<ClickEvent>(OnBackButtonClick);
+        if (_controlsBackButton != null) _controlsBackButton.UnregisterCallback<ClickEvent>(OnBackButtonClick);
+    }
+
+    private void OnPlayGameClick(ClickEvent evt)
+    {
+        Debug.Log("You pressed the Start Game Button");
+        _containerZeroPanel?.AddToClassList("moveContainerZeroOutOfFrame");
+        _containerGameNarrativeOnePanel?.AddToClassList("moveContainerGameNarrativeOneIntoFrame");
+    }
+
+    private void OnNextButtonOneClick(ClickEvent evt)
+    {
+        Debug.Log("You pressed the first next Button");
+    }
+
+    private void OnNextButtonTwoClick(ClickEvent evt)
+    {
+        Debug.Log("You pressed the second next Button");
+    }
+
+    private void OnNextButtonThreeClick(ClickEvent evt)
+    {
+        Debug.Log("You pressed the third next Button");
     }
 
     private void OnPlayClick(ClickEvent evt)
     {
         Debug.Log("You pressed the Play Button");
-        // insert load next scene here / action here
     }
 
     private void OnSettingsClick(ClickEvent evt)
     {
         Debug.Log("You pressed the Settings Button");
-        // insert settings panel functionality
-
-
-
-        CloseCurrentOpenPanel();
-
-        if(_settingsPanel != null)
-        {
-            _settingsPanel.AddToClassList("moveSettingsPanelIntoFrame");
-            _currentOpenPanel = _settingsPanel;
-        }
+        OpenPanel(_settingsPanel, "moveSettingsPanelIntoFrame");
     }
 
     private void OnControlsClick(ClickEvent evt)
     {
         Debug.Log("You pressed the Controls Button");
-        // insert Controls panel functionality
-
-        CloseCurrentOpenPanel();
-
-        if (_controlsPanel != null)
-        {
-            _controlsPanel.AddToClassList("moveControlsPanelIntoFrame");
-            _currentOpenPanel = _controlsPanel;
-        }
+        OpenPanel(_controlsPanel, "moveControlsPanelIntoFrame");
     }
 
     private void OnBackButtonClick(ClickEvent evt)
     {
         Debug.Log("You pressed the Back Button");
         CloseCurrentOpenPanel();
+    }
 
+    private void OpenPanel(VisualElement panel, string className)
+    {
+        CloseCurrentOpenPanel();
+        if (panel != null)
+        {
+            panel.AddToClassList(className);
+            _currentOpenPanel = panel;
+        }
     }
 
     private void CloseCurrentOpenPanel()
@@ -119,15 +176,13 @@ public class MainMenuEvents : MonoBehaviour
         {
             _currentOpenPanel.RemoveFromClassList("moveSettingsPanelIntoFrame");
             _currentOpenPanel.RemoveFromClassList("moveControlsPanelIntoFrame");
+            _currentOpenPanel.RemoveFromClassList("moveContainerZeroOutOfFrame");
             _currentOpenPanel = null;
         }
     }
 
-
-
     private void OnAllButtonClick(ClickEvent evt)
     {
-        _audioSource.Play();
+        _audioSource?.Play();
     }
-
 }
