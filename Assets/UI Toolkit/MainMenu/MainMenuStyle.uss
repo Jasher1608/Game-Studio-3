@@ -109,15 +109,21 @@
 .moveContainerZeroOutOfFrame {
     translate: 0 2019px;
     opacity: 1;
-    transition-duration: 3s;
-    transition-timing-function: ease-in-out-sine;
+    transition-duration: 10s;
+    transition-timing-function: linear;
+    transition-property: opacity;
 }
 
 .moveContainerGameNarrativeOneIntoFrame {
     translate: 0 -1242px;
     opacity: 1;
-    transition-duration: 4s;
-    transition-timing-function: ease-in-out-sine;
+    transition-duration: 2s, 5s;
+    transition-timing-function: ease-out, ease;
+    transition-property: all, transform-origin;
+}
+
+.moveContainerMainMenuIntoFrame {
+    translate: 1190px 0;
 }
 
 .menuButton {
@@ -182,4 +188,27 @@
     transition-duration: 0.3s;
     -unity-font: url("project://database/Assets/Fonts/PRINC___.TTF?fileID=12800000&guid=2ef0d999c8d2e364cbeda7e856cad551&type=3#PRINC___");
     -unity-font-definition: initial;
+}
+
+.makeInvisible {
+    display: none;
+    transition-duration: 1s;
+}
+
+.insertTextBoxTwo {
+    left: -155px;
+    translate: -1376px 0;
+    transition-duration: 0.5s;
+}
+
+.insertTextBoxThree {
+    left: -155px;
+    translate: -2516px 0;
+    transition-duration: 0.5s;
+}
+
+.insertTextBoxFour {
+    left: -155px;
+    translate: -3643px 0;
+    transition-duration: 0.5s;
 }

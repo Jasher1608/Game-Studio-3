@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -16,12 +17,18 @@ public class MainMenuEvents : MonoBehaviour
     private Button _nextButtonTwo;
     private Button _nextButtonThree;
 
+    private Label _narrativeOne;
+    private Label _narrativeTwo;
+    private Label _narrativeThree;
+    private Label _narrativeFour;
+
     private List<Button> _menuButtons = new List<Button>();
 
     private VisualElement _settingsPanel;
     private VisualElement _controlsPanel;
     private VisualElement _containerZeroPanel;
     private VisualElement _containerGameNarrativeOnePanel;
+    private VisualElement _containerMainButtonContainerPanel;
 
     private Button _settingsBackButton;
     private Button _controlsBackButton;
@@ -49,7 +56,14 @@ public class MainMenuEvents : MonoBehaviour
         _settingsPanel = _document.rootVisualElement.Q<VisualElement>("SettingsPanel");
         _controlsPanel = _document.rootVisualElement.Q<VisualElement>("ControlsPanel");
         _containerZeroPanel = _document.rootVisualElement.Q<VisualElement>("ContainerZeroPanel");
-        _containerGameNarrativeOnePanel = _document.rootVisualElement.Q<VisualElement>("ContainerGameNarrativeOne");
+        _containerGameNarrativeOnePanel = _document.rootVisualElement.Q<VisualElement>("ContainerGameNarrativeOnePanel");
+        _containerMainButtonContainerPanel = _document.rootVisualElement.Q<VisualElement>("ContainerMainButtonContainerPanel");
+
+        // Initalize Labels
+        _narrativeOne = _document.rootVisualElement.Q<Label>("NarrativeOne");
+        _narrativeTwo = _document.rootVisualElement.Q<Label>("NarrativeTwo");
+        _narrativeThree = _document.rootVisualElement.Q<Label>("NarrativeThree");
+        _narrativeFour = _document.rootVisualElement.Q<Label>("NarrativeFour");
 
         // Initialize back buttons
         _settingsBackButton = _settingsPanel?.Q<Button>("SettingsBackButton");
@@ -125,21 +139,33 @@ public class MainMenuEvents : MonoBehaviour
     private void OnNextButtonOneClick(ClickEvent evt)
     {
         Debug.Log("You pressed the first next Button");
+
+        // Next text box
+
+
+        _nextButtonOne
+
     }
 
     private void OnNextButtonTwoClick(ClickEvent evt)
     {
         Debug.Log("You pressed the second next Button");
+
+        // Next text box
     }
 
     private void OnNextButtonThreeClick(ClickEvent evt)
     {
         Debug.Log("You pressed the third next Button");
+        _containerGameNarrativeOnePanel?.AddToClassList("moveContainerMainMenuIntoFrame");
+
+        // Move menu into scene
     }
 
     private void OnPlayClick(ClickEvent evt)
     {
         Debug.Log("You pressed the Play Button");
+        
     }
 
     private void OnSettingsClick(ClickEvent evt)
