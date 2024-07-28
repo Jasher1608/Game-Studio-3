@@ -16,6 +16,7 @@ public class MainMenuEvents : MonoBehaviour
     private Button _nextButtonOne;
     private Button _nextButtonTwo;
     private Button _nextButtonThree;
+    private Button _nextButtonClose;
 
     private Label _narrativeOne;
     private Label _narrativeTwo;
@@ -28,7 +29,7 @@ public class MainMenuEvents : MonoBehaviour
     private VisualElement _controlsPanel;
     private VisualElement _containerZeroPanel;
     private VisualElement _containerGameNarrativeOnePanel;
-    private VisualElement _containerMainButtonContainerPanel;
+    private VisualElement _mainButtonContainerPanel;
 
     private Button _settingsBackButton;
     private Button _controlsBackButton;
@@ -48,6 +49,7 @@ public class MainMenuEvents : MonoBehaviour
         _nextButtonOne = _document.rootVisualElement.Q<Button>("NextButtonOne");
         _nextButtonTwo = _document.rootVisualElement.Q<Button>("NextButtonTwo");
         _nextButtonThree = _document.rootVisualElement.Q<Button>("NextButtonThree");
+        _nextButtonClose = _document.rootVisualElement.Q<Button>("NextButtonClose");
 
         // Register button callbacks
         RegisterButtonCallbacks();
@@ -57,9 +59,9 @@ public class MainMenuEvents : MonoBehaviour
         _controlsPanel = _document.rootVisualElement.Q<VisualElement>("ControlsPanel");
         _containerZeroPanel = _document.rootVisualElement.Q<VisualElement>("ContainerZeroPanel");
         _containerGameNarrativeOnePanel = _document.rootVisualElement.Q<VisualElement>("ContainerGameNarrativeOnePanel");
-        _containerMainButtonContainerPanel = _document.rootVisualElement.Q<VisualElement>("ContainerMainButtonContainerPanel");
+        _mainButtonContainerPanel = _document.rootVisualElement.Q<VisualElement>("MainButtonContainerPanel");
 
-        // Initalize Labels
+        // Initialize Labels
         _narrativeOne = _document.rootVisualElement.Q<Label>("NarrativeOne");
         _narrativeTwo = _document.rootVisualElement.Q<Label>("NarrativeTwo");
         _narrativeThree = _document.rootVisualElement.Q<Label>("NarrativeThree");
@@ -104,6 +106,7 @@ public class MainMenuEvents : MonoBehaviour
         if (_nextButtonOne != null) _nextButtonOne.RegisterCallback<ClickEvent>(OnNextButtonOneClick);
         if (_nextButtonTwo != null) _nextButtonTwo.RegisterCallback<ClickEvent>(OnNextButtonTwoClick);
         if (_nextButtonThree != null) _nextButtonThree.RegisterCallback<ClickEvent>(OnNextButtonThreeClick);
+        if (_nextButtonClose != null) _nextButtonClose.RegisterCallback<ClickEvent>(OnNextButtonCloseClick);
     }
 
     private void UnregisterButtonCallbacks()
@@ -115,6 +118,7 @@ public class MainMenuEvents : MonoBehaviour
         if (_nextButtonOne != null) _nextButtonOne.UnregisterCallback<ClickEvent>(OnNextButtonOneClick);
         if (_nextButtonTwo != null) _nextButtonTwo.UnregisterCallback<ClickEvent>(OnNextButtonTwoClick);
         if (_nextButtonThree != null) _nextButtonThree.UnregisterCallback<ClickEvent>(OnNextButtonThreeClick);
+        if (_nextButtonClose != null) _nextButtonClose.UnregisterCallback<ClickEvent>(OnNextButtonCloseClick);
     }
 
     private void RegisterBackButtonCallbacks()
@@ -140,32 +144,66 @@ public class MainMenuEvents : MonoBehaviour
     {
         Debug.Log("You pressed the first next Button");
 
-        // Next text box
-
-
-        _nextButtonOne
+        // Update narrative label
+        if (_narrativeOne != null) // Ensure label is not null
+        {
+            _narrativeOne.AddToClassList("makeInvisible"); // Add class to make invisible
+        }
+        if (_narrativeTwo != null) // Ensure label is not null
+        {
+            _narrativeTwo.AddToClassList("insertTextBoxTwo"); // Add class to show next narrative
+        }
 
     }
 
     private void OnNextButtonTwoClick(ClickEvent evt)
     {
-        Debug.Log("You pressed the second next Button");
+        // Update narrative label
+        if (_narrativeTwo != null) // Ensure label is not null
+        {
+            _narrativeTwo.AddToClassList("makeInvisible"); // Add class to make invisible
+        }
+        if (_narrativeThree != null) // Ensure label is not null
+        {
+            _narrativeThree.AddToClassList("insertTextBoxThree"); // Add class to show next narrative
+        }
 
-        // Next text box
     }
 
     private void OnNextButtonThreeClick(ClickEvent evt)
     {
-        Debug.Log("You pressed the third next Button");
-        _containerGameNarrativeOnePanel?.AddToClassList("moveContainerMainMenuIntoFrame");
+        // Update narrative label
+        if (_narrativeThree != null) // Ensure label is not null
+        {
+            _narrativeThree.AddToClassList("makeInvisible"); // Add class to make invisible
+        }
+        if (_narrativeFour != null) // Ensure label is not null
+        {
+            _narrativeFour.AddToClassList("insertTextBoxFour"); // Add class to show next narrative
+        }
+    }
 
-        // Move menu into scene
+    private void OnNextButtonCloseClick(ClickEvent evt)
+    {
+        Debug.Log("You pressed the next close Button");
+
+        // Move main button container into view
+        if (_mainButtonContainerPanel != null) // Ensure panel is not null
+        {
+            _mainButtonContainerPanel.AddToClassList("moveMainMenuPanelIntoFrame"); // Add class to move main menu into frame
+            Debug.Log("Class 'moveMainMenuPanelIntoFrame' added to _mainButtonContainerPanel");
+
+            _containerGameNarrativeOnePanel.RemoveFromClassList("moveContainerGameNarrativeOneIntoFrame");
+        }
+        else
+        {
+            Debug.LogError("_mainButtonContainerPanel is null");
+        }
     }
 
     private void OnPlayClick(ClickEvent evt)
     {
         Debug.Log("You pressed the Play Button");
-        
     }
 
     private void OnSettingsClick(ClickEvent evt)

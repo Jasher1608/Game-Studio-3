@@ -1,5 +1,5 @@
 .button {
-    -unity-font: url("project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&guid=43bc683a8b04a3949b2edd8a81a092b7&type=3#GreekRollsRegular");
+    -unity-font: url("project://database/Assets/Fonts/PRINC___.TTF?fileID=12800000&guid=2ef0d999c8d2e364cbeda7e856cad551&type=3#PRINC___");
     -unity-font-definition: initial;
     font-size: 58px;
     background-image: url("project://database/Assets/Sprites/MainMenu/Border/panel-border-013.png?fileID=21300000&guid=0df59c5b104393a4eac1f4094de00a15&type=3#panel-border-013");
@@ -29,6 +29,8 @@
     transition-timing-function: ease;
     transition-delay: 0s;
     background-color: rgb(76, 0, 255);
+    -unity-font-definition: initial;
+    -unity-font: url("project://database/Assets/Fonts/PRINC___.TTF?fileID=12800000&guid=2ef0d999c8d2e364cbeda7e856cad551&type=3#PRINC___");
 }
 
 .header {
@@ -36,7 +38,7 @@
     justify-content: flex-end;
     align-self: center;
     font-size: 100px;
-    -unity-font: url("project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&guid=43bc683a8b04a3949b2edd8a81a092b7&type=3#GreekRollsRegular");
+    -unity-font: url("project://database/Assets/Fonts/Greek-Freak.ttf?fileID=12800000&guid=3f7b5006a9003174693189fa5ad98fe6&type=3#Greek-Freak");
     -unity-font-definition: initial;
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0);
@@ -62,7 +64,7 @@
 .header3 {
     -unity-text-outline-color: rgb(255, 255, 255);
     font-size: 65px;
-    -unity-font: url("project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&guid=43bc683a8b04a3949b2edd8a81a092b7&type=3#GreekRollsRegular");
+    -unity-font: url("project://database/Assets/Fonts/Greek-Freak.ttf?fileID=12800000&guid=3f7b5006a9003174693189fa5ad98fe6&type=3#Greek-Freak");
     -unity-font-definition: initial;
     color: rgb(255, 255, 255);
     margin-top: 0;
@@ -115,57 +117,40 @@
 }
 
 .moveContainerGameNarrativeOneIntoFrame {
-    translate: 0 -1242px;
+    translate: 0 -1257px;
     opacity: 1;
-    transition-duration: 2s, 5s;
-    transition-timing-function: ease-out, ease;
-    transition-property: all, transform-origin;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    transition-property: all;
 }
 
-.moveContainerMainMenuIntoFrame {
-    translate: 1190px 0;
+.moveMainMenuPanelIntoFrame {
+    translate: 750px 0;
+    transition-duration: 1s;
+    transition-property: translate;
+    transition-timing-function: linear;
 }
 
 .menuButton {
-    -unity-font: url("project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&guid=43bc683a8b04a3949b2edd8a81a092b7&type=3#GreekRollsRegular");
+    -unity-font: url("project://database/Assets/Fonts/PRINC___.TTF?fileID=12800000&guid=2ef0d999c8d2e364cbeda7e856cad551&type=3#PRINC___");
     -unity-font-definition: initial;
-    font-size: 50px;
+    font-size: 40px;
     background-image: url("project://database/Assets/Sprites/MainMenu/Border/panel-border-013.png?fileID=21300000&guid=0df59c5b104393a4eac1f4094de00a15&type=3#panel-border-013");
     background-color: rgb(0, 0, 0);
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     align-self: center;
-    margin-top: 32px;
-    margin-right: 32px;
-    margin-bottom: 32px;
-    margin-left: 32px;
     color: rgb(255, 255, 255);
     justify-content: flex-start;
     align-items: center;
-    -unity-background-image-tint-color: rgba(255, 255, 255, 0.81);
+    -unity-background-image-tint-color: rgb(41, 0, 195);
 }
 
 .menuButton:hover {
-    -unity-font: url("project://database/Assets/Fonts/GreekRollsRegular.ttf?fileID=12800000&guid=43bc683a8b04a3949b2edd8a81a092b7&type=3#GreekRollsRegular");
-    -unity-font-definition: initial;
-    font-size: 50px;
-    background-image: url("project://database/Assets/Sprites/MainMenu/Border/panel-border-013.png?fileID=21300000&guid=0df59c5b104393a4eac1f4094de00a15&type=3#panel-border-013");
-    background-color: rgb(46, 0, 161);
-    width: 150px;
-    height: 150px;
-    align-self: center;
-    color: rgb(255, 255, 255);
-    justify-content: flex-start;
-    align-items: center;
-    transition-duration: 0.4s;
-    -unity-background-image-tint-color: rgba(0, 0, 0, 0.81);
     scale: 1.1 1.1;
-    rotate: 0;
-    transition-timing-function: ease;
-    border-left-color: rgba(255, 0, 0, 0);
-    border-right-color: rgba(255, 0, 0, 0);
-    border-top-color: rgba(255, 0, 0, 0);
-    border-bottom-color: rgba(255, 0, 0, 0);
+    transition-duration: 0.5s;
+    background-color: rgb(76, 0, 255);
+    -unity-background-image-tint-color: rgb(76, 0, 255);
 }
 
 .buttonNextText {
@@ -175,6 +160,7 @@
     background-color: rgb(0, 0, 0);
     -unity-font-style: bold;
     font-size: 19px;
+    -unity-font: url("project://database/Assets/Fonts/PRINC___.TTF?fileID=12800000&guid=2ef0d999c8d2e364cbeda7e856cad551&type=3#PRINC___");
 }
 
 .buttonNextText:hover {
@@ -192,23 +178,36 @@
 
 .makeInvisible {
     display: none;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    transition-property: opacity;
+    transition-timing-function: ease-out;
+    translate: 0 0;
+    scale: 0.1 1;
 }
 
 .insertTextBoxTwo {
     left: -155px;
-    translate: -1376px 0;
+    translate: -1548px 0;
     transition-duration: 0.5s;
+    -unity-font: url("project://database/Assets/Fonts/PRINC___.TTF?fileID=12800000&guid=2ef0d999c8d2e364cbeda7e856cad551&type=3#PRINC___");
+    -unity-font-definition: initial;
+    -unity-font-style: normal;
 }
 
 .insertTextBoxThree {
     left: -155px;
-    translate: -2516px 0;
+    translate: -2663px 0;
     transition-duration: 0.5s;
+    -unity-font: url("project://database/Assets/Fonts/PRINC___.TTF?fileID=12800000&guid=2ef0d999c8d2e364cbeda7e856cad551&type=3#PRINC___");
+    -unity-font-definition: initial;
 }
 
 .insertTextBoxFour {
     left: -155px;
-    translate: -3643px 0;
+    translate: -3790px 0;
     transition-duration: 0.5s;
+    -unity-font: url("project://database/Assets/Fonts/PRINC___.TTF?fileID=12800000&guid=2ef0d999c8d2e364cbeda7e856cad551&type=3#PRINC___");
+    -unity-font-definition: initial;
 }
