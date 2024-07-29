@@ -19,6 +19,8 @@ public class SkillTreeEvents : MonoBehaviour
     private VisualElement _nyxPanel;
     private VisualElement _nemesisPanel;
 
+    private VisualElement _skillPopUp;
+
     private Button _aresButton;
     private Button _apolloButton;
     private Button _dionysusButton;
@@ -35,39 +37,118 @@ public class SkillTreeEvents : MonoBehaviour
     private Button _nyxBackButton;
     private Button _nemesisBackButton;
 
-    private VisualElement _currentOpenPanel;
+    private Button _aresSkill1;
+    private Button _aresSkill2;
+    private Button _aresSkill3;
+    private Button _aresSkill4;
+    private Button _aresSkill5;
+    private Button _aresSkill6;
+    private Button _aresSkill7;
+    private Button _aresSkill8;
+    private Button _aresSkill9;
 
+    private Button _apolloSkill1;
+    private Button _apolloSkill2;
+    private Button _apolloSkill3;
+    private Button _apolloSkill4;
+    private Button _apolloSkill5;
+    private Button _apolloSkill6;
+    private Button _apolloSkill7;
+    private Button _apolloSkill8;
+    private Button _apolloSkill9;
+
+    private Button _dionysusSkill1;
+    private Button _dionysusSkill2;
+    private Button _dionysusSkill3;
+    private Button _dionysusSkill4;
+    private Button _dionysusSkill5;
+    private Button _dionysusSkill6;
+    private Button _dionysusSkill7;
+    private Button _dionysusSkill8;
+    private Button _dionysusSkill9;
+
+    private Button _artemisSkill1;
+    private Button _artemisSkill2;
+    private Button _artemisSkill3;
+    private Button _artemisSkill4;
+    private Button _artemisSkill5;
+    private Button _artemisSkill6;
+    private Button _artemisSkill7;
+    private Button _artemisSkill8;
+    private Button _artemisSkill9;
+
+    private Button _athenaSkill1;
+    private Button _athenaSkill2;
+    private Button _athenaSkill3;
+    private Button _athenaSkill4;
+    private Button _athenaSkill5;
+    private Button _athenaSkill6;
+    private Button _athenaSkill7;
+    private Button _athenaSkill8;
+    private Button _athenaSkill9;
+
+    private Button _nemesisSkill1;
+    private Button _nemesisSkill2;
+    private Button _nemesisSkill3;
+    private Button _nemesisSkill4;
+    private Button _nemesisSkill5;
+    private Button _nemesisSkill6;
+    private Button _nemesisSkill7;
+    private Button _nemesisSkill8;
+    private Button _nemesisSkill9;
+
+    private Button _nyxSkill1;
+    private Button _nyxSkill2;
+    private Button _nyxSkill3;
+    private Button _nyxSkill4;
+    private Button _nyxSkill5;
+    private Button _nyxSkill6;
+    private Button _nyxSkill7;
+    private Button _nyxSkill8;
+    private Button _nyxSkill9;
+
+    private VisualElement _currentOpenPanel;
 
 
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
-
         _document = GetComponent<UIDocument>();
 
-        _aresButton = _document.rootVisualElement.Q<Button>("Ares");
-        _aresButton.RegisterCallback<ClickEvent>(OnAresClick);
+        if (_document == null)
+        {
+            Debug.LogError("UIDocument component not found!");
+            return;
+        }
 
-        _apolloButton = _document.rootVisualElement.Q<Button>("Apollo");
-        _apolloButton.RegisterCallback<ClickEvent>(OnApolloClick);
+        InitializeButtons();
+        InitializePanels();
+        RegisterSkillButtons();
+    }
 
-        _dionysusButton = _document.rootVisualElement.Q<Button>("Dionysus");
-        _dionysusButton.RegisterCallback<ClickEvent>(OnDionysusClick);
+    private void InitializeButtons()
+    {
+        _aresButton = InitializeButton("Ares", OnAresClick);
+        _apolloButton = InitializeButton("Apollo", OnApolloClick);
+        _dionysusButton = InitializeButton("Dionysus", OnDionysusClick);
+        _artemisButton = InitializeButton("Artemis", OnArtemisClick);
+        _athenaButton = InitializeButton("Athena", OnAthenaClick);
+        _nemesisButton = InitializeButton("Nemesis", OnNemesisClick);
+        _nyxButton = InitializeButton("Nyx", OnNyxClick);
+    }
 
-        _artemisButton = _document.rootVisualElement.Q<Button>("Artemis");
-        _artemisButton.RegisterCallback<ClickEvent>(OnArtemisClick);
+    private Button InitializeButton(string name, EventCallback<ClickEvent> callback)
+    {
+        Button button = _document.rootVisualElement.Q<Button>(name);
+        if (button != null)
+        {
+            button.RegisterCallback<ClickEvent>(callback);
+        }
+        return button;
+    }
 
-        _athenaButton = _document.rootVisualElement.Q<Button>("Athena");
-        _athenaButton.RegisterCallback<ClickEvent>(OnAthenaClick);
-
-        _nemesisButton = _document.rootVisualElement.Q<Button>("Nemesis");
-        _nemesisButton.RegisterCallback<ClickEvent>(OnNemesisClick);
-
-        _nyxButton = _document.rootVisualElement.Q<Button>("Nyx");
-        _nyxButton.RegisterCallback<ClickEvent>(OnNyxClick);
-
-
-
+    private void InitializePanels()
+    {
         _aresPanel = _document.rootVisualElement.Q<VisualElement>("AresPanel");
         _apolloPanel = _document.rootVisualElement.Q<VisualElement>("ApolloPanel");
         _dionysusPanel = _document.rootVisualElement.Q<VisualElement>("DionysusPanel");
@@ -76,28 +157,33 @@ public class SkillTreeEvents : MonoBehaviour
         _nemesisPanel = _document.rootVisualElement.Q<VisualElement>("NemesisPanel");
         _nyxPanel = _document.rootVisualElement.Q<VisualElement>("NyxPanel");
 
+        InitializeBackButton(_aresPanel, "AresBackButton");
+        InitializeBackButton(_apolloPanel, "ApolloBackButton");
+        InitializeBackButton(_dionysusPanel, "DionysusBackButton");
+        InitializeBackButton(_artemisPanel, "ArtemisBackButton");
+        InitializeBackButton(_athenaPanel, "AthenaBackButton");
+        InitializeBackButton(_nemesisPanel, "NemesisBackButton");
+        InitializeBackButton(_nyxPanel, "NyxBackButton");
+    }
 
-        _aresBackButton = _aresPanel.Q<Button>("AresBackButton");
-        _aresBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
+    private void InitializeBackButton(VisualElement panel, string buttonName)
+    {
+        if (panel != null)
+        {
+            Button backButton = panel.Q<Button>(buttonName);
+            if (backButton != null)
+            {
+                backButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
+            }
+        }
+    }
 
-        _apolloBackButton = _apolloPanel.Q<Button>("ApolloBackButton");
-        _apolloBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
+    private void RegisterSkillButtons()
+    {
+        _skillPopUp = _document.rootVisualElement.Q<VisualElement>("SkillPopUp");
 
-        _dionysusBackButton = _dionysusPanel.Q<Button>("DionysusBackButton");
-        _dionysusBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
-
-        _artemisBackButton = _artemisPanel.Q<Button>("ArtemisBackButton");
-        _artemisBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
-
-        _athenaBackButton = _athenaPanel.Q<Button>("AthenaBackButton");
-        _athenaBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
-
-        _nemesisBackButton = _nemesisPanel.Q<Button>("NemesisBackButton");
-        _nemesisBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
-
-        _nyxBackButton = _nyxPanel.Q<Button>("NyxBackButton");
-        _nyxBackButton.RegisterCallback<ClickEvent>(OnBackButtonClick);
-
+        _aresSkill1 = InitializeSkillButton("AresSkill1", OnAresSkill1Click);
+        // Initialize other skill buttons similarly...
 
         _skillTreeButtons = _document.rootVisualElement.Query<Button>().ToList();
         for (int i = 0; i < _skillTreeButtons.Count; i++)
@@ -106,31 +192,36 @@ public class SkillTreeEvents : MonoBehaviour
         }
     }
 
+    private Button InitializeSkillButton(string name, EventCallback<ClickEvent> callback)
+    {
+        Button button = _skillPopUp.Q<Button>(name);
+        if (button != null)
+        {
+            button.RegisterCallback<ClickEvent>(callback);
+        }
+        return button;
+    }
+
     private void OnDisable()
     {
+        UnregisterButton(_aresButton, OnAresClick);
+        UnregisterButton(_apolloButton, OnApolloClick);
+        UnregisterButton(_dionysusButton, OnDionysusClick);
+        UnregisterButton(_artemisButton, OnArtemisClick);
+        UnregisterButton(_athenaButton, OnAthenaClick);
+        UnregisterButton(_nemesisButton, OnNemesisClick);
+        UnregisterButton(_nyxButton, OnNyxClick);
 
-        // Unregister all callbacks
+        UnregisterSkillButton(_aresSkill1, OnAresSkill1Click);
+        // Unregister other skill buttons similarly...
 
-        {
-            _aresButton.UnregisterCallback<ClickEvent>(OnAresClick);
-            _apolloButton.UnregisterCallback<ClickEvent>(OnApolloClick);
-            _dionysusButton.UnregisterCallback<ClickEvent>(OnDionysusClick);
-            _artemisButton.UnregisterCallback<ClickEvent>(OnArtemisClick);
-            _athenaButton.UnregisterCallback<ClickEvent>(OnAthenaClick);
-            _nemesisButton.UnregisterCallback<ClickEvent>(OnNemesisClick);
-            _nyxButton.UnregisterCallback<ClickEvent>(OnNyxClick);
-
-        }
-
-        // Unregister back buttons
-
-        _aresBackButton.UnregisterCallback<ClickEvent>(OnBackButtonClick);
-        _apolloBackButton.UnregisterCallback<ClickEvent>(OnBackButtonClick);
-        _dionysusBackButton.UnregisterCallback<ClickEvent>(OnBackButtonClick);
-        _artemisBackButton.UnregisterCallback<ClickEvent>(OnBackButtonClick);
-        _athenaBackButton.UnregisterCallback<ClickEvent>(OnBackButtonClick);
-        _nemesisBackButton.UnregisterCallback<ClickEvent>(OnBackButtonClick);
-        _nyxBackButton.UnregisterCallback<ClickEvent>(OnBackButtonClick);
+        UnregisterBackButton(_aresBackButton, OnBackButtonClick);
+        UnregisterBackButton(_apolloBackButton, OnBackButtonClick);
+        UnregisterBackButton(_dionysusBackButton, OnBackButtonClick);
+        UnregisterBackButton(_artemisBackButton, OnBackButtonClick);
+        UnregisterBackButton(_athenaBackButton, OnBackButtonClick);
+        UnregisterBackButton(_nemesisBackButton, OnBackButtonClick);
+        UnregisterBackButton(_nyxBackButton, OnBackButtonClick);
 
         for (int i = 0; i < _skillTreeButtons.Count; i++)
         {
@@ -138,11 +229,33 @@ public class SkillTreeEvents : MonoBehaviour
         }
     }
 
+    private void UnregisterButton(Button button, EventCallback<ClickEvent> callback)
+    {
+        if (button != null)
+        {
+            button.UnregisterCallback<ClickEvent>(callback);
+        }
+    }
+
+    private void UnregisterSkillButton(Button button, EventCallback<ClickEvent> callback)
+    {
+        if (button != null)
+        {
+            button.UnregisterCallback<ClickEvent>(callback);
+        }
+    }
+
+    private void UnregisterBackButton(Button button, EventCallback<ClickEvent> callback)
+    {
+        if (button != null)
+        {
+            button.UnregisterCallback<ClickEvent>(callback);
+        }
+    }
+
     private void OnAresClick(ClickEvent evt)
     {
         Debug.Log("You pressed the Ares Button");
-        // insert panel functionality here
-
         CloseCurrentOpenPanel();
 
         if (_aresPanel != null)
@@ -155,8 +268,6 @@ public class SkillTreeEvents : MonoBehaviour
     private void OnApolloClick(ClickEvent evt)
     {
         Debug.Log("You pressed the Apollo Button");
-        // insert panel functionality here
-
         CloseCurrentOpenPanel();
 
         if (_apolloPanel != null)
@@ -169,8 +280,6 @@ public class SkillTreeEvents : MonoBehaviour
     private void OnDionysusClick(ClickEvent evt)
     {
         Debug.Log("You pressed the Dionysus Button");
-        // insert panel functionality here
-
         CloseCurrentOpenPanel();
 
         if (_dionysusPanel != null)
@@ -179,11 +288,10 @@ public class SkillTreeEvents : MonoBehaviour
             _currentOpenPanel = _dionysusPanel;
         }
     }
+
     private void OnArtemisClick(ClickEvent evt)
     {
         Debug.Log("You pressed the Artemis Button");
-        // insert panel functionality here
-
         CloseCurrentOpenPanel();
 
         if (_artemisPanel != null)
@@ -196,8 +304,6 @@ public class SkillTreeEvents : MonoBehaviour
     private void OnAthenaClick(ClickEvent evt)
     {
         Debug.Log("You pressed the Athena Button");
-        // insert panel functionality here
-
         CloseCurrentOpenPanel();
 
         if (_athenaPanel != null)
@@ -210,8 +316,6 @@ public class SkillTreeEvents : MonoBehaviour
     private void OnNemesisClick(ClickEvent evt)
     {
         Debug.Log("You pressed the Nemesis Button");
-        // insert panel functionality here
-
         CloseCurrentOpenPanel();
 
         if (_nemesisPanel != null)
@@ -224,8 +328,6 @@ public class SkillTreeEvents : MonoBehaviour
     private void OnNyxClick(ClickEvent evt)
     {
         Debug.Log("You pressed the Nyx Button");
-        // insert panel functionality here
-
         CloseCurrentOpenPanel();
 
         if (_nyxPanel != null)
@@ -243,26 +345,36 @@ public class SkillTreeEvents : MonoBehaviour
 
     private void CloseCurrentOpenPanel()
     {
-            if (_currentOpenPanel != null)
-            {
-                _currentOpenPanel.RemoveFromClassList("moveAresPanelIntoFrame");
-                _currentOpenPanel.RemoveFromClassList("moveApolloPanelIntoFrame");
-                _currentOpenPanel.RemoveFromClassList("moveDionysusPanelIntoFrame");
-                _currentOpenPanel.RemoveFromClassList("moveAthenaPanelIntoFrame");
-                _currentOpenPanel.RemoveFromClassList("moveArtemisPanelIntoFrame");
-                _currentOpenPanel.RemoveFromClassList("moveNyxPanelIntoFrame");
-                _currentOpenPanel.RemoveFromClassList("moveNemesisPanelIntoFrame");
+        if (_currentOpenPanel != null)
+        {
+            _currentOpenPanel.RemoveFromClassList("moveAresPanelIntoFrame");
+            _currentOpenPanel.RemoveFromClassList("moveApolloPanelIntoFrame");
+            _currentOpenPanel.RemoveFromClassList("moveDionysusPanelIntoFrame");
+            _currentOpenPanel.RemoveFromClassList("moveAthenaPanelIntoFrame");
+            _currentOpenPanel.RemoveFromClassList("moveArtemisPanelIntoFrame");
+            _currentOpenPanel.RemoveFromClassList("moveNyxPanelIntoFrame");
+            _currentOpenPanel.RemoveFromClassList("moveNemesisPanelIntoFrame");
 
-                _currentOpenPanel = null;
-            }
+            _currentOpenPanel = null;
+        }
     }
 
+    private void OnAresSkill1Click(ClickEvent evt)
+    {
+        Debug.Log("You pressed the Ares Skill 1 Button");
+        CloseCurrentOpenPanel();
+
+        if (_skillPopUp != null)
+        {
+            _skillPopUp.AddToClassList("moveSkillPopUpPanelIntoFrame");
+            _currentOpenPanel = _skillPopUp;
+        }
+    }
 
     private void OnAllButtonClick(ClickEvent evt)
     {
         _audioSource.Play();
     }
-
 }
 
 

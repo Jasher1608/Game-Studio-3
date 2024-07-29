@@ -1,98 +1,122 @@
-.moveAresPanelIntoFrame {
-    translate: 0 1192px;
-    transition-duration: 1s;
-}
-
-.moveApolloPanelIntoFrame {
-    translate: 0 1192px;
-    transition-duration: 1s;
-}
-
-.moveDionysusPanelIntoFrame {
-    translate: 0 1192px;
-    transition-duration: 1s;
-}
-
-.moveArtemisPanelIntoFrame {
-    translate: 0 1192px;
-    transition-duration: 1s;
-}
-
-.moveAthenaPanelIntoFrame {
-    translate: 0 1192px;
-    transition-duration: 1s;
-}
-
-.moveNyxPanelIntoFrame {
-    translate: 0 1192px;
-    transition-duration: 1s;
-}
-
-.moveNemesisPanelIntoFrame {
-    translate: 0 1192px;
-    transition-duration: 1s;
-}
-
 .Skill1 {
-    left: -443px;
-    bottom: -375px;
     height: 100px;
     width: 100px;
-    top: 305px;
+    left: 0;
 }
 
 .Skill2 {
-    left: -240px;
+    left: -122px;
     width: 100px;
     height: 100px;
-    top: 27px;
+    top: 56px;
 }
 
 .Skill3 {
-    top: 194px;
-    left: -240px;
+    top: -8px;
+    left: 124px;
     width: 100px;
     height: 100px;
 }
 
 .Skill4 {
-    left: -40px;
-    top: -347px;
+    left: -320px;
+    top: 8px;
     width: 100px;
     height: 100px;
+    translate: 6px 0;
 }
 
 .Skill5 {
-    top: -255px;
-    left: -40px;
+    top: 16px;
+    left: -121px;
     width: 100px;
     height: 100px;
 }
 
 .Skill6 {
-    top: -200px;
-    left: -40px;
+    top: 64px;
+    left: 123px;
     width: 100px;
     height: 100px;
 }
 
 .Skill7 {
-    top: -140px;
-    left: -40px;
+    top: -269px;
+    left: 317px;
     width: 100px;
     height: 100px;
 }
 
 .Skill8 {
-    top: -708px;
-    left: 164px;
+    top: -93px;
+    left: -260px;
     width: 100px;
     height: 100px;
 }
 
 .Skill9 {
-    top: -457px;
-    left: 173px;
+    top: -165px;
+    left: 275px;
     width: 100px;
     height: 100px;
+}
+
+.moveNemesisPanelIntoFrame {
+    translate: 0 1626px;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+    transition-property: all;
+}
+
+.moveNyxPanelIntoFrame {
+    translate: 0 1626px;
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+}
+
+.moveAthenaPanelIntoFrame {
+    translate: 0 1626px;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.moveArtemisPanelIntoFrame {
+    translate: 0 1626px;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.moveDionysusPanelIntoFrame {
+    translate: 0 1626px;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.moveApolloPanelIntoFrame {
+    translate: 0 1626px;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.moveAresPanelIntoFrame {
+    translate: 0 1626px;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.moveSkillPopUpPanelIntoFrame {
+    translate: 0 -341px;
+    transition-delay: 0.1s;
+    transition-duration: 0.5s;
+}
+
+.progressBar {
+    scale: 1 0.2;
+    rotate: 0;
+}
+
+.godlyWeapon {
+    left: 321px;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    translate: -1152px 758px;
 }
