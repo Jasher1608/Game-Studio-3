@@ -362,13 +362,9 @@ public class SkillTreeEvents : MonoBehaviour
     private void OnAresSkill1Click(ClickEvent evt)
     {
         Debug.Log("You pressed the Ares Skill 1 Button");
-        CloseCurrentOpenPanel();
 
-        if (_skillPopUp != null)
-        {
-            _skillPopUp.AddToClassList("moveSkillPopUpPanelIntoFrame");
-            _currentOpenPanel = _skillPopUp;
-        }
+        _skillPopUp.AddToClassList("moveSkillPopUpPanelIntoFrame");
+    
     }
 
     private void OnAllButtonClick(ClickEvent evt)
