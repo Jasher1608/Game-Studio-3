@@ -61,6 +61,36 @@
     height: 100px;
 }
 
+.moveAresPanelIntoFrame {
+    translate: 0 1626px;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.moveApolloPanelIntoFrame {
+    translate: 0 1626px;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.moveDionysusPanelIntoFrame {
+    translate: 0 1626px;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.moveArtemisPanelIntoFrame {
+    translate: 0 1626px;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.moveAthenaPanelIntoFrame {
+    translate: 0 1626px;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+}
+
 .moveNemesisPanelIntoFrame {
     translate: 0 1626px;
     transition-duration: 0.5s;
@@ -74,38 +104,8 @@
     transition-delay: 0.1s;
 }
 
-.moveAthenaPanelIntoFrame {
-    translate: 0 1626px;
-    transition-duration: 0.5s;
-    transition-delay: 0.2s;
-}
-
-.moveArtemisPanelIntoFrame {
-    translate: 0 1626px;
-    transition-duration: 0.5s;
-    transition-delay: 0.2s;
-}
-
-.moveDionysusPanelIntoFrame {
-    translate: 0 1626px;
-    transition-duration: 0.5s;
-    transition-delay: 0.2s;
-}
-
-.moveApolloPanelIntoFrame {
-    translate: 0 1626px;
-    transition-duration: 0.5s;
-    transition-delay: 0.2s;
-}
-
-.moveAresPanelIntoFrame {
-    translate: 0 1626px;
-    transition-duration: 0.5s;
-    transition-delay: 0.2s;
-}
-
 .moveSkillPopUpPanelIntoFrame {
-    translate: 0 -341px;
+    translate: 0 -374px;
     transition-delay: 0.1s;
     transition-duration: 0.5s;
 }

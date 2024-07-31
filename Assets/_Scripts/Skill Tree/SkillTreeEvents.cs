@@ -19,7 +19,16 @@ public class SkillTreeEvents : MonoBehaviour
     private VisualElement _nyxPanel;
     private VisualElement _nemesisPanel;
 
-    private VisualElement _skillPopUp;
+
+    private VisualElement _aresSkillPopUp1;
+    private VisualElement _aresSkillPopUp2;
+    private VisualElement _aresSkillPopUp3;
+    private VisualElement _aresSkillPopUp4;
+    private VisualElement _aresSkillPopUp5;
+    private VisualElement _aresSkillPopUp6;
+    private VisualElement _aresSkillPopUp7;
+    private VisualElement _aresSkillPopUp8;
+    private VisualElement _aresSkillPopUp9;
 
     private Button _aresButton;
     private Button _apolloButton;
@@ -109,6 +118,8 @@ public class SkillTreeEvents : MonoBehaviour
 
     private VisualElement _currentOpenPanel;
 
+    private VisualElement _currentSkillPanel;
+
 
     private void Awake()
     {
@@ -123,7 +134,7 @@ public class SkillTreeEvents : MonoBehaviour
 
         InitializeButtons();
         InitializePanels();
-        RegisterSkillButtons();
+        InitializeSkillButtons();
     }
 
     private void InitializeButtons()
@@ -149,6 +160,9 @@ public class SkillTreeEvents : MonoBehaviour
 
     private void InitializePanels()
     {
+
+        // Each god panel
+
         _aresPanel = _document.rootVisualElement.Q<VisualElement>("AresPanel");
         _apolloPanel = _document.rootVisualElement.Q<VisualElement>("ApolloPanel");
         _dionysusPanel = _document.rootVisualElement.Q<VisualElement>("DionysusPanel");
@@ -156,6 +170,20 @@ public class SkillTreeEvents : MonoBehaviour
         _athenaPanel = _document.rootVisualElement.Q<VisualElement>("AthenaPanel");
         _nemesisPanel = _document.rootVisualElement.Q<VisualElement>("NemesisPanel");
         _nyxPanel = _document.rootVisualElement.Q<VisualElement>("NyxPanel");
+
+        //Ares Skill Pop Up Panels
+
+        _aresSkillPopUp1 = _document.rootVisualElement.Q<VisualElement>("AresSkillPopUp1");
+        _aresSkillPopUp2 = _document.rootVisualElement.Q<VisualElement>("AresSkillPopUp2");
+        _aresSkillPopUp3 = _document.rootVisualElement.Q<VisualElement>("AresSkillPopUp3");
+        _aresSkillPopUp4 = _document.rootVisualElement.Q<VisualElement>("AresSkillPopUp4");
+        _aresSkillPopUp5 = _document.rootVisualElement.Q<VisualElement>("AresSkillPopUp5");
+        _aresSkillPopUp6 = _document.rootVisualElement.Q<VisualElement>("AresSkillPopUp6");
+        _aresSkillPopUp7 = _document.rootVisualElement.Q<VisualElement>("AresSkillPopUp7");
+        _aresSkillPopUp8 = _document.rootVisualElement.Q<VisualElement>("AresSkillPopUp8");
+        _aresSkillPopUp9 = _document.rootVisualElement.Q<VisualElement>("AresSkillPopUp9");
+
+        //Back button Panel return
 
         InitializeBackButton(_aresPanel, "AresBackButton");
         InitializeBackButton(_apolloPanel, "ApolloBackButton");
@@ -178,23 +206,25 @@ public class SkillTreeEvents : MonoBehaviour
         }
     }
 
-    private void RegisterSkillButtons()
+    private void InitializeSkillButtons()
     {
-        _skillPopUp = _document.rootVisualElement.Q<VisualElement>("SkillPopUp");
+        _aresSkill1 = InitializeButton("AresSkill1", OnAresSkill1Click);
+        _aresSkill2 = InitializeButton("AresSkill2", OnAresSkill2Click);
+        _aresSkill3 = InitializeButton("AresSkill3", OnAresSkill3Click);
+        _aresSkill4 = InitializeButton("AresSkill4", OnAresSkill4Click);
+        _aresSkill5 = InitializeButton("AresSkill5", OnAresSkill5Click);
+        _aresSkill6 = InitializeButton("AresSkill6", OnAresSkill6Click);
+        _aresSkill7 = InitializeButton("AresSkill7", OnAresSkill7Click);
+        _aresSkill8 = InitializeButton("AresSkill8", OnAresSkill8Click);
+        _aresSkill9 = InitializeButton("AresSkill9", OnAresSkill9Click);
 
-        _aresSkill1 = InitializeSkillButton("AresSkill1", OnAresSkill1Click);
-        // Initialize other skill buttons similarly...
+        RegisterSkillButtonCallbacks();
 
-        _skillTreeButtons = _document.rootVisualElement.Query<Button>().ToList();
-        for (int i = 0; i < _skillTreeButtons.Count; i++)
-        {
-            _skillTreeButtons[i].RegisterCallback<ClickEvent>(OnAllButtonClick);
-        }
     }
 
     private Button InitializeSkillButton(string name, EventCallback<ClickEvent> callback)
     {
-        Button button = _skillPopUp.Q<Button>(name);
+        Button button = _document.rootVisualElement.Q<Button>(name);
         if (button != null)
         {
             button.RegisterCallback<ClickEvent>(callback);
@@ -202,8 +232,27 @@ public class SkillTreeEvents : MonoBehaviour
         return button;
     }
 
+
+    // Register skill button callbacks
+
+    private void RegisterSkillButtonCallbacks()
+    {
+        if (_aresSkill1 != null) _aresSkill1.RegisterCallback<ClickEvent>(OnAresSkill1Click);
+        if (_aresSkill2 != null) _aresSkill2.RegisterCallback<ClickEvent>(OnAresSkill2Click);
+        if (_aresSkill3 != null) _aresSkill3.RegisterCallback<ClickEvent>(OnAresSkill3Click);
+        if (_aresSkill4 != null) _aresSkill4.RegisterCallback<ClickEvent>(OnAresSkill4Click);
+        if (_aresSkill5 != null) _aresSkill5.RegisterCallback<ClickEvent>(OnAresSkill5Click);
+        if (_aresSkill6 != null) _aresSkill6.RegisterCallback<ClickEvent>(OnAresSkill6Click);
+        if (_aresSkill7 != null) _aresSkill7.RegisterCallback<ClickEvent>(OnAresSkill7Click);
+        if (_aresSkill8 != null) _aresSkill8.RegisterCallback<ClickEvent>(OnAresSkill8Click);
+        if (_aresSkill9 != null) _aresSkill9.RegisterCallback<ClickEvent>(OnAresSkill9Click);
+    }
+
+    
     private void OnDisable()
     {
+        // upregister god panel buttons
+
         UnregisterButton(_aresButton, OnAresClick);
         UnregisterButton(_apolloButton, OnApolloClick);
         UnregisterButton(_dionysusButton, OnDionysusClick);
@@ -212,8 +261,19 @@ public class SkillTreeEvents : MonoBehaviour
         UnregisterButton(_nemesisButton, OnNemesisClick);
         UnregisterButton(_nyxButton, OnNyxClick);
 
+        // unregister ares skill buttons
+
         UnregisterSkillButton(_aresSkill1, OnAresSkill1Click);
-        // Unregister other skill buttons similarly...
+        UnregisterSkillButton(_aresSkill2, OnAresSkill1Click);
+        UnregisterSkillButton(_aresSkill3, OnAresSkill1Click);
+        UnregisterSkillButton(_aresSkill4, OnAresSkill1Click);
+        UnregisterSkillButton(_aresSkill5, OnAresSkill1Click);
+        UnregisterSkillButton(_aresSkill6, OnAresSkill1Click);
+        UnregisterSkillButton(_aresSkill7, OnAresSkill1Click);
+        UnregisterSkillButton(_aresSkill8, OnAresSkill1Click);
+        UnregisterSkillButton(_aresSkill9, OnAresSkill1Click);
+
+        // Unregister god panel back buttons
 
         UnregisterBackButton(_aresBackButton, OnBackButtonClick);
         UnregisterBackButton(_apolloBackButton, OnBackButtonClick);
@@ -359,12 +419,87 @@ public class SkillTreeEvents : MonoBehaviour
         }
     }
 
+    private void CloseCurrentSkillPanel()
+    {
+        if (_currentSkillPanel != null)
+        {
+            _currentSkillPanel.RemoveFromClassList("moveSkillPopUpPanelIntoFrame");
+            _currentSkillPanel = null;
+        }
+    }
+
+
     private void OnAresSkill1Click(ClickEvent evt)
     {
         Debug.Log("You pressed the Ares Skill 1 Button");
+        _aresSkillPopUp1.AddToClassList("moveSkillPopUpPanelIntoFrame");
 
-        _skillPopUp.AddToClassList("moveSkillPopUpPanelIntoFrame");
-    
+        _currentSkillPanel = _aresSkillPopUp1;
+    }
+
+    private void OnAresSkill2Click(ClickEvent evt)
+    {
+        Debug.Log("You pressed the Ares Skill 2 Button");
+        _aresSkillPopUp2.AddToClassList("moveSkillPopUpPanelIntoFrame");
+
+        _currentSkillPanel = _aresSkillPopUp2;
+    }
+
+    private void OnAresSkill3Click(ClickEvent evt)
+    {
+        Debug.Log("You pressed the Ares Skill 3 Button");
+        _aresSkillPopUp3.AddToClassList("moveSkillPopUpPanelIntoFrame");
+
+        _currentSkillPanel = _aresSkillPopUp3;
+
+    }
+    private void OnAresSkill4Click(ClickEvent evt)
+    {
+        Debug.Log("You pressed the Ares Skill 4 Button");
+        _aresSkillPopUp4.AddToClassList("moveSkillPopUpPanelIntoFrame");
+
+        _currentSkillPanel = _aresSkillPopUp4;
+
+    }
+
+    private void OnAresSkill5Click(ClickEvent evt)
+    {
+        Debug.Log("You pressed the Ares Skill 5 Button");
+        _aresSkillPopUp4.AddToClassList("moveSkillPopUpPanelIntoFrame");
+
+        _currentSkillPanel = _aresSkillPopUp5;
+
+    }
+    private void OnAresSkill6Click(ClickEvent evt)
+    {
+        Debug.Log("You pressed the Ares Skill 6 Button");
+        _aresSkillPopUp6.AddToClassList("moveSkillPopUpPanelIntoFrame");
+
+        _currentSkillPanel = _aresSkillPopUp6;
+
+    }
+    private void OnAresSkill7Click(ClickEvent evt)
+    {
+        Debug.Log("You pressed the Ares Skill 7 Button");
+        _aresSkillPopUp7.AddToClassList("moveSkillPopUpPanelIntoFrame");
+
+        _currentSkillPanel = _aresSkillPopUp7;
+    }
+
+    private void OnAresSkill8Click(ClickEvent evt)
+    {
+        Debug.Log("You pressed the Ares Skill 8 Button");
+        _aresSkillPopUp8.AddToClassList("moveSkillPopUpPanelIntoFrame");
+
+        _currentSkillPanel = _aresSkillPopUp8;
+
+    }
+    private void OnAresSkill9Click(ClickEvent evt)
+    {
+        Debug.Log("You pressed the Ares Skill 9 Button");
+        _aresSkillPopUp9.AddToClassList("moveSkillPopUpPanelIntoFrame");
+
+        _currentSkillPanel = _aresSkillPopUp9;
     }
 
     private void OnAllButtonClick(ClickEvent evt)
