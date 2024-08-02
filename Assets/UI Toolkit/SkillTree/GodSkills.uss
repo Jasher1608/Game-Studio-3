@@ -104,8 +104,44 @@
     transition-delay: 0.1s;
 }
 
-.moveSkillPopUpPanelIntoFrame {
+.moveAresSkillPopUpPanelIntoFrame {
     translate: 0 -374px;
+    transition-delay: 0.1s;
+    transition-duration: 0.5s;
+}
+
+.moveApolloSkillPopUpPanelIntoFrame {
+    translate: 0 -732px;
+    transition-delay: 0.1s;
+    transition-duration: 0.5s;
+}
+
+.moveDionysusSkillPopUpPanelIntoFrame {
+    translate: 0 -1035px;
+    transition-delay: 0.1s;
+    transition-duration: 0.5s;
+}
+
+.moveArtemisSkillPopUpPanelIntoFrame {
+    translate: 0 -1342px;
+    transition-delay: 0.1s;
+    transition-duration: 0.5s;
+}
+
+.moveAthenaSkillPopUpPanelIntoFrame {
+    translate: 0 -1342px;
+    transition-delay: 0.1s;
+    transition-duration: 0.5s;
+}
+
+.moveNemesisSkillPopUpPanelIntoFrame {
+    translate: 0 -1342px;
+    transition-delay: 0.1s;
+    transition-duration: 0.5s;
+}
+
+.moveNyxSkillPopUpPanelIntoFrame {
+    translate: 0 -1342px;
     transition-delay: 0.1s;
     transition-duration: 0.5s;
 }
