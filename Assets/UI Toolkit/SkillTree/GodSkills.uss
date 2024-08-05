@@ -84,37 +84,37 @@
 .moveAresPanelIntoFrame {
     translate: 0 1626px;
     transition-duration: 0.5s;
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
 }
 
 .moveApolloPanelIntoFrame {
     translate: 0 1626px;
     transition-duration: 0.5s;
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
 }
 
 .moveDionysusPanelIntoFrame {
     translate: 0 1626px;
     transition-duration: 0.5s;
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
 }
 
 .moveArtemisPanelIntoFrame {
     translate: 0 1626px;
     transition-duration: 0.5s;
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
 }
 
 .moveAthenaPanelIntoFrame {
     translate: 0 1626px;
     transition-duration: 0.5s;
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
 }
 
 .moveNemesisPanelIntoFrame {
     translate: 0 1626px;
     transition-duration: 0.5s;
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
     transition-property: all;
 }
 
@@ -127,49 +127,49 @@
 .moveAresSkillPopUpPanelIntoFrame {
     translate: 0 -374px;
     transition-delay: 0.1s;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     transition-timing-function: ease-in;
 }
 
 .moveApolloSkillPopUpPanelIntoFrame {
     translate: 0 -732px;
     transition-delay: 0.1s;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     transition-timing-function: ease-in;
 }
 
 .moveDionysusSkillPopUpPanelIntoFrame {
     translate: 0 -1035px;
     transition-delay: 0.1s;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     transition-timing-function: ease-in;
 }
 
 .moveArtemisSkillPopUpPanelIntoFrame {
     translate: 0 -1342px;
     transition-delay: 0.1s;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     transition-timing-function: ease-in;
 }
 
 .moveAthenaSkillPopUpPanelIntoFrame {
     translate: 0 -1342px;
     transition-delay: 0.1s;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     transition-timing-function: ease-in;
 }
 
 .moveNemesisSkillPopUpPanelIntoFrame {
     translate: 0 -1342px;
     transition-delay: 0.1s;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     transition-timing-function: ease-in;
 }
 
 .moveNyxSkillPopUpPanelIntoFrame {
     translate: 0 -1342px;
     transition-delay: 0.1s;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     transition-timing-function: ease-in;
 }
 

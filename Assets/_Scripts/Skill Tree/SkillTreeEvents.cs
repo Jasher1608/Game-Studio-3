@@ -842,6 +842,14 @@ public class SkillTreeEvents : MonoBehaviour
             _currentOpenPanel.RemoveFromClassList("moveNemesisPanelIntoFrame");
 
             _currentOpenPanel = null;
+
+            CloseCurrentAresSkillPanel();
+            CloseCurrentApolloSkillPanel();
+            CloseCurrentDionysusSkillPanel();
+            CloseCurrentArtemisSkillPanel();
+            CloseCurrentAthenaSkillPanel();
+            CloseCurrentNemesisSkillPanel();
+            CloseCurrentNyxSkillPanel();
         }
     }
 
