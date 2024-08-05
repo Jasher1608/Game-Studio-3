@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro.EditorUtilities;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class MainMenuEvents : MonoBehaviour
@@ -204,6 +205,7 @@ public class MainMenuEvents : MonoBehaviour
     private void OnPlayClick(ClickEvent evt)
     {
         Debug.Log("You pressed the Play Button");
+        SceneManager.LoadScene("PlayerSelection");
     }
 
     private void OnSettingsClick(ClickEvent evt)

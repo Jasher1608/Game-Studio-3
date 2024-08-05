@@ -1,0 +1,475 @@
+fileFormatVersion: 2
+guid: e0070b567ba6fae4998af5315623e05f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss_Slime (1)_8
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 6874
+        width: 676
+        height: 428
+      alignment: 9
+      pivot: {x: 0.5967637, y: 0.04260482}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7349e5ecea4f80478284e7be8707784
+      internalID: -966715472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Slime (1)_9
+      rect:
+        serializedVersion: 2
+        x: 2798
+        y: 6867
+        width: 680
+        height: 420
+      alignment: 9
+      pivot: {x: 0.5686491, y: 0.054689825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e57d78bc88c751448698e104bb8f88c
+      internalID: 1132150241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Slime (1)_10
+      rect:
+        serializedVersion: 2
+        x: 4846
+        y: 6864
+        width: 660
+        height: 408
+      alignment: 9
+      pivot: {x: 0.58851284, y: 0.065733664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3f381bbbdd90a24780669ff12f0b204
+      internalID: -1358735594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Slime (1)_12
+      rect:
+        serializedVersion: 2
+        x: 6894
+        y: 6866
+        width: 660
+        height: 440
+      alignment: 9
+      pivot: {x: 0.58500385, y: 0.06387939}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf61f2ed267a3744ad8fc7caee88c7c
+      internalID: -1693650451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Slime (1)_20
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 4818
+        width: 850
+        height: 660
+      alignment: 9
+      pivot: {x: 0.45831415, y: 0.04277048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc36368458907ae45a1edf342286e16b
+      internalID: 1861891737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Slime (1)_21
+      rect:
+        serializedVersion: 2
+        x: 2801
+        y: 4818
+        width: 916
+        height: 832
+      alignment: 9
+      pivot: {x: 0.42168576, y: 0.03930664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1cb4b491a7da74f8ef257017e64d97
+      internalID: -324841865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Slime (1)_22
+      rect:
+        serializedVersion: 2
+        x: 4850
+        y: 4818
+        width: 1068
+        height: 832
+      alignment: 9
+      pivot: {x: 0.36366528, y: 0.03516329}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8046d42181715941a574e75172e762f
+      internalID: 783591049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Slime (1)_24
+      rect:
+        serializedVersion: 2
+        x: 7070
+        y: 4978
+        width: 962
+        height: 822
+      alignment: 9
+      pivot: {x: 0.411883, y: 0.026754485}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efad904ea79ed134ca43204b6c37880c
+      internalID: 399922566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Slime (1)_35
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 3144
+        width: 914
+        height: 614
+      alignment: 9
+      pivot: {x: 0.57071733, y: 0.048702873}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2d4636de4ecaa49ba5dc262cbfdebf
+      internalID: -974107344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Slime (1)_37
+      rect:
+        serializedVersion: 2
+        x: 2978
+        y: 3150
+        width: 916
+        height: 608
+      alignment: 9
+      pivot: {x: 0.5691001, y: 0.08171546}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2b399a300f53346908ebc6214efa46
+      internalID: 1234388419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Slime (1)_39
+      rect:
+        serializedVersion: 2
+        x: 5266
+        y: 2909
+        width: 735
+        height: 693
+      alignment: 9
+      pivot: {x: 0.59150654, y: 0.0384946}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 242a1a5b52c05314a83fe5bd1cd3791e
+      internalID: -1705889948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Slime (1)_41
+      rect:
+        serializedVersion: 2
+        x: 7297
+        y: 2766
+        width: 869
+        height: 836
+      alignment: 9
+      pivot: {x: 0.6567585, y: 0.03506163}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1c8145ddb6e9d4e9ea310d32144489
+      internalID: -1943840608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Slime (1)_73
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 720
+        width: 691
+        height: 442
+      alignment: 9
+      pivot: {x: 0.5662409, y: 0.048369125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984cc1a39684d4c49b0dc8f1a1384518
+      internalID: 1756858955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Boss_Slime (1)_0: -838141584
+      Boss_Slime (1)_1: -1720173579
+      Boss_Slime (1)_10: -1358735594
+      Boss_Slime (1)_11: 2109140452
+      Boss_Slime (1)_12: -1693650451
+      Boss_Slime (1)_13: 1401472765
+      Boss_Slime (1)_14: 278767567
+      Boss_Slime (1)_15: -878752706
+      Boss_Slime (1)_16: 2008070240
+      Boss_Slime (1)_17: 528867613
+      Boss_Slime (1)_18: 446168099
+      Boss_Slime (1)_19: 1314357096
+      Boss_Slime (1)_2: 1671619718
+      Boss_Slime (1)_20: 1861891737
+      Boss_Slime (1)_21: -324841865
+      Boss_Slime (1)_22: 783591049
+      Boss_Slime (1)_23: 521856641
+      Boss_Slime (1)_24: 399922566
+      Boss_Slime (1)_25: -1343058461
+      Boss_Slime (1)_26: -246139930
+      Boss_Slime (1)_27: 1758641632
+      Boss_Slime (1)_28: -91472359
+      Boss_Slime (1)_29: 1305005135
+      Boss_Slime (1)_3: 2125096455
+      Boss_Slime (1)_30: -733749532
+      Boss_Slime (1)_31: -1561222523
+      Boss_Slime (1)_32: -1629968104
+      Boss_Slime (1)_33: 1202806171
+      Boss_Slime (1)_34: 965970325
+      Boss_Slime (1)_35: -974107344
+      Boss_Slime (1)_36: -1254827806
+      Boss_Slime (1)_37: 1234388419
+      Boss_Slime (1)_38: 120619843
+      Boss_Slime (1)_39: -1705889948
+      Boss_Slime (1)_4: 1242270290
+      Boss_Slime (1)_40: -364659545
+      Boss_Slime (1)_41: -1943840608
+      Boss_Slime (1)_42: -464309018
+      Boss_Slime (1)_43: -11448867
+      Boss_Slime (1)_44: 969591867
+      Boss_Slime (1)_45: -777522421
+      Boss_Slime (1)_46: -799411102
+      Boss_Slime (1)_47: -789894913
+      Boss_Slime (1)_48: -404350308
+      Boss_Slime (1)_49: -1427981105
+      Boss_Slime (1)_5: -1408525832
+      Boss_Slime (1)_50: -79934605
+      Boss_Slime (1)_51: -1404122473
+      Boss_Slime (1)_52: -966006133
+      Boss_Slime (1)_53: -559793754
+      Boss_Slime (1)_54: 1176768363
+      Boss_Slime (1)_55: -1034992671
+      Boss_Slime (1)_56: -1230370897
+      Boss_Slime (1)_57: -1566686392
+      Boss_Slime (1)_58: 1150636026
+      Boss_Slime (1)_59: 879328475
+      Boss_Slime (1)_6: -847594861
+      Boss_Slime (1)_60: 1798497607
+      Boss_Slime (1)_61: -851540658
+      Boss_Slime (1)_62: -1018127840
+      Boss_Slime (1)_63: 509111277
+      Boss_Slime (1)_64: -1559062013
+      Boss_Slime (1)_65: 808677934
+      Boss_Slime (1)_66: -1052912890
+      Boss_Slime (1)_67: 207569012
+      Boss_Slime (1)_68: -922698453
+      Boss_Slime (1)_69: 28010246
+      Boss_Slime (1)_7: -2055152388
+      Boss_Slime (1)_70: -1967456374
+      Boss_Slime (1)_71: -1450828329
+      Boss_Slime (1)_72: -1979298268
+      Boss_Slime (1)_73: 1756858955
+      Boss_Slime (1)_74: 1226723233
+      Boss_Slime (1)_8: -966715472
+      Boss_Slime (1)_9: 1132150241
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

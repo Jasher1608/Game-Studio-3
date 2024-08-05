@@ -1,0 +1,501 @@
+fileFormatVersion: 2
+guid: 7388663cfddfa744f898e794ad010ede
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy02_EarthWorm (1)_0
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 2374
+        width: 31
+        height: 12
+      alignment: 9
+      pivot: {x: 0.49755415, y: 0.41324288}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d386d2d75df7784c8fdd5ab015c783d
+      internalID: -1910297968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy02_EarthWorm (1)_1
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 2373
+        width: 42
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cdab6c22c9bb8747b32f77a4d55774f
+      internalID: 1319083165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy02_EarthWorm (1)_2
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 2373
+        width: 43
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f434ed284e79a01489930545b3dd4f2a
+      internalID: 19322748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy02_EarthWorm (1)_3
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 2370
+        width: 44
+        height: 30
+      alignment: 9
+      pivot: {x: 0.51683486, y: 0.3738738}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 819442bf5fbbaef4fb29b8fc95090e03
+      internalID: -566276857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy02_EarthWorm (1)_4
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1856
+        width: 50
+        height: 42
+      alignment: 9
+      pivot: {x: 0.52927583, y: 0.32156226}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14863c2780bf9b1469aa9171528b5074
+      internalID: 1065605518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy02_EarthWorm (1)_5
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 1856
+        width: 49
+        height: 48
+      alignment: 9
+      pivot: {x: 0.52442276, y: 0.24164073}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e160e7b6220684c9d6d698d2c009e6
+      internalID: -630682654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy02_EarthWorm (1)_6
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 1855
+        width: 53
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5554015, y: 0.26559758}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38f9d1d246bb2b4eb0c28d2fbb17805
+      internalID: 1172304274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy02_EarthWorm (1)_7
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 1854
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5170543, y: 0.26785156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 119f537d03c932e48b190ca98761146b
+      internalID: 1749543173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy02_EarthWorm (1)_8
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1342
+        width: 53
+        height: 50
+      alignment: 9
+      pivot: {x: 0.54456145, y: 0.26104736}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d882de766bfb97243beb84e83f6862b0
+      internalID: -1164778029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy02_EarthWorm (1)_9
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 1341
+        width: 56
+        height: 51
+      alignment: 9
+      pivot: {x: 0.50917816, y: 0.30448404}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062179d7f07a926478600fdae5b9ce0a
+      internalID: 1389129610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy02_EarthWorm (1)_10
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 1342
+        width: 54
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5485184, y: 0.27730224}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc999fc83842c974392ba2b6a9ca0a5b
+      internalID: 960248103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy02_EarthWorm (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 1342
+        width: 55
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5189586, y: 0.29901367}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5270cca21b58c054798ed20d5ada5d81
+      internalID: 1100920958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy02_EarthWorm (1)_12
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 831
+        width: 53
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5000006, y: 0.27594867}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3750ae08bc9cfb74f98871d73673cf52
+      internalID: 1903302196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy02_EarthWorm (1)_13
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 831
+        width: 54
+        height: 49
+      alignment: 9
+      pivot: {x: 0.51676995, y: 0.27585694}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd05360a860ed7469e4fb6f3f4e22e2
+      internalID: -1502895912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy02_EarthWorm (1)_14
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 832
+        width: 49
+        height: 47
+      alignment: 9
+      pivot: {x: 0.50862217, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d7f659a01d53546a8a16c76db4e9c6
+      internalID: 197017619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy02_EarthWorm (1)_15
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 833
+        width: 49
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5422787, y: 0.2625405}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f4dcd49e7e8214d8e2d2e052a97fb5
+      internalID: -1916481589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy02_EarthWorm (1)_16
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 322
+        width: 43
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5375221, y: 0.36410424}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a006b16385c984bb75db2daec6b8b2
+      internalID: -1287758780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Enemy02_EarthWorm (1)_0: -1910297968
+      Enemy02_EarthWorm (1)_1: 1319083165
+      Enemy02_EarthWorm (1)_10: 960248103
+      Enemy02_EarthWorm (1)_11: 1100920958
+      Enemy02_EarthWorm (1)_12: 1903302196
+      Enemy02_EarthWorm (1)_13: -1502895912
+      Enemy02_EarthWorm (1)_14: 197017619
+      Enemy02_EarthWorm (1)_15: -1916481589
+      Enemy02_EarthWorm (1)_16: -1287758780
+      Enemy02_EarthWorm (1)_2: 19322748
+      Enemy02_EarthWorm (1)_3: -566276857
+      Enemy02_EarthWorm (1)_4: 1065605518
+      Enemy02_EarthWorm (1)_5: -630682654
+      Enemy02_EarthWorm (1)_6: 1172304274
+      Enemy02_EarthWorm (1)_7: 1749543173
+      Enemy02_EarthWorm (1)_8: -1164778029
+      Enemy02_EarthWorm (1)_9: 1389129610
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
