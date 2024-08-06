@@ -19,7 +19,6 @@ public class SkillTreeEvents : MonoBehaviour
     private VisualElement _nyxPanel;
     private VisualElement _nemesisPanel;
 
-
     private VisualElement _aresSkillPopUp1;
     private VisualElement _aresSkillPopUp2;
     private VisualElement _aresSkillPopUp3;
@@ -89,7 +88,6 @@ public class SkillTreeEvents : MonoBehaviour
     private VisualElement _nyxSkillPopUp7;
     private VisualElement _nyxSkillPopUp8;
     private VisualElement _nyxSkillPopUp9;
-
 
     private Button _aresButton;
     private Button _apolloButton;
@@ -187,7 +185,6 @@ public class SkillTreeEvents : MonoBehaviour
     private VisualElement _currentNemesisSkillPanel;
     private VisualElement _currentNyxSkillPanel;
 
-
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
@@ -198,7 +195,10 @@ public class SkillTreeEvents : MonoBehaviour
             Debug.LogError("UIDocument component not found!");
             return;
         }
+    }
 
+    private void OnEnable()
+    {
         InitializeButtons();
         InitializePanels();
         InitializeSkillButtons();
@@ -510,10 +510,9 @@ public class SkillTreeEvents : MonoBehaviour
 
     }
 
-
     private void OnDisable()
     {
-        // upregister god panel buttons
+        // unregister god panel buttons
 
         UnregisterButton(_aresButton, OnAresClick);
         UnregisterButton(_apolloButton, OnApolloClick);
