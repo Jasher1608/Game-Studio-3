@@ -55,6 +55,8 @@ public class PlayerController : SerializedMonoBehaviour
 
     private Coroutine updateUICoroutine;
 
+    public Dictionary<string, God> gods = new Dictionary<string, God>();
+
     void Start()
     {
         playerStats = Instantiate(playerStatsOriginal);

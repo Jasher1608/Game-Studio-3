@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector.Editor.GettingStarted;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,11 @@ using UnityEngine.UIElements;
 
 public class SkillTreeEvents : MonoBehaviour
 {
+    #region References
     private UIDocument _document;
     private Button _button;
+
+    private PlayerController _playerController;
 
     private List<Button> _skillTreeButtons = new List<Button>();
     private AudioSource _audioSource;
@@ -184,11 +188,13 @@ public class SkillTreeEvents : MonoBehaviour
     private VisualElement _currentAthenaSkillPanel;
     private VisualElement _currentNemesisSkillPanel;
     private VisualElement _currentNyxSkillPanel;
+    #endregion References
 
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
         _document = GetComponent<UIDocument>();
+        _playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
 
         if (_document == null)
         {
@@ -701,6 +707,11 @@ public class SkillTreeEvents : MonoBehaviour
         Debug.Log("You pressed the Ares Button");
         CloseCurrentOpenPanel();
 
+        if (_playerController.gods.TryGetValue("Ares", out God god))
+        {
+            _playerController.ChangeGod(god);
+        }
+
         if (_aresPanel != null)
         {
             _aresPanel.AddToClassList("moveAresPanelIntoFrame");
@@ -718,6 +729,11 @@ public class SkillTreeEvents : MonoBehaviour
     {
         Debug.Log("You pressed the Apollo Button");
         CloseCurrentOpenPanel();
+
+        if (_playerController.gods.TryGetValue("Apollo", out God god))
+        {
+            _playerController.ChangeGod(god);
+        }
 
         if (_apolloPanel != null)
         {
@@ -737,6 +753,11 @@ public class SkillTreeEvents : MonoBehaviour
         Debug.Log("You pressed the Dionysus Button");
         CloseCurrentOpenPanel();
 
+        if (_playerController.gods.TryGetValue("Dionysus", out God god))
+        {
+            _playerController.ChangeGod(god);
+        }
+
         if (_dionysusPanel != null)
         {
             _dionysusPanel.AddToClassList("moveDionysusPanelIntoFrame");
@@ -754,6 +775,11 @@ public class SkillTreeEvents : MonoBehaviour
     {
         Debug.Log("You pressed the Artemis Button");
         CloseCurrentOpenPanel();
+
+        if (_playerController.gods.TryGetValue("Artemis", out God god))
+        {
+            _playerController.ChangeGod(god);
+        }
 
         if (_artemisPanel != null)
         {
@@ -773,6 +799,11 @@ public class SkillTreeEvents : MonoBehaviour
         Debug.Log("You pressed the Athena Button");
         CloseCurrentOpenPanel();
 
+        if (_playerController.gods.TryGetValue("Athena", out God god))
+        {
+            _playerController.ChangeGod(god);
+        }
+
         if (_athenaPanel != null)
         {
             _athenaPanel.AddToClassList("moveAthenaPanelIntoFrame");
@@ -791,6 +822,11 @@ public class SkillTreeEvents : MonoBehaviour
         Debug.Log("You pressed the Nemesis Button");
         CloseCurrentOpenPanel();
 
+        if (_playerController.gods.TryGetValue("Nemesis", out God god))
+        {
+            _playerController.ChangeGod(god);
+        }
+
         if (_nemesisPanel != null)
         {
             _nemesisPanel.AddToClassList("moveNemesisPanelIntoFrame");
@@ -808,6 +844,11 @@ public class SkillTreeEvents : MonoBehaviour
     {
         Debug.Log("You pressed the Nyx Button");
         CloseCurrentOpenPanel();
+
+        if (_playerController.gods.TryGetValue("Nyx", out God god))
+        {
+            _playerController.ChangeGod(god);
+        }
 
         if (_nyxPanel != null)
         {

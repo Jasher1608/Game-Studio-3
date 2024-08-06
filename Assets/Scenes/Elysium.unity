@@ -462,7 +462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 026aeabf60b9eb44daec9c7341b245fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentGod: {fileID: 11400000, guid: 10959b5cf03352d4d86ecbcab9495786, type: 2}
+  currentGod: {fileID: 11400000, guid: 73f360f9f3270af46abb51aa652cdca3, type: 2}
   experienceManager: {fileID: 345188459}
 --- !u!114 &345188459
 MonoBehaviour:
@@ -603,12 +603,123 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 10959b5cf03352d4d86ecbcab9495786, type: 2}
+    - {fileID: 11400000, guid: 73f360f9f3270af46abb51aa652cdca3, type: 2}
+    - {fileID: 11400000, guid: 1e97adbdbc8e4bd41be37ae4b5306a8f, type: 2}
+    - {fileID: 11400000, guid: 28ecfd34799defd42906a523b6b59287, type: 2}
+    - {fileID: 11400000, guid: aa2b02c8b1425d141bfbcb005780a9f6, type: 2}
+    - {fileID: 11400000, guid: 1d8efd995580af445a9eb00a744265d5, type: 2}
+    - {fileID: 11400000, guid: ffc76b74fd5dd164d890dd71f122b268, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: gods
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[God,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 7
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Apollo
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Ares
+    - Name: $v
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Artemis
+    - Name: $v
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Athena
+    - Name: $v
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Dionysus
+    - Name: $v
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Nemesis
+    - Name: $v
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Nyx
+    - Name: $v
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   characterDB: {fileID: 11400000, guid: a726616ea024cba4696577b2bcd81de2, type: 2}
   artworkSprite: {fileID: 430522993}
   playerStatsOriginal: {fileID: 11400000, guid: 1c2379ba3dfc55b4084eb8bf185ea3fb, type: 2}
@@ -2457,7 +2568,7 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: 658e6887e425ba248ae306dc65e0fac5, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: f3664cf315ae95a4bbf9676bbc9936fe, type: 3}
-  m_SortingOrder: 1
+  m_SortingOrder: 9
 --- !u!4 &2103507467
 Transform:
   m_ObjectHideFlags: 0
@@ -2467,7 +2578,7 @@ Transform:
   m_GameObject: {fileID: 2103507464}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 373.14493, y: 965.9184, z: -7.2076855}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
