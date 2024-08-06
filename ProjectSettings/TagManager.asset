@@ -7,6 +7,7 @@ TagManager:
   - PropSpawn
   - Enemy
   - Ambrosia
+  - DevotionManager
   layers:
   - Default
   - TransparentFX

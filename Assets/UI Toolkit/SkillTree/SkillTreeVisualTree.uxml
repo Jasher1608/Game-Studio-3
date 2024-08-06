@@ -36,7 +36,7 @@
                 <ui:Button text="Skill 9" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AresSkill9" class="Skill9 skillButton" style="width: 50px; height: 50px; font-size: 10px; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
             </ui:VisualElement>
             <ui:VisualElement name="XP_SkillTallyContainer" class="header2" style="flex-grow: 1; position: absolute; width: 382px; left: 1100px; height: 165px; top: 136px; align-items: flex-start; align-self: auto; font-size: 43px;">
-                <ui:Label tabindex="-1" text="Ares XP =" parse-escape-sequences="true" display-tooltip-when-elided="true" name="XP" class="header3" style="-unity-text-align: middle-left; height: 76px; font-size: 40px; top: 80px;" />
+                <ui:Label tabindex="-1" text="Ares XP =" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AresXP" class="header3" style="-unity-text-align: middle-left; height: 76px; font-size: 40px; top: 80px;" />
             </ui:VisualElement>
             <ui:VisualElement name="AresProgressBars" style="flex-grow: 1; transform-origin: center; rotate: 90deg;">
                 <ui:ProgressBar value="22" title="my-progress" name="ProgressBarOne" class="progressBar" style="top: -251px; position: absolute; left: -930px; rotate: 123deg; translate: 52px -23px; scale: 0.8 0.2;" />
@@ -75,7 +75,7 @@
                 <ui:ProgressBar value="22" title="my-progress" name="ProgressBarEight" class="progressBar" style="top: -251px; position: absolute; left: -930px; rotate: -29deg; translate: 152px -284px; scale: 2 0.2;" />
             </ui:VisualElement>
             <ui:VisualElement name="XP_SkillTallyContainer" class="header2" style="flex-grow: 1; position: absolute; width: 382px; left: 1100px; height: 165px; top: 136px; align-items: flex-start; align-self: auto; font-size: 43px;">
-                <ui:Label tabindex="-1" text="Apollo XP =" parse-escape-sequences="true" display-tooltip-when-elided="true" name="XP" class="header3" style="-unity-text-align: middle-left; height: 76px; font-size: 40px; top: 80px;" />
+                <ui:Label tabindex="-1" text="Apollo XP =" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ApolloXP" class="header3" style="-unity-text-align: middle-left; height: 76px; font-size: 40px; top: 80px;" />
             </ui:VisualElement>
             <ui:VisualElement name="GodlyWeapon" tabindex="-2" class="godlyWeapon" style="flex-grow: 1; height: 195px; width: 194px; position: absolute; left: 882px; top: 35px; background-image: url(&quot;project://database/Assets/Sprites/Gods/GodlyWeapons/Ares.png?fileID=2800000&amp;guid=2d03db52c5438914bb15fef24bf02f0a&amp;type=3#Ares&quot;); -unity-background-image-tint-color: rgb(122, 122, 122);" />
             <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="ApolloBackButton" class="closeButton" style="left: 1005px; top: -1342px; background-color: rgba(188, 188, 188, 0);" />
@@ -83,7 +83,7 @@
         <ui:VisualElement name="DionysusPanel" style="flex-grow: 1; align-items: flex-start; margin-top: 49px; margin-right: 49px; margin-bottom: 49px; margin-left: 49px; background-color: rgba(125, 125, 125, 0.39); background-image: url(&quot;project://database/Assets/Sprites/Gods/SkillTreeGods/Dionysus.jpg?fileID=21300000&amp;guid=c4d615771b804234dae53b2ff3985eeb&amp;type=3#Dionysus&quot;); border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 12px; border-right-width: 12px; border-bottom-width: 12px; border-left-width: 12px; -unity-background-image-tint-color: rgb(82, 82, 82); position: absolute; left: 300px; width: 980px; height: 1480px; top: -1700px; opacity: 1;">
             <ui:Label tabindex="-1" text="Dionysus" parse-escape-sequences="false" display-tooltip-when-elided="true" class="header" />
             <ui:VisualElement name="XP_SkillTallyContainer" class="header2" style="flex-grow: 1; position: absolute; width: 382px; left: 1100px; height: 165px; top: 136px; align-items: flex-start; align-self: auto; font-size: 43px;">
-                <ui:Label tabindex="-1" text="Dionysus XP =" parse-escape-sequences="true" display-tooltip-when-elided="true" name="XP" class="header3" style="-unity-text-align: middle-left; height: 76px; font-size: 40px; top: 80px;" />
+                <ui:Label tabindex="-1" text="Dionysus XP =" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DionysusXP" class="header3" style="-unity-text-align: middle-left; height: 76px; font-size: 40px; top: 80px;" />
             </ui:VisualElement>
             <ui:VisualElement name="GodlyWeapon" tabindex="-2" class="godlyWeapon" style="flex-grow: 1; height: 195px; width: 194px; position: absolute; left: 882px; top: 35px; background-image: url(&quot;project://database/Assets/Sprites/Gods/GodlyWeapons/Ares.png?fileID=2800000&amp;guid=2d03db52c5438914bb15fef24bf02f0a&amp;type=3#Ares&quot;); -unity-background-image-tint-color: rgb(122, 122, 122);" />
             <ui:VisualElement tabindex="2" focusable="false" name="DionysusTreeContainer" style="flex-grow: 1; -unity-background-scale-mode: stretch-to-fill; align-self: center; -unity-background-image-tint-color: rgb(48, 47, 47); align-items: flex-start; background-color: rgba(0, 0, 0, 0); flex-direction: column; top: -117px; height: 462px; width: 795px; left: 14px;">
@@ -112,7 +112,7 @@
         <ui:VisualElement name="ArtemisPanel" style="flex-grow: 1; align-items: flex-start; margin-top: 49px; margin-right: 49px; margin-bottom: 49px; margin-left: 49px; background-color: rgba(125, 125, 125, 0.39); background-image: url(&quot;project://database/Assets/Sprites/Gods/SkillTreeGods/Artemis.jpg?fileID=21300000&amp;guid=df9e754cffa09c347a9b66ebefaa21bf&amp;type=3#Artemis&quot;); border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 12px; border-right-width: 12px; border-bottom-width: 12px; border-left-width: 12px; -unity-background-image-tint-color: rgb(82, 82, 82); position: absolute; left: 300px; width: 980px; height: 1480px; top: -1700px; opacity: 1;">
             <ui:Label tabindex="-1" text="Artemis" parse-escape-sequences="false" display-tooltip-when-elided="true" class="header" />
             <ui:VisualElement name="XP_SkillTallyContainer" class="header2" style="flex-grow: 1; position: absolute; width: 382px; left: 1100px; height: 165px; top: 136px; align-items: flex-start; align-self: auto; font-size: 43px;">
-                <ui:Label tabindex="-1" text="Artemis XP =" parse-escape-sequences="true" display-tooltip-when-elided="true" name="XP" enable-rich-text="true" class="header3" style="-unity-text-align: middle-left; height: 76px; font-size: 40px; top: 80px;" />
+                <ui:Label tabindex="-1" text="Artemis XP =" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ArtemisXP" enable-rich-text="true" class="header3" style="-unity-text-align: middle-left; height: 76px; font-size: 40px; top: 80px;" />
             </ui:VisualElement>
             <ui:VisualElement name="GodlyWeapon" tabindex="-2" class="godlyWeapon" style="flex-grow: 1; height: 195px; width: 194px; position: absolute; left: 882px; top: 35px; background-image: url(&quot;project://database/Assets/Sprites/Gods/GodlyWeapons/Ares.png?fileID=2800000&amp;guid=2d03db52c5438914bb15fef24bf02f0a&amp;type=3#Ares&quot;); -unity-background-image-tint-color: rgb(122, 122, 122);" />
             <ui:VisualElement tabindex="2" focusable="false" name="ArtemisTreeContainer" style="flex-grow: 1; -unity-background-scale-mode: stretch-to-fill; align-self: center; -unity-background-image-tint-color: rgb(48, 47, 47); align-items: flex-start; background-color: rgba(0, 0, 0, 0); flex-direction: column; top: -117px; height: 462px; width: 795px; left: 14px;">
@@ -152,7 +152,7 @@
                 <ui:Button text="Skill 9" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AthenaSkill9" class="Skill9 skillButton" style="width: 50px; height: 50px; font-size: 10px; top: -377px; left: 314px; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
             </ui:VisualElement>
             <ui:VisualElement name="XP_SkillTallyContainer" class="header2" style="flex-grow: 1; position: absolute; width: 382px; left: 1100px; height: 165px; top: 136px; align-items: flex-start; align-self: auto; font-size: 43px;">
-                <ui:Label tabindex="-1" text="Athena XP =" parse-escape-sequences="true" display-tooltip-when-elided="true" name="XP" class="header3" style="-unity-text-align: middle-left; height: 76px; font-size: 40px; top: 80px;" />
+                <ui:Label tabindex="-1" text="Athena XP =" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AthenaXP" class="header3" style="-unity-text-align: middle-left; height: 76px; font-size: 40px; top: 80px;" />
             </ui:VisualElement>
             <ui:VisualElement name="AthenaProgressBars" style="flex-grow: 1; transform-origin: center; rotate: 90deg;">
                 <ui:ProgressBar value="22" title="my-progress" name="ProgressBarOne" class="progressBar" style="top: -251px; position: absolute; left: -930px; rotate: 45deg; translate: -31px -23px;" />
@@ -181,7 +181,7 @@
                 <ui:Button text="Skill 9" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NemesisSkill9" class="Skill9 skillButton" style="width: 50px; height: 50px; font-size: 10px; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
             </ui:VisualElement>
             <ui:VisualElement name="XP_SkillTallyContainer" class="header2" style="flex-grow: 1; position: absolute; width: 382px; left: 1100px; height: 165px; top: 136px; align-items: flex-start; align-self: auto; font-size: 43px;">
-                <ui:Label tabindex="-1" text="Nemesis XP =" parse-escape-sequences="true" display-tooltip-when-elided="true" name="XP" class="header3" style="-unity-text-align: middle-left; height: 76px; font-size: 40px; top: 80px;" />
+                <ui:Label tabindex="-1" text="Nemesis XP =" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NemesisXP" class="header3" style="-unity-text-align: middle-left; height: 76px; font-size: 40px; top: 80px;" />
             </ui:VisualElement>
             <ui:VisualElement name="NemesisProgressBars" style="flex-grow: 1; transform-origin: center; rotate: 90deg;">
                 <ui:ProgressBar value="22" title="my-progress" name="ProgressBarOne" class="progressBar" style="top: -251px; position: absolute; left: -930px; rotate: 45deg; translate: -31px -23px;" />
@@ -210,7 +210,7 @@
                 <ui:Button text="Skill 9" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NyxSkill9" class="Skill9 skillButton" style="width: 50px; height: 50px; font-size: 10px; background-image: url(&quot;project://database/Assets/Sprites/SkillTree/GodCoin.png?fileID=21300000&amp;guid=3e2797e44e40856468366f95cced9449&amp;type=3#GodCoin&quot;); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
             </ui:VisualElement>
             <ui:VisualElement name="XP_SkillTallyContainer" class="header2" style="flex-grow: 1; position: absolute; width: 382px; left: 1100px; height: 165px; top: 136px; align-items: flex-start; align-self: auto; font-size: 43px;">
-                <ui:Label tabindex="-1" text="Nyx XP =" parse-escape-sequences="true" display-tooltip-when-elided="true" name="XP" class="header3" style="-unity-text-align: middle-left; height: 76px; font-size: 40px; top: 80px;" />
+                <ui:Label tabindex="-1" text="Nyx XP =" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NyxXP" class="header3" style="-unity-text-align: middle-left; height: 76px; font-size: 40px; top: 80px;" />
             </ui:VisualElement>
             <ui:VisualElement name="NyxProgressBars" style="flex-grow: 1; transform-origin: center; rotate: 90deg;">
                 <ui:ProgressBar value="22" title="my-progress" name="ProgressBarOne" class="progressBar" style="top: -251px; position: absolute; left: -930px; rotate: 45deg; translate: -31px -23px;" />
