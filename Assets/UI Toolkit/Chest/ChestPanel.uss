@@ -36,7 +36,7 @@
     margin-right: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
-    scale: 1.01 1.01;
+    scale: 1.05 1.05;
     transition-duration: 0.3s;
     transition-delay: 0.1s;
     -unity-background-image-tint-color: rgb(255, 255, 255);

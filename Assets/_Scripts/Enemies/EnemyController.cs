@@ -26,6 +26,14 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] private GameObject ambrosia;
 
+
+    // Added variables for enemy attacks 
+    public float damage;
+    public float hitWaitTime = 1f;
+    private float hitCounter; // to keep track of wait time
+
+
+
     void Awake()
     {
         enemyStats = Instantiate(enemyStatsOriginal);
@@ -55,7 +63,31 @@ public class EnemyController : MonoBehaviour
 
         movement = (direction + separation).normalized * movementSpeed;
         rb.velocity = movement;
+
+        // added to incorporate hit Counter on enemy attack
+
+        if(hitCounter > 0f)
+        {
+            hitCounter -= Time.deltaTime;
+        }
+
     }
+
+
+
+    // Added to engage with Player Health Controller script when enemy attacks player
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player" && hitCounter <= 0f)
+        {
+            PlayerHealthController.instance.TakeDamage(damage);
+
+            hitCounter = hitWaitTime;
+        }
+    }
+
+
 
     void CalculateStats()
     {

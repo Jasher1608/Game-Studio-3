@@ -126,7 +126,15 @@
 .moveContainerGameNarrativeOneIntoFrame {
     translate: 0 -1257px;
     opacity: 1;
-    transition-duration: 2s;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-property: all;
+}
+
+.moveContainerGameNarrativeTwoIntoFrame {
+    translate: 0 -1257px;
+    opacity: 1;
+    transition-duration: 1s;
     transition-timing-function: ease;
     transition-property: all;
 }
@@ -150,13 +158,13 @@
     color: rgb(255, 255, 255);
     justify-content: flex-start;
     align-items: center;
-    -unity-background-image-tint-color: rgb(46, 46, 46);
+    -unity-background-image-tint-color: rgb(47, 0, 123);
 }
 
 .menuButton:hover {
     scale: 1.1 1.1;
     transition-duration: 0.5s;
-    background-color: rgb(76, 0, 255);
+    background-color: rgba(76, 0, 255, 0);
     -unity-background-image-tint-color: rgb(76, 0, 255);
 }
 
@@ -227,4 +235,25 @@
     padding-right: 25px;
     padding-bottom: 25px;
     padding-left: 25px;
+}
+
+.moveLosePanelIntoFrame {
+    translate: 0 850px;
+    opacity: 1;
+    transition-timing-function: ease-in-bounce;
+    transition-duration: 2s;
+    transition-delay: 0s;
+    scale: 1.1 1.1;
+    rotate: 1deg;
+}
+
+.moveWinPanelIntoFrame {
+    translate: -2441px 0;
+    opacity: 1;
+}
+
+.moveChestPanelIntoFrame {
+    translate: 625px -917px;
+    transition-duration: 1s;
+    transition-delay: 0.1s;
 }
