@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2d03db52c5438914bb15fef24bf02f0a
+guid: 659a23b51c4999f469e405b6bb5f814d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Weapon6_BallAndChain_0
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 2419
+        width: 358
+        height: 367
+      alignment: 9
+      pivot: {x: 0.175443, y: 0.22672881}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809fed3016a7d0e4a8ee8bb218cd7fd2
+      internalID: 965350002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon6_BallAndChain_1
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 2419
+        width: 419
+        height: 424
+      alignment: 9
+      pivot: {x: 0.15426454, y: 0.19525032}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5523204d4defe438a628ebff6d886b
+      internalID: 845510150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon6_BallAndChain_2
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1387
+        width: 277
+        height: 312
+      alignment: 9
+      pivot: {x: 0.23838647, y: 0.29190573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6566cb88946a65745af54a559ebb0ec8
+      internalID: 1165246303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon6_BallAndChain_3
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1387
+        width: 234
+        height: 279
+      alignment: 9
+      pivot: {x: 0.27806574, y: 0.33073878}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8faccdc9523274c87c1c6a29e71d01
+      internalID: -1944193503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon6_BallAndChain_4
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 364
+        width: 133
+        height: 178
+      alignment: 9
+      pivot: {x: 0.50154907, y: 0.49999964}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce521f87a255d50438928c97a0e6431b
+      internalID: -992028365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +224,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Weapon6_BallAndChain_0: 965350002
+      Weapon6_BallAndChain_1: 845510150
+      Weapon6_BallAndChain_2: 1165246303
+      Weapon6_BallAndChain_3: -1944193503
+      Weapon6_BallAndChain_4: -992028365
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
