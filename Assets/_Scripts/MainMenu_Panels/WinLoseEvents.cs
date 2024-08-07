@@ -1,8 +1,13 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+
+
+// best practise seperate script for Win Lose condition - however current lose conttion incorporated in player health controller for practical purposes 
+
+ Binning this one based on above note.
 
 public class WinLoseEvents : MonoBehaviour
 {
@@ -69,6 +74,8 @@ public class WinLoseEvents : MonoBehaviour
         Debug.Log("You pressed the Play Again button");
 
         SceneManager.LoadScene("MainMenu");
+
+        // trying to get this to work, however multiple attempts not working. Going with plan B by adding in basic UI button - this is also attempted and referenced in the Player Health Contrller script/ 
     }
 
     private void OnNextLevelClick(ClickEvent evt)
@@ -79,3 +86,5 @@ public class WinLoseEvents : MonoBehaviour
         // SceneManager.LoadScene("Tarturus");
     }
 }
+
+*/
