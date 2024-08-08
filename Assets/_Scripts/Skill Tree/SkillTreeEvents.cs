@@ -188,6 +188,14 @@ public class SkillTreeEvents : MonoBehaviour
     private Label _nemesisXP;
     private Label _nyxXP;
 
+    private Label _apolloSP;
+    private Label _aresSP;
+    private Label _athenaSP;
+    private Label _artemisSP;
+    private Label _dionysusSP;
+    private Label _nemesisSP;
+    private Label _nyxSP;
+
     private VisualElement _currentOpenPanel;
 
     private VisualElement _currentAresSkillPanel;
@@ -451,6 +459,14 @@ public class SkillTreeEvents : MonoBehaviour
         _dionysusXP = _document.rootVisualElement.Q<Label>("DionysusXP");
         _nemesisXP = _document.rootVisualElement.Q<Label>("NemesisXP");
         _nyxXP = _document.rootVisualElement.Q<Label>("NyxXP");
+
+        _apolloSP = _document.rootVisualElement.Q<Label>("ApolloSkillPoints");
+        _aresSP = _document.rootVisualElement.Q<Label>("AresSkillPoints");
+        _athenaSP = _document.rootVisualElement.Q<Label>("AthenaSkillPoints");
+        _artemisSP = _document.rootVisualElement.Q<Label>("ArtemisSkillPoints");
+        _dionysusSP = _document.rootVisualElement.Q<Label>("DionysusSkillPoints");
+        _nemesisSP = _document.rootVisualElement.Q<Label>("NemesisSkillPoints");
+        _nyxSP = _document.rootVisualElement.Q<Label>("NyxSkillPoints");
     }
 
     // Register skill button callbacks
@@ -729,6 +745,7 @@ public class SkillTreeEvents : MonoBehaviour
             _aresPanel.AddToClassList("moveAresPanelIntoFrame");
             _currentOpenPanel = _aresPanel;
             _aresXP.text = $"XP: {_experienceManager.currentGodInstance.currentXP:F1}/{_experienceManager.currentGodInstance.xpToNextLevel:F1}";
+            _aresSP.text = $"Ares Skill Points: {_experienceManager.currentGodInstance.skillPoints}";
             CloseCurrentApolloSkillPanel();
             CloseCurrentDionysusSkillPanel();
             CloseCurrentArtemisSkillPanel();
@@ -753,6 +770,7 @@ public class SkillTreeEvents : MonoBehaviour
             _apolloPanel.AddToClassList("moveApolloPanelIntoFrame");
             _currentOpenPanel = _apolloPanel;
             _apolloXP.text = $"XP: {_experienceManager.currentGodInstance.currentXP:F1}/{_experienceManager.currentGodInstance.xpToNextLevel:F1}";
+            _apolloSP.text = $"Apollo Skill Points: {_experienceManager.currentGodInstance.skillPoints}";
             CloseCurrentAresSkillPanel();
             CloseCurrentDionysusSkillPanel();
             CloseCurrentArtemisSkillPanel();
@@ -777,6 +795,7 @@ public class SkillTreeEvents : MonoBehaviour
             _dionysusPanel.AddToClassList("moveDionysusPanelIntoFrame");
             _currentOpenPanel = _dionysusPanel;
             _dionysusXP.text = $"XP: {_experienceManager.currentGodInstance.currentXP:F1}/{_experienceManager.currentGodInstance.xpToNextLevel:F1}";
+            _dionysusSP.text = $"Dionysus Skill Points: {_experienceManager.currentGodInstance.skillPoints}";
             CloseCurrentAresSkillPanel();
             CloseCurrentApolloSkillPanel();
             CloseCurrentArtemisSkillPanel();
@@ -801,6 +820,7 @@ public class SkillTreeEvents : MonoBehaviour
             _artemisPanel.AddToClassList("moveArtemisPanelIntoFrame");
             _currentOpenPanel = _artemisPanel;
             _artemisXP.text = $"XP: {_experienceManager.currentGodInstance.currentXP:F1}/{_experienceManager.currentGodInstance.xpToNextLevel:F1}";
+            _artemisSP.text = $"Artemis Skill Points: {_experienceManager.currentGodInstance.skillPoints}";
             CloseCurrentAresSkillPanel();
             CloseCurrentApolloSkillPanel();
             CloseCurrentDionysusSkillPanel();
@@ -825,6 +845,7 @@ public class SkillTreeEvents : MonoBehaviour
             _athenaPanel.AddToClassList("moveAthenaPanelIntoFrame");
             _currentOpenPanel = _athenaPanel;
             _athenaXP.text = $"XP: {_experienceManager.currentGodInstance.currentXP:F1}/{_experienceManager.currentGodInstance.xpToNextLevel:F1}";
+            _athenaSP.text = $"Athena Skill Points: {_experienceManager.currentGodInstance.skillPoints}";
             CloseCurrentAresSkillPanel();
             CloseCurrentApolloSkillPanel();
             CloseCurrentDionysusSkillPanel();
@@ -849,6 +870,7 @@ public class SkillTreeEvents : MonoBehaviour
             _nemesisPanel.AddToClassList("moveNemesisPanelIntoFrame");
             _currentOpenPanel = _nemesisPanel;
             _nemesisXP.text = $"XP: {_experienceManager.currentGodInstance.currentXP:F1}/{_experienceManager.currentGodInstance.xpToNextLevel:F1}";
+            _nemesisSP.text = $"Nemesis Skill Points: {_experienceManager.currentGodInstance.skillPoints}";
             CloseCurrentAresSkillPanel();
             CloseCurrentApolloSkillPanel();
             CloseCurrentArtemisSkillPanel();
@@ -873,6 +895,7 @@ public class SkillTreeEvents : MonoBehaviour
             _nyxPanel.AddToClassList("moveNyxPanelIntoFrame");
             _currentOpenPanel = _nyxPanel;
             _nyxXP.text = $"XP: {_experienceManager.currentGodInstance.currentXP:F1}/{_experienceManager.currentGodInstance.xpToNextLevel:F1}";
+            _nyxSP.text = $"Nyx Skill Points: {_experienceManager.currentGodInstance.skillPoints}";
             CloseCurrentAresSkillPanel();
             CloseCurrentApolloSkillPanel();
             CloseCurrentDionysusSkillPanel();

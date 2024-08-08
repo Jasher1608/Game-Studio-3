@@ -5,18 +5,24 @@ using UnityEngine;
 
 public class SkillManager : SerializedMonoBehaviour
 {
+    [SerializeField] ExperienceManager experienceManager;
     public void UpgradeSkill(Skill skill, Stats playerStats)
     {
         if (skill.currentLevel < skill.maxLevel)
         {
-            skill.currentLevel++;
-
-            if (skill.statModifiersByLevel.TryGetValue(skill.currentLevel, out List<StatModifier> modifiers))
+            if (experienceManager.currentGodInstance.skillPoints > 0)
             {
-                foreach (var modifier in modifiers)
+                skill.currentLevel++;
+
+                if (skill.statModifiersByLevel.TryGetValue(skill.currentLevel, out List<StatModifier> modifiers))
                 {
-                    playerStats.ChangeStat(modifier.stat, modifier.modifierValue);
+                    foreach (var modifier in modifiers)
+                    {
+                        playerStats.ChangeStat(modifier.stat, modifier.modifierValue);
+                    }
                 }
+
+                experienceManager.currentGodInstance.skillPoints--;
             }
         }
     }

@@ -327,6 +327,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
+  experienceManager: {fileID: 345188459}
 --- !u!4 &150258609
 Transform:
   m_ObjectHideFlags: 0
