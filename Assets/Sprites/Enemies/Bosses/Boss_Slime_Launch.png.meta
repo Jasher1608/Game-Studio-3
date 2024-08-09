@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -106,6 +106,58 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -134,12 +186,12 @@ TextureImporter:
       name: Boss_Slime_Launch_0
       rect:
         serializedVersion: 2
-        x: 836
-        y: 3127
-        width: 1119
-        height: 1096
+        x: 680
+        y: 2577
+        width: 1190
+        height: 1193
       alignment: 9
-      pivot: {x: 0.4739918, y: 0.2702922}
+      pivot: {x: 0.30745065, y: 0.22945487}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +207,12 @@ TextureImporter:
       name: Boss_Slime_Launch_1
       rect:
         serializedVersion: 2
-        x: 2836
-        y: 3127
-        width: 1119
-        height: 1096
+        x: 2752
+        y: 2595
+        width: 1167
+        height: 1210
       alignment: 9
-      pivot: {x: 0.4739918, y: 0.2702922}
+      pivot: {x: 0.30745065, y: 0.22945487}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +228,12 @@ TextureImporter:
       name: Boss_Slime_Launch_2
       rect:
         serializedVersion: 2
-        x: 5036
-        y: 2928
-        width: 1119
-        height: 1096
+        x: 5023
+        y: 2589
+        width: 1256
+        height: 1401
       alignment: 9
-      pivot: {x: 0.4739918, y: 0.2702922}
+      pivot: {x: 0.042391762, y: 0.07727471}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +249,12 @@ TextureImporter:
       name: Boss_Slime_Launch_4
       rect:
         serializedVersion: 2
-        x: 7073
-        y: 2747
-        width: 1119
-        height: 1096
+        x: 6927
+        y: 2554
+        width: 1265
+        height: 1442
       alignment: 9
-      pivot: {x: 0.4739918, y: 0.2702922}
+      pivot: {x: 0.08361777, y: 0.11251511}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -281,7 +333,7 @@ TextureImporter:
       name: Boss_Slime_Launch_8
       rect:
         serializedVersion: 2
-        x: 531
+        x: 522
         y: 6824
         width: 1119
         height: 1096
@@ -323,7 +375,7 @@ TextureImporter:
       name: Boss_Slime_Launch_10
       rect:
         serializedVersion: 2
-        x: 4607
+        x: 4625
         y: 6824
         width: 1119
         height: 1096
@@ -365,12 +417,12 @@ TextureImporter:
       name: Boss_Slime_Launch_12
       rect:
         serializedVersion: 2
-        x: 1128
-        y: 642
-        width: 1119
-        height: 1096
+        x: 531
+        y: 639
+        width: 1561
+        height: 1600
       alignment: 9
-      pivot: {x: 0.4739918, y: 0.2702922}
+      pivot: {x: 0.08361777, y: 0.11251511}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
