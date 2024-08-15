@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour
     private Transform playerTransform;
     private Rigidbody2D rb;
 
+    [SerializeField] GameObject bat;
     [SerializeField] private Stats enemyStatsOriginal;
     [HideInInspector] public Stats enemyStats;
 
