@@ -433,7 +433,7 @@ Material:
     - _TextureLayer1Contrast: 1
     - _TextureLayer1ContrastToggle: 0
     - _TextureLayer1EdgeClip: 0
-    - _TextureLayer1Fade: 1
+    - _TextureLayer1Fade: 0.49
     - _TextureLayer1Rows: 3
     - _TextureLayer1ScrollToggle: 0
     - _TextureLayer1SheetToggle: 1
@@ -599,7 +599,7 @@ Material:
     - _SineGlowColor: {r: 0, g: 0.05577663, b: 1.2075471, a: 0}
     - _SineMoveFrequency: {r: 1, g: 1, b: 0, a: 0}
     - _SineMoveOffset: {r: 0.5, g: 0.5, b: 0, a: 0}
-    - _SineRotatePivot: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _SineRotatePivot: {r: 0, g: 0, b: 0, a: 0}
     - _SineScaleFactor: {r: 0.2, g: 0.2, b: 0, a: 0}
     - _SourceAlphaDissolveNoiseScale: {r: 0.3, g: 0.3, b: 0, a: 0}
     - _SourceAlphaDissolvePosition: {r: 0, g: 0, b: 0, a: 0}
@@ -612,7 +612,7 @@ Material:
     - _SqueezeCenter: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _SqueezeScale: {r: 2, g: 0, b: 0, a: 0}
     - _StrongTintTint: {r: 1, g: 1, b: 1, a: 1}
-    - _TextureLayer1Color: {r: 0.4494117, g: 1.298301, b: 2.996079, a: 1}
+    - _TextureLayer1Color: {r: 0.27181813, g: 0.062477786, b: 1.0188681, a: 1}
     - _TextureLayer1Offset: {r: 0, g: 0, b: 0, a: 0}
     - _TextureLayer1Scale: {r: 1, g: 1, b: 0, a: 0}
     - _TextureLayer1ScrollSpeed: {r: 0, g: 1, b: 0, a: 0}

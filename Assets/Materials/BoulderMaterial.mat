@@ -12,6 +12,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _ENABLESHADOW_ON
   - _ENABLEVIBRATE_ON
   - _SHADERFADING_NONE
   - _SHADERSPACE_UV
@@ -215,7 +216,7 @@ Material:
     - _EnableRecolorRGBYCP: 0
     - _EnableSaturation: 0
     - _EnableScreenTiling: 0
-    - _EnableShadow: 0
+    - _EnableShadow: 1
     - _EnableSharpen: 0
     - _EnableShiftHue: 0
     - _EnableShifting: 0
@@ -348,7 +349,7 @@ Material:
     - _ScreenWidthUnits: 10
     - _ShaderFading: 0
     - _ShaderSpace: 0
-    - _ShadowFade: 1
+    - _ShadowFade: 0.2
     - _SharpenFactor: 4
     - _SharpenFade: 1
     - _SharpenOffset: 2
