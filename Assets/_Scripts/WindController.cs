@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class WindController : MonoBehaviour
 {
-    public Material windMaterial; // The material with the shader using "_PoisonNoiseSpeed"
-    public float minWindSpeed = 0.1f; // Minimum wind speed
-    public float maxWindSpeed = 1.0f; // Maximum wind speed
-    public float directionChangeInterval = 5.0f; // How often the wind direction changes (in seconds)
-    public float speedChangeInterval = 3.0f; // How often the wind speed changes (in seconds)
-    public float smoothness = 0.1f; // How smoothly the wind changes (lower values are smoother)
+    public Material windMaterial;
+    public float minWindSpeed = 0.1f;
+    public float maxWindSpeed = 1.0f;
+    public float directionChangeInterval = 5.0f;
+    public float speedChangeInterval = 3.0f;
+    public float smoothness = 0.1f;
 
     private Vector2 currentWindSpeed;
 
