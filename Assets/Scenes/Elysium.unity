@@ -2156,7 +2156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1133348308
 Transform:
   m_ObjectHideFlags: 0
@@ -2940,6 +2940,56 @@ MonoBehaviour:
     m_Bits: 64
   attackAngle: 0
   enemyTag: Enemy
+--- !u!1 &1945939156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1945939158}
+  - component: {fileID: 1945939157}
+  m_Layer: 0
+  m_Name: WindController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1945939157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945939156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa01bd31a4d72b845b637144a7c98b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windMaterial: {fileID: 2100000, guid: cb778ad3a9e1dc44392cdd3017de49f3, type: 2}
+  minWindSpeed: 0.1
+  maxWindSpeed: 0.75
+  directionChangeInterval: 7
+  speedChangeInterval: 4
+  smoothness: 0.001
+--- !u!4 &1945939158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945939156}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1952224154
 GameObject:
   m_ObjectHideFlags: 0
@@ -3805,3 +3855,4 @@ SceneRoots:
   - {fileID: 3070638989247461498}
   - {fileID: 2847930774935827670}
   - {fileID: 8265979024718457468}
+  - {fileID: 1945939158}
