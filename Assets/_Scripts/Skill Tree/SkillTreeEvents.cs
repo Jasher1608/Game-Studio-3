@@ -196,6 +196,8 @@ public class SkillTreeEvents : MonoBehaviour
     private Label _nemesisSP;
     private Label _nyxSP;
 
+    private Label _statsLabel;
+
     private VisualElement _currentOpenPanel;
 
     private VisualElement _currentAresSkillPanel;
@@ -227,6 +229,21 @@ public class SkillTreeEvents : MonoBehaviour
         InitializePanels();
         InitializeSkillButtons();
         InitializeLabels();
+
+        // Populate stats label
+        _playerController.CalculateStats();
+
+        _statsLabel.text = $"Max Health: {PlayerController.playerStats.GetStat(Stat.maxHealth) * PlayerController.playerStats.GetStat(Stat.maxHealthModifier)}\n" +
+            $"Movement Speed: {PlayerController.playerStats.GetStat(Stat.movementSpeed) * PlayerController.playerStats.GetStat(Stat.movementSpeedModifier)}\n" +
+            $"Dash Power: {PlayerController.playerStats.GetStat(Stat.dashPower) * PlayerController.playerStats.GetStat(Stat.dashPowerModifier)}\n" +
+            $"Melee Damage: {PlayerController.playerStats.GetStat(Stat.meleeDamage) * PlayerController.playerStats.GetStat(Stat.meleeDamageModifier)}\n" +
+            $"Melee Cooldown: {PlayerController.playerStats.GetStat(Stat.meleeCooldown) * PlayerController.playerStats.GetStat(Stat.meleeCooldownModifier)}\n" +
+            $"Melee Range: {PlayerController.playerStats.GetStat(Stat.meleeRange) * PlayerController.playerStats.GetStat(Stat.meleeRangeModifier)}\n" +
+            $"Crit Chance: {PlayerController.playerStats.GetStat(Stat.critChance) * PlayerController.playerStats.GetStat(Stat.critChanceModifier)}\n" +
+            $"Crit Damage: {PlayerController.playerStats.GetStat(Stat.critDamage) * PlayerController.playerStats.GetStat(Stat.critDamageModifier)}\n" +
+            $"Attack Area: {PlayerController.playerStats.GetStat(Stat.attackArea) * PlayerController.playerStats.GetStat(Stat.attackAreaModifier)}\n" +
+            $"Armour: {PlayerController.playerStats.GetStat(Stat.armour) * PlayerController.playerStats.GetStat(Stat.armourModifier)}\n" +
+            $"Additional Projectile Count: {PlayerController.playerStats.GetStat(Stat.additionalProjectileCount)}";
     }
 
     private void InitializeButtons()
@@ -467,6 +484,8 @@ public class SkillTreeEvents : MonoBehaviour
         _dionysusSP = _document.rootVisualElement.Q<Label>("DionysusSkillPoints");
         _nemesisSP = _document.rootVisualElement.Q<Label>("NemesisSkillPoints");
         _nyxSP = _document.rootVisualElement.Q<Label>("NyxSkillPoints");
+
+        _statsLabel = _document.rootVisualElement.Q<Label>("StatsLabel");
     }
 
     // Register skill button callbacks

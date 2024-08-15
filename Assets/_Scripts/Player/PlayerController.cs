@@ -22,11 +22,6 @@ public class PlayerController : SerializedMonoBehaviour
     private float meleeRange;
     private float meleeCooldown;
     private float armour;
-    private float mana;
-    private float magicDamage;
-    private float magicRange;
-    private float magicCooldown;
-    private float luck;
     private float criticalChance;
     private float criticalDamage;
     private float dashPower;
@@ -122,7 +117,7 @@ public class PlayerController : SerializedMonoBehaviour
         canDash = true;
     }
 
-    void CalculateStats()
+    public void CalculateStats()
     {
         movementSpeed = PlayerStatUtils.CalculateMovementSpeed(playerStats);
         maxHealth = PlayerStatUtils.CalculateMaxHealth(playerStats);
@@ -130,11 +125,6 @@ public class PlayerController : SerializedMonoBehaviour
         meleeRange = PlayerStatUtils.CalculateMeleeRange(playerStats);
         meleeCooldown = PlayerStatUtils.CalculateMeleeCooldown(playerStats);
         armour = PlayerStatUtils.CalculateArmour(playerStats);
-        mana = PlayerStatUtils.CalculateMana(playerStats);
-        magicDamage = PlayerStatUtils.CalculateMagicDamage(playerStats);
-        magicRange = PlayerStatUtils.CalculateMagicRange(playerStats);
-        magicCooldown = PlayerStatUtils.CalculateMagicCooldown(playerStats);
-        luck = PlayerStatUtils.CalculateLuck(playerStats);
         dashPower = PlayerStatUtils.CalculateDashPower(playerStats);
         dashCooldown = PlayerStatUtils.CalculateDashCooldown(playerStats);
         criticalDamage = PlayerStatUtils.CalculateCritDamage(playerStats);
