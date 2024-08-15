@@ -130,7 +130,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0d1b68f92d2f4b8436c4077999c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bat: {fileID: 0}
   enemyStatsOriginal: {fileID: 11400000, guid: 12712fce96d473f46b82b49a2ac08b23, type: 2}
   enemyStats: {fileID: 0}
   despawnDistance: 30

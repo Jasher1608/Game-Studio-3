@@ -25,14 +25,13 @@ public class StygianOrbBehaviour : ProjectileWeaponBehaviour
             try
             {
                 enemyController = collision.GetComponent<EnemyController>();
+                enemyController.enemyStats.ChangeStat(Stat.health, -stygianOrbController.damage);
             }
             catch
             {
                 Debug.LogWarning($"Enemy {collision.gameObject.name} does not have an EnemyController component.");
                 return;
             }
-
-            enemyController.enemyStats.ChangeStat(Stat.health, -stygianOrbController.damage);
         }
     }
 

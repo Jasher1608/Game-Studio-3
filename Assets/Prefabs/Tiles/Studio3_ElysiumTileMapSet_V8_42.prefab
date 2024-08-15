@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3854005404521188762}
   - component: {fileID: 5862519651803062194}
   - component: {fileID: -6563010006518015626}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Studio3_ElysiumTileMapSet_V8_42
   m_TagString: Untagged
   m_Icon: {fileID: 0}

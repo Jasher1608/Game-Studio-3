@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 5373939656114724090}
   - component: {fileID: 3070155557692220285}
   - component: {fileID: -8518836712836243624}
-  m_Layer: 0
+  - component: {fileID: 479126226456764613}
+  m_Layer: 8
   m_Name: Studio3_ElysiumTileMapSet_V8_41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,3 +98,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9391fe9eca4aeed498cbec9218ed82e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!60 &479126226456764613
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8248897624296357791}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.5, y: 0.5}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.06250709, y: -0.4935663}
+      - {x: -0.14337192, y: 0.004289141}
+      - {x: -0.099892065, y: 0.2353546}
+      - {x: 0.06250709, y: 0.49785542}
+  m_UseDelaunayMesh: 0

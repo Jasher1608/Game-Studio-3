@@ -80,7 +80,7 @@ public class EnemyController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player" && hitCounter <= 0f)
+        if(collision.gameObject.CompareTag("Player") && hitCounter <= 0f)
         {
             PlayerHealthController.instance.TakeDamage(damage);
 
