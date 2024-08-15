@@ -248,7 +248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 39, y: -25.426514}
+  m_AnchoredPosition: {x: 39, y: -25.426575}
   m_SizeDelta: {x: -727.9696, y: 127.1333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &33303548
@@ -885,6 +885,7 @@ Transform:
   - {fileID: 1832869401}
   - {fileID: 208318620}
   - {fileID: 166754305}
+  - {fileID: 1151872711}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &430522995
@@ -2200,7 +2201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1133348308
 Transform:
   m_ObjectHideFlags: 0
@@ -2270,6 +2271,58 @@ MonoBehaviour:
   maxEnemiesAllowed: 200
   maxEnemiesReached: 0
   waveInterval: 20
+--- !u!1 &1151872710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1151872711}
+  - component: {fileID: 1151872712}
+  m_Layer: 0
+  m_Name: IceWeapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1151872711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151872710}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 430522994}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1151872712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151872710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c30ae5f1332b54283c3fe1a922d82d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iceAreaPrefab: {fileID: 2921664472803686981, guid: 419737bcc5a7e1a4ebac514594ec4465, type: 3}
+  iceDuration: 5
+  freezeRadius: 3
+  freezeDuration: 3
+  cooldown: 10
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1225867142
 GameObject:
   m_ObjectHideFlags: 0
@@ -2932,6 +2985,56 @@ MonoBehaviour:
     m_Bits: 64
   attackAngle: 0
   enemyTag: Enemy
+--- !u!1 &1945939156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1945939158}
+  - component: {fileID: 1945939157}
+  m_Layer: 0
+  m_Name: WindController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1945939157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945939156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa01bd31a4d72b845b637144a7c98b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windMaterial: {fileID: 2100000, guid: cb778ad3a9e1dc44392cdd3017de49f3, type: 2}
+  minWindSpeed: 0.1
+  maxWindSpeed: 0.75
+  directionChangeInterval: 7
+  speedChangeInterval: 4
+  smoothness: 0.001
+--- !u!4 &1945939158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945939156}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1952224154
 GameObject:
   m_ObjectHideFlags: 0
@@ -3643,6 +3746,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5436053458807820612, guid: 761c8f69f41678f42b4302def2e0148f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5436053458807820612, guid: 761c8f69f41678f42b4302def2e0148f, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -3806,3 +3913,4 @@ SceneRoots:
   - {fileID: 3070638989247461498}
   - {fileID: 2847930774935827670}
   - {fileID: 8265979024718457468}
+  - {fileID: 1945939158}

@@ -90,7 +90,7 @@ public class EnemyController : MonoBehaviour
 
 
 
-    void CalculateStats()
+    public void CalculateStats()
     {
         movementSpeed = PlayerStatUtils.CalculateMovementSpeed(enemyStats);
         maxHealth = PlayerStatUtils.CalculateMaxHealth(enemyStats);
