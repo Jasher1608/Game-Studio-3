@@ -16,7 +16,7 @@ public class EnemyController : MonoBehaviour
     public float despawnDistance = 20f;
 
     private float movementSpeed;
-    private float maxHealth;
+    [SerializeField] private float maxHealth;
     private float meleeDamage;
     private float meleeCooldown;
 
@@ -30,7 +30,7 @@ public class EnemyController : MonoBehaviour
 
     // Added variables for enemy attacks 
     public float damage;
-    public float hitWaitTime = 1f;
+    public float hitWaitTime = 0.5f;
     private float hitCounter; // to keep track of wait time
 
 

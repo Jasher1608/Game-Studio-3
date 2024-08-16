@@ -1713,6 +1713,7 @@ GameObject:
   - component: {fileID: 2040343329}
   - component: {fileID: 2040343328}
   - component: {fileID: 2040343330}
+  - component: {fileID: 2040343331}
   m_Layer: 0
   m_Name: SelectedCharacter
   m_TagString: Untagged
@@ -1802,6 +1803,21 @@ MonoBehaviour:
   characterDB: {fileID: 11400000, guid: a726616ea024cba4696577b2bcd81de2, type: 2}
   characterName: {fileID: 1102723752}
   artworkSprite: {fileID: 2040343328}
+--- !u!114 &2040343331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040343327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9563b5cf7fb37418b4651b6e9e5f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalStretchToSize: 4
+  verticalStretchToSize: 6.98
+  depthStretchToSize: 2
 --- !u!1 &2075665353
 GameObject:
   m_ObjectHideFlags: 0

@@ -111,9 +111,9 @@ public class NarrativeEvents : MonoBehaviour
         if (_containerGameNarrativeTwoPanel != null)
         {
             _containerGameNarrativeTwoPanel.style.display = DisplayStyle.None; // Hide the panel
-            //Time.timeScale = 1; // Resume the game 
+            Time.timeScale = 1; // Resume the game 
 
-            // note : this is not working - still troubleshooting 
+            // note : this is not working - still troubleshooting - just kidding got it to work today 16.8.24
         }
     }
 }

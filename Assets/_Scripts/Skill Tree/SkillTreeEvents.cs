@@ -209,6 +209,13 @@ public class SkillTreeEvents : MonoBehaviour
     private VisualElement _currentNyxSkillPanel;
     #endregion References
 
+    [SerializeField] private float floatSpeed = 1f; // Speed of floating
+    [SerializeField] private float floatHeight = 2f; // Height of floating
+    [SerializeField] private GameObject narrativeEvents;
+    [SerializeField] private GameObject skillTree;
+
+    private Vector2 startPos;
+
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
@@ -221,6 +228,14 @@ public class SkillTreeEvents : MonoBehaviour
             Debug.LogError("UIDocument component not found!");
             return;
         }
+    }
+    void Start()
+    {
+        // Store the starting position in 2D
+        startPos = transform.position;
+        narrativeEvents.SetActive(true);
+        skillTree.SetActive(false);
+        //Time.timeScale = 1f;
     }
 
     private void OnEnable()
