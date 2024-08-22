@@ -162,10 +162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0d1b68f92d2f4b8436c4077999c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bat: {fileID: 0}
+  bat: {fileID: 8804501791796003277}
   enemyStatsOriginal: {fileID: 11400000, guid: 12712fce96d473f46b82b49a2ac08b23, type: 2}
   enemyStats: {fileID: 0}
   despawnDistance: 30
+  maxHealth: 0
   separationDistance: 0
   enemyLayerMask:
     serializedVersion: 2
@@ -173,6 +174,7 @@ MonoBehaviour:
   ambrosia: {fileID: 5340849254588779802, guid: 3c367084448d1ae49b3f1b12b952bec7, type: 3}
   damage: 10
   hitWaitTime: 1
+  enemyDeathSound: {fileID: 8300000, guid: 22181e54739a7d749a4a3c8148a8a749, type: 3}
 --- !u!95 &8222444685439613054
 Animator:
   serializedVersion: 5

@@ -27,12 +27,17 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] private GameObject ambrosia;
 
-
     // Added variables for enemy attacks 
     public float damage;
-    public float hitWaitTime = 0.5f;
+    public float hitWaitTime = 0.2f;
     private float hitCounter; // to keep track of wait time
 
+    // Added Audio
+    public AudioClip enemyDeathSound;
+    private AudioSource audioSource;
+
+    // Added a flag to track if the enemy is dead
+    private bool isDead = false; 
 
 
     void Awake()
@@ -40,6 +45,14 @@ public class EnemyController : MonoBehaviour
         enemyStats = Instantiate(enemyStatsOriginal);
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
+
+        //Initalising audio source
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
     }
 
     private void OnEnable()
@@ -49,7 +62,8 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        if (enemyStats.GetStat(Stat.health) <= 0)
+        // Check if the enemy is dead before calling Death()
+        if (enemyStats.GetStat(Stat.health) <= 0 && !isDead)
         {
             Death();
         }
@@ -102,11 +116,55 @@ public class EnemyController : MonoBehaviour
 
     private void Death()
     {
+        if (isDead) return; // Added this check to avoid multiple Death() calls
+        isDead = true; // Set isDead to true when Death() is called
+
+        Debug.Log("Enemy died. Playing death sound.");
         EnemySpawner enemySpawner = FindObjectOfType<EnemySpawner>();
         enemySpawner.OnEnemyKilled();
+
+        audioSource.PlayOneShot(enemyDeathSound);
+        Debug.Log("Sound played: " + enemyDeathSound.name);
+
+        // Start the visual effect Coroutine (both color change and shrinking)
+        StartCoroutine(DieWithEffects());
+
         Instantiate(ambrosia, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+
+        // Destroy the GameObject after the sound plays
+        Destroy(gameObject, enemyDeathSound.length +0.5f);
+
     }
+
+    //Death Visual effects
+    private IEnumerator DieWithEffects()
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        Color originalColor = spriteRenderer.color;
+        Vector3 originalScale = transform.localScale;
+
+        float duration = 0.5f; // Time over which the effects will occur
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+
+            // Transition to red
+            spriteRenderer.color = Color.Lerp(originalColor, Color.red, elapsedTime / duration);
+
+            // Scale down (shrink)
+            transform.localScale = Vector3.Lerp(originalScale, Vector3.zero, elapsedTime / duration);
+
+            yield return null;
+        }
+
+        // Ensure it's fully red and fully shrunk
+        spriteRenderer.color = Color.red;
+        transform.localScale = Vector3.zero;
+    }
+
+
 
     void ReturnEnemy()
     {
@@ -148,6 +206,9 @@ public class EnemyController : MonoBehaviour
     
     public void TakeDamage()
     {
-        Death();
+        if (!isDead) // Added this check to avoid calling Death() if already dead
+        {
+            Death();
+        }
     }
 }

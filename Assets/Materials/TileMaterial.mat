@@ -574,7 +574,7 @@ Material:
     - _PixelOutlineTextureSpeed: {r: 0.5, g: 0, b: 0, a: 0}
     - _PoisonColor: {r: 0, g: 2.9433959, b: 0, a: 0}
     - _PoisonNoiseScale: {r: 0.2, g: 0.2, b: 0, a: 0}
-    - _PoisonNoiseSpeed: {r: -0.28336498, g: -0.09346045, b: 0, a: 0}
+    - _PoisonNoiseSpeed: {r: -0.13706455, g: 0.3737956, b: 0, a: 0}
     - _RainbowCenter: {r: 0, g: 0, b: 0, a: 0}
     - _RainbowNoiseScale: {r: 0.2, g: 0.2, b: 0, a: 0}
     - _RecolorRGBBlueTint: {r: 1, g: 1, b: 1, a: 0.5019608}

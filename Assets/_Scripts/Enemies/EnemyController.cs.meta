@@ -3,7 +3,12 @@ guid: 62d0d1b68f92d2f4b8436c4077999c40
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bat: {instanceID: 0}
+  - enemyStatsOriginal: {instanceID: 0}
+  - enemyStats: {instanceID: 0}
+  - ambrosia: {instanceID: 0}
+  - enemyDeathSound: {fileID: 8300000, guid: 22181e54739a7d749a4a3c8148a8a749, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
